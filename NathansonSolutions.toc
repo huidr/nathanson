@@ -16,3 +16,4 @@
 \contentsline {subsection}{\numberline {3.2}Primitive Roots to Composite Moduli}{19}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Power Residues}{20}{subsection.3.3}%
 \contentsline {subsection}{\numberline {3.4}Quadratic Residues}{21}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Quadratic Reciprocity Law}{22}{subsection.3.5}%
