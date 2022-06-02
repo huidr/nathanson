@@ -812,5 +812,82 @@ If $p \equiv 3 \mod 4$, by quadratic reciprocity, we have
 \end{cases}
 \end{displaymath}
 
-\end{document}
+\textsc{Exercise 11}. \emph{In Exercises $11-17$ we derive properties of the Jacobi symbol, which is a generalization of the Legendre symbol to composite moduli. Let $m$ be an odd positive integer, and let 
+\begin{displaymath}
+m = \prod_{i=1}^r p_i^{k_i}
+\end{displaymath}
+be the factorization of $m$ into the product of powers of distinct prime numbers. For any nonzero integer $a$, we define the Jacobi symbol $\left( \frac{a}{m} \right)$ as follows: 
+\begin{displaymath}
+\left( \frac{a}{m} \right) = \prod_{i=1}^r \left( \frac{a}{p_i} \right)^{k_i}.
+\end{displaymath}
+\begin{enumerate}[(a)]
+\item Prove that if $a\equiv b \mod m$, then 
+\begin{displaymath}
+\left( \frac{a}{m} \right) = \left( \frac{b}{m} \right).
+\end{displaymath} 
+\item For any integers $a$ and $b$, prove that 
+\begin{displaymath}
+\left( \frac{ab}{m} \right) = \left( \frac{a}{m} \right)\left( \frac{b}{m} \right).
+\end{displaymath} 
+\item Prove that $\left( \frac{a}{m} \right) = 0$ if and only if $(a,m)>1$.
+\end{enumerate}}
 
+\textsc{Solution}. The idea is to reduce the Jacobi symbol to Legendre symbols whose properties we are already familiar with.
+\begin{enumerate}[(a)]
+\item Since $a\equiv b \mod m$, it follows that $a \equiv b \mod p_i$ for each prime factor $p_i$ of $m$. Therefore, the following should be obvious: 
+\begin{displaymath}
+\left( \frac{a}{m} \right) = \prod_{i=1}^r \left( \frac{a}{p_i} \right)^{k_i} = \prod_{i=1}^r \left( \frac{b}{p_i} \right)^{k_i} = \left( \frac{b}{m} \right).
+\end{displaymath} 
+\item From the definition of Jacobi symbol and properties of Legendre symbol, it follows that, 
+\begin{displaymath}
+\left( \frac{ab}{m} \right) = \prod_{i=1}^r \left( \frac{ab}{p_i} \right)^{k_i} = \prod_{i=1}^r \left( \frac{a}{p_i} \right)^{k_i} \left( \frac{b}{p_i} \right)^{k_i} = \prod_{i=1}^r \left( \frac{a}{p_i} \right)^{k_i} \prod_{i=1}^r \left( \frac{b}{p_i} \right)^{k_i} = \left( \frac{a}{m} \right) \left( \frac{b}{m} \right).
+\end{displaymath} 
+\item Suppose $\left( \frac{a}{m} \right) = 0$. Clearly $\left( \frac{a}{p_i} \right) = 0$ for some prime factor $p_i$ of $m$. Since this is a Legendre symbol, it follows that $p_i$ divides $a$. That is, $p_i$ divides both $a$ and $m$. It follows that $\gcd(a,m)>1$. Conversely, suppose $\gcd(a,m)>1$, that is, $a$ and $m$ have a common prime divisor (say $p_j$ where $1\leq j \leq r$). Then 
+\begin{displaymath}
+\left( \frac{a}{m} \right) = \prod_{i=1}^r \left( \frac{a}{p_i} \right)^{k_i} = \prod_{i=1}^{j-1} \left( \frac{a}{p_i} \right)^{k_i} \left( \frac{a}{p_j} \right)^{k_j} \prod_{i=j+1}^r \left( \frac{a}{p_i} \right)^{k_i} = 0. \done
+\end{displaymath}
+\end{enumerate}
+
+\textsc{Exercise 12}. \emph{Compute the Jacobi symbol $\left( \frac{38}{165} \right)$.}
+
+\textsc{Solution}. Prime factorization yields $38 = 2 \cdot 19$ and $165 = 3 \cdot 5 \cdot 11$. Therefore, 
+\begin{displaymath}
+\left( \frac{38}{165} \right) = \left( \frac{2}{3} \right) \left( \frac{19}{3} \right) \left( \frac{2}{5} \right) \left( \frac{19}{5} \right) \left( \frac{2}{11} \right) \left( \frac{19}{11} \right) = \left( \frac{2}{3} \right) \left( \frac{1}{3} \right) \left( \frac{2}{5} \right) \left( \frac{4}{5} \right) \left( \frac{2}{11} \right) \left( \frac{8}{11} \right)
+\end{displaymath}
+Using the formula $\left( \frac{a}{p} \right) = a^{(p-1)/2} \mod p$ to compute $\left( \frac{2}{3} \right) = -1$, $\left( \frac{1}{3} \right) = 1$, $\left( \frac{2}{5} \right) = -1$, $\left( \frac{2}{11} \right) = -1$, it follows that 
+\begin{displaymath}
+\left( \frac{38}{165} \right) = \left( \frac{2}{3} \right) \left( \frac{1}{3} \right) \left( \frac{2}{5} \right)^3 \left( \frac{2}{11} \right)^4 = 1. \done
+\end{displaymath}
+
+\textsc{Exercise 13}. \emph{Let $m$ be an odd integer, and let $(a,m) = 1$. The integer $a$ is called a quadratic residue modulo $m$ if there exists an integer $x$ such that 
+\begin{displaymath}
+x^2 \equiv a \mod m
+\end{displaymath}
+and a quadratic nonresidue modulo $m$ if this congruence has no solution. Prove that if $\left( \frac{a}{m} \right) = -1$, then $a$ is a quadratic nonresidue modulo $m$. Prove that $a$ is not necessarily a quadratic residue modulo $m$ if $\left( \frac{a}{m} \right) = 1$.}
+
+\textsc{Solution}. Let $m = \prod_{i=1}^r p_i^{k_i}$ be its prime factorization. Suppose $a$ is a quadratic residue modulo $m$. That is, there is some integer $x$ satisfying $x^2 \equiv a \mod m$. Then, $x^2 \equiv a \mod p_i$ for each $1 \leq i \leq r$ (because if $m$ divides $x^2-a$, then $p_i$ also divides $x^2-a$). Therefore, $\left( \frac{a}{p_i} \right) = 1$ for each $p_i$. But the given condition says
+\begin{displaymath}
+\left( \frac{a}{m} \right) = \prod_{i=1}^r \left( \frac{a}{p_i} \right)^{k_i} = -1,
+\end{displaymath}
+which is true only when $\left( \frac{a}{p_j} \right) = -1$ for some $p_j$ where $1\leq j \leq r$. This is absurd. It follows that $a$ is a quadratic nonresidue modulo $m$. For the second part of the question, we consider $m = 21$ and $a=-1$. We observe that 
+\begin{displaymath}
+\left( \frac{-1}{21} \right) = \left( \frac{-1}{3} \right) \left( \frac{-1}{7} \right) = (-1)(-1) = 1.
+\end{displaymath}
+That is, $-1$ is a quadratic nonresidue modulo $3$ and $7$. Then $-1$ cannot be a quadratic residue modulo $21$ (by the arguments used in the first part of the question). \done
+
+\textsc{Exercise 14}. \emph{Let $m = p^k$, where $p$ is an odd prime and $k\geq 1$. Prove that 
+\begin{displaymath}
+\frac{m-1}{2} \equiv \frac{k(p-1)}{2} \mod 2.
+\end{displaymath}}\textsc{Solution}. The proposition is trivially true when $k=1$. So, we assume that $k\geq 2$. Then
+\begin{align*}
+  m &= ((p-1)+1)^k \\
+    &= (p-1)^k + k(p-1)^{k-1} + \cdots + k(p-1) + 1 \\
+  \frac{m-1}{2} &= \frac{(p-1)^k}{2} + \frac{k(p-1)}{2}[(p-1)^{k-2} + \cdots + 1].
+\end{align*} Since $k\geq 2$ and $p-1$ is even, it follows that $(p-1)^k/2$ is divisible by $2$. Also, all powers of $p-1$ are divisible by $2$. Therefore, taking modulo $2$ on both sides yield 
+\begin{displaymath}
+\frac{m-1}{2} \equiv \frac{k(p-1)}{2} \mod 2.\done
+\end{displaymath}
+
+\subsection{Quadratic Residues to Composite Moduli}
+
+\end{document}

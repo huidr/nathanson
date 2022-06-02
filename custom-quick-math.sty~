@@ -6,7 +6,7 @@
 \RequirePackage[bookmarksdepth=4]{hyperref}
 \RequirePackage{pdfpages}
 \RequirePackage{xcolor}
-\RequirePackage[shortlabels]{enumitem}
+\RequirePackage{enumitem}
 \setlist[itemize]{noitemsep, topsep=0pt}
 \setlist[enumerate]{noitemsep, topsep=0pt}
 
