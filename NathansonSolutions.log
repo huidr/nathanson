@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.27)  2 JUN 2022 05:59
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.27)  2 JUN 2022 22:29
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -560,16 +560,16 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ] [3
 
 ] [4]
-[5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19]
-(./NathansonSolutions.aux)
+[5] [6] [7] [8] [9] [10] [11] [12] [13] [14] [15] [16] [17] [18] [19] [20]
+[21] (./NathansonSolutions.aux)
 Package rerunfilecheck Info: File `NathansonSolutions.out' has not changed.
-(rerunfilecheck)             Checksum: 2B92A0A238D084E2223B2166471AE3E9;1138.
+(rerunfilecheck)             Checksum: F8208397AFFD4EEF2A1AC5B91B21BA00;1355.
  ) 
 Here is how much of TeX's memory you used:
- 9303 strings out of 481176
- 139053 string characters out of 5914225
+ 9311 strings out of 481176
+ 139157 string characters out of 5914225
  471675 words of memory out of 5000000
- 26045 multiletter control sequences out of 15000+600000
+ 26048 multiletter control sequences out of 15000+600000
  411546 words of font info for 56 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191
  98i,10n,102p,655b,361s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -588,10 +588,10 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on NathansonSolutions.pdf (19 pages, 238687 bytes).
+Output written on NathansonSolutions.pdf (21 pages, 246627 bytes).
 PDF statistics:
- 237 PDF objects out of 1000 (max. 8388607)
- 198 compressed objects within 2 object streams
- 36 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 264 PDF objects out of 1000 (max. 8388607)
+ 222 compressed objects within 3 object streams
+ 41 named destinations out of 1000 (max. 500000)
+ 145 words of extra memory for PDF output out of 10000 (max. 10000000)
 

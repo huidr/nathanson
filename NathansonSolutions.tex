@@ -31,12 +31,8 @@
 \pagebreak
 
 \clearpage
-
 \thispagestyle{empty}
-
-%\renewcommand{\baselinestretch}{0.5}\normalsize
 \tableofcontents
-%\renewcommand{\baselinestretch}{1.0}\normalsize
 \clearpage
 
 \normalsize
@@ -676,6 +672,78 @@ Exercise 7 is similar to Exercise 3.
 \textsc{Exercise 8}. \emph{Find all solutions of the congruence $2^x \equiv 22 \mod 53$}.
 
 \textsc{Solution}. In Exercise 7, we prove that $2$ is a primitive root modulo $53$. We observe that $2^7 \equiv 22 \mod 53$. 
+
+\subsection{Primitive Roots to Composite Moduli}
+
+\textsc{Exercise 1}. \emph{Find an integer $g$ that is a primitive root moduli $5^k$ for all $k \geq 1$. Find a primitive root modulo $10$. Find a primitive root modulo $50$.}
+
+\textsc{Solution}. Since ord$_5(2) = 4 = \varphi(5)$, $2$ is a primitive root of $5$. We observe that the highest power of $3$ which divides $2^4-1$ is $3$. Further, $\varphi(5^k) = 4\cdot 5^{k-1}$. By Theorem $3.6$, it follows that $2$ is a primitive root modulo $5^k$ for all $k\geq 1$. Since $10 = 2\cdot 5$ and $2+5 = 7 $ is odd, by Theorem $3.7$, it follows that $7$ is a primitive root modulo $10$. Finally, $50 = 2 \cdot 5^2$ and $2$ is a primitive root modulo $25$. Since $2+5^2 = 27$ is odd, $27$ is a primitive root modulo $50$. \done
+
+\textsc{Exercise 2}. \emph{For $k \geq 1$, let $e_k$ be the order of $5$ modulo $3^k$. Prove that 
+\begin{displaymath}
+e_k = 2\cdot 3^{k-1}.
+\end{displaymath}}\textsc{Solution}. We begin by observing that $5$ is a primitive root of $3$ (because $5 \equiv 2 \mod 3, 5^2 \equiv 1 \mod 3$ and $\varphi(3) = 2$). Since the highest power of $3$ which divides $5^2-1$ is $3$ and $\varphi(3^k) = 2\cdot 3^{k-1}$, by Theorem $3.6$, it follows that $5$ is a primitive root of $3^k$ for all $k\geq 1$. Therefore, $e_k = \varphi(3^k) = 2\cdot 3^{k-1}$. \done
+
+\textsc{Exercise 3}. \emph{Prove that $p$ divides the binomial coefficient $\binom{p}{i} $ for $i=1,2,\ldots, p-1$.}
+
+\textsc{Solution}.
+
+\textsc{Exercise 4}. \emph{Prove that if $g$ is a primitive root modulo $p^2$, then $g$ is a primitive root modulo $p^k$ for all $k\geq 2$.}
+
+\textsc{Solution}. If we can prove that $g$ is a primitive root modulo $p$, then (by Theorem $3.7$) we are done.
+
+\textsc{Exercise 7}. \emph{Use Exercise $6$ to prove that the exponential congruence 
+\begin{displaymath}
+9^k \equiv 1 \mod 7^k
+\end{displaymath}
+has no solutions}.
+
+\textsc{Solution.} We see that ord$_7(9) = 3$ and the highest power of $7$ which divides $9^3-1$ is $7$. Suppose the given congruence has solutions. Then by Exercise $6$, we have 
+\begin{displaymath}
+\frac{7^k}{k} < \frac{9^3}{3} = 243 \implies 7^k < 243k,
+\end{displaymath}
+which cannot hold for $k\geq 4$. It is easy to check that it has no solutions for $k=1,2,3$ as well. The proposition follows. \done
+
+\subsection{Power Residues}
+
+%
+%\textsc{Exercise 1}. \emph{Find all cubic residues modulo $19$.}
+
+%\textsc{Solution}. We observe that $\gcd(3, 18) = 3$. Since ord$_{19}(2) = \varphi(19)$, it follows that $2$ is a primitive root modulo $19$. Suppose $a$ is a cubic residue modulo $19$. Then, by Theorem $3.11$, it follows that 
+%\begin{displaymath}
+%a^{(19-1)/3} = a^6 \equiv 1 \mod 19.
+%\end{displaymath}
+%But $1$ is a $6$th power residue modulo $19$. It follows that the congruence has exactly $3$ solutions that are pairwise incongruent modulo $19$. We see that
+%\begin{longtable}{p{8em} p{8em} p{8em}}
+%  $7^6 \equiv 1 \mod 19$, & $8^6 \equiv 1 \mod 19$, & $11^6 \equiv \mod 19$ \\
+%  $12^6 \equiv 1 \mod 19$, & $18^6 \equiv 1 \mod 19$. & \\
+%\end{longtable}
+
+Exercise $1$ has been solved in the text.
+
+\textsc{Exercise 2}. \emph{Find all solutions of the congruence $x^3\equiv 8 \mod 19$.}
+
+\textsc{Solution}. In Exercise $1$, we saw that $8$ is a cubic residue modulo $19$. Also, $\gcd(3,18) = 6$. By Theorem $3.11$, it follows that the congruence has exactly $6$ solutions that are pairwise incongruent modulo $19$.
+
+\textsc{Exercise 3}. \emph{Define the map $f:(\Z/19\Z)^{\times} \to (\Z/19\Z)^{\times}$ by $f(x+19\Z) = x^3+19\Z$. Prove that $f$ is a homomorphism of the multiplicative group $(\Z/19\Z)^{\times}$, and compute its kernel.}
+
+\textsc{Solution}. Homomorphism follows from the fact that $f(xy) = (xy)^3 + 19\Z = (x^3+19\Z)(y^3+19\Z) = f(x)f(y)$ for all $x,y \in \Z/19\Z$. Any $k\in \ker(f)$ satisfies the congruence
+\begin{displaymath}
+k^3 \equiv 1 \mod 19.
+\end{displaymath}
+It is checked that the solutions are $1+19\Z$, $7+19\Z$, and $11+19\Z$. These are the elements of $\ker(f)$. \done
+
+\textsc{Exercise 6}. \emph{Define the map $f: (\Z/23\Z)^{\times} \to (\Z/23\Z)^{\times}$ by $f(x+ 23\Z) = x^3 + 23\Z$. Prove that $f$ is an isomorphism of the multiplicative group $(\Z/23\Z)^{\times}$, that is, prove that $f$ is a homomorphism that is one-one and onto.}
+
+\subsection{Quadratic Residues}
+
+\textsc{Exercise 1}. \emph{Find all solutions of the congruences $x^2 \equiv 2 \mod 47$ and $x^2 \equiv 2 \mod 53$.}
+
+\textsc{Solution}. 
+
+
+
+
 
 \end{document}
 

@@ -13,3 +13,6 @@
 \contentsline {subsection}{\numberline {2.5}Euler's Theorem and Fermat's Theorem}{18}{subsection.2.5}%
 \contentsline {section}{\numberline {3}Primitive Roots and Quadratic Reciprocity}{19}{section.3}%
 \contentsline {subsection}{\numberline {3.1}Polynomials and Primitive Roots}{19}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Primitive Roots to Composite Moduli}{19}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Power Residues}{20}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Quadratic Residues}{21}{subsection.3.4}%
