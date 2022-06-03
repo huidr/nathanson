@@ -75,19 +75,39 @@ Exercises 16-17 are easy exercises of using induction.
 
 \textsc{Exercise 19}. \emph{Let $a$ and $d$ be integers with $d\geq 1$. Prove that there exist unique integers $q^{\prime}$ and $r^{\prime}$ such that $a=dq^{\prime} + r^{\prime}$ and $-d/2 < r^{\prime} \leq d/2$.}
 
-\textsc{Solution}. Let $S$ be the set of integers of the form $a-dx$ with $x\in\Z$.
+\textsc{Solution}. Let $S$ be the set of integers of the form $a-dx$ with $x\in\Z$. We choose $r^{\prime} = a-dx$ such that $-d/2 < a-dx \leq d/2$. It is possible to choose such an $r^{\prime}$ because $a-dx$ is an arithmetic progression with common difference $d$, and $|d/2 - (-d/2)| = d$. Then we set $q^{\prime} = x$ so that $a = dq^{\prime} + r^{\prime}$. To prove uniqueness, we assume $a = dq_1 + r_1$ with $-d/2 < r_1 \leq d/2$. Since $-d/2 < r_1, r^{\prime} \leq d/2$, and $a = dq_1+r_1 = dq^{\prime} + r^{\prime}$, it follows that 
+\begin{displaymath}
+|r_1 - r^{\prime}| \leq d-1, \hspace{1cm} \text{and} \hspace{1cm} d(q_1-q^{\prime}) = r^{\prime} - r_1.
+\end{displaymath}
+If $q_1 \ne q^{\prime}$, then 
+\begin{displaymath}
+|q_1 - q^{\prime}| \geq 1, \hspace{1cm} \text{and} \hspace{1cm} d\leq d|q_1-q^{\prime}| = |r^{\prime} - r_1 | \leq d-1,
+\end{displaymath}
+which is absurd. It follows that $q_1 = q^{\prime}$ and $r_1 = r^{\prime}$. \done
 
 Exercise 20 is a straightforward computation using the definition of binomial coefficient.
 
 \textsc{Exercise 21}. \emph{Prove that the product of any $k$ consecutive integers is always divisible by $k!$.}
 
-\textsc{Solution}.
+\textsc{Solution}. Any $k$ consecutive integers are of the form $n, n-1, \ldots, n-(k-1)$. Their product can be written as 
+\begin{displaymath}
+\frac{n(n-1)\cdots (n-k+1)(n-k)(n-k-1)\cdots 2\cdot 1}{(n-k)!} = \frac{n!}{(n-k)!}.
+\end{displaymath}
+To prove that this product is divisible by $k!$, it suffices to prove that $n!/k!(n-k)!$, that is, $\binom{n}{k}$ is an integer. We prove this by using induction on $n$. The base case of $n=1$ is easily verified. Suppose the proposition holds for some $n\in\Z, n>1$. By Exercise $20$, 
+\begin{displaymath}
+\binom{n+1}{k} = \binom{n}{k} + \binom{n}{k-1},
+\end{displaymath}
+where both terms on the right side are integers (by induction hypothesis). Therefore, the term on the left side is an integer. The proposition follows. \done
 
 \textsc{Exercise 22}. \emph{Let $m_0, m_1, m_2,\ldots$ be a strictly increasing sequence of positive integers such that $m_0=1$ and $m_i$ divides $m_{i+1}$ for all $i\geq 0$. Prove that every positive integer $n$ can be represented uniquely in the form $n = \sum_{i=0}^{\infty}a_im_i$, where $0\leq a_i \leq m_{i+1}/m_i-1$ for all $i\geq 0$ and $m_i=0$ for all but finitely many integers $i$.}
 
-\textsc{Solution}. 
+\textsc{Solution}. Any strictly increasing sequence of positive integers is unbounded. Thus, given any positive integer $n$, there exists $k\in\Z, k\geq 0$ such that $m_k \leq n < m_{k+1}$. For $k\geq 0$, let $P(k)$ be the statement that every integer in the interval $m_k \leq n < m_{k+1}$ has a unique representation in the form $\sum_{i=0}^{\infty} a_im_i$, where $0\leq a_i \leq m_{i+1}/m_i-1$ for all $i\geq 0$ and $m_i=0$ for all but finitely many integers $i$. Clearly $P(0)$ holds since $n=a_0$ is the unique representation if $1 \leq n \leq m_1$. Let $k\geq 1$ and suppose the statements $P(0)$, $P(1)$, $\ldots, P(k-1)$ hold. We shall prove $P(k)$. Let $m_k \leq n \leq m_{k+1}$. Then, by division algorithm, 
+\begin{displaymath}
+n = a_k m_k + r, \hspace{1cm} \text{where } 0\leq r \leq m_k.
+\end{displaymath}
+The remainder of the proof resembles the proof of unique $m$-acidic representation of an integer $n$ given in the textbook. \done
 
-Exercise 23-24 follows trivially from Exercise 22. Exercise 25-26 are simple applications of well-ordering of natural numbers. 
+Exercise 23-24 follow trivially from Exercise 22. Exercise 25-26 are simple applications of well-ordering of natural numbers. 
 
 \subsection{Greatest Common Divisors}
 
@@ -123,7 +143,7 @@ Exercise 17 is similar to how we treated Exercise 16 (above). Exercises 18-19 ar
 
 \textsc{Exercise 20}. \emph{Let $H$ be a nonempty subset of an additive abelian group $G$. Prove that $H$ is a subgroup if and only if $x-y \in H$ for all $x,y\in H$.}
 
-\textsc{Solution}.
+\textsc{Solution}. Suppose $H$ is a subgroup of $G$. That is, $H$ is a group in its own right, and all the group axioms hold in $H$. Let $x,y\in H$. Then, $-y \in H$ (existence of inverse) and $x-y = x+(-y) \in H$ (closure). Conversely, suppose $x-y \in H$ for all $x,y\in H$. Clearly $0 \in H$ since $x-x=0$ for any $x\in H$. Also, $-x \in H$ for any $x\in H$ since $-x = 0-x$. Finally for any $x,y\in H$, we see that $x+y = x-(-y) \in H$. It follows that $H$ is a subgroup. \done
 
 Exercise 21 follows trivially from closure under multiplication (and addition). Exercises 22-23 are simple applications of elementary set theory and group axioms.
 
@@ -156,7 +176,7 @@ Exercise 26 is straightforward by considering a particular case (example).
 
 \textsc{Exercise 28}. \emph{Let $G$ and $H$ be groups which $e$ the identity in $H$. Let $f:G\to H$ be a group homomorphism. The kernel of $f$ is the set $f^{-1}(e) = \{x\in G : f(x) = e \in H \} \subset G$. The image of $f$ is the set $f(G) = \{f(x) : x\in G\} \subset H$. Prove that the kernel of $f$ is a subgroup of $G$, and the image of $f$ is a subgroup of $H$.}
 
-\textsc{Solution}.
+\textsc{Solution}. Let $x,y\in \ker(f)$. Then $f(x+y) = f(x) + f(y) = e + e = e$ and so, $x+y \in \ker(f)$. We must be careful that the two operations $+$ mean different things: the first one is between elements in $G$; the second one is between elements in $H$. Let $e_G$ be the identity element of $G$. Clearly $f(x) = f(x + e_G) = f(x) + f(e_G)$ for every $x \in G$, and so, $f(e_G) = e$. That is, $e_G \in \ker(f)$. Finally, $e = f(e_G) = f(x - x) = f(x) + f(-x) = e + f(-x) = f(-x)$ for every $x\in \ker(f)$. That is, $-x\in \ker(f)$ for every $x\in \ker(f)$. It follows that $\ker(f)$ is a subgroup of $G$. Let $I$ be the image of $f$ in $H$. Since $f(e_G) = e$, we see that $e\in I$. Let $x, y \in I$. Then there exists $a, b \in G$ such that $f(a) = x$ and $f(b) = y$. Clearly $f(a + b) = f(a) + f(b) = x + y$ so that $x+y \in I$. Also, $e = f(e_G) = f(a - a) = f(a) + f(-a) = x + f(-a)$ so that $-x = f(-a)$. That is, $-x \in I$ for all $x\in I$. Consequently, $I$ is a subgroup of $H$. \done
 
 \textsc{Exercise 29}. \emph{Define the map $f: \Z \to \Z$ by $f(n)=3n$. Prove that $f$ is a group homomorphism and determine the kernel and image of $f$.}
 
@@ -199,7 +219,18 @@ Exercise 9 is obvious once we expand the continued fraction.
 \langle a_0, a_2,\ldots,a_n \rangle = \frac{p_n}{q_n}
 \end{displaymath}}for $n=0,1,\ldots, N$. The continued fraction $\langle a_0, a_1,\ldots,a_n \rangle $ is called the $n$th \emph{convergent} of the continued fraction $\langle a_0, a_1, \ldots, a_N\rangle$.
 
-\textsc{Solution}. We prove this using induction on $n$. When $n=1$, $p_1/q_1 = (a_1a_0+1)/a_1$, which is the continued fraction $\langle a_0, a_1 \rangle$. Suppose the proposition holds for $n=k$.
+\textsc{Solution}. We prove this using induction on $n$. The base case of $n=0$ follows immediately. When $n=1$, $p_1/q_1 = (a_1a_0+1)/a_1$, which is the continued fraction $\langle a_0, a_1 \rangle$. Suppose the proposition holds for $n=k$. That is, 
+\begin{displaymath}
+\langle a_0, a_1, \ldots, a_k \rangle = \frac{p_k}{q_k} = \frac{a_kp_{k-1} + q_{k-2}}{a_kq_{k-1} + q_{k-2}}.
+\end{displaymath}
+Since $\langle a_0, a_1, \ldots, a_k, a_{k+1} \rangle = \langle a_0, a_1, \ldots, a_k+1/a_{k+1} \rangle$, it follows that
+\begin{align*}
+  \langle a_0, a_1, \ldots, a_k, a_{k+1} \rangle &= \frac{\left( a_k+\frac{1}{a_{k+1}} \right)p_{k-1} + p_{k-2}}{\left( a_k+\frac{1}{a_{k+1}} \right)q_{k-1} + q_{k-2}} \\
+                                                            &= \frac{(a_ka_{k+1} + 1)p_{k-1} + a_{k+1}p_{k-2}}{(a_ka_{k+1} + 1)q_{k-1} + a_{k+2}q_{k-2}} \\
+                                                            &= \frac{a_{k+1}(a_kp_{k-1} + p_{k-2}) + p_{k-1}}{a_{k+1}(a_kq_{k-1} + q_{k-2}) + q_{k-1}} \\
+  &= \frac{p_{k+1}}{q_{k+1}},
+\end{align*}
+By induction, the proposition follows. \done
 
 Exercise 11 is a simple computation problem. The $n$th convergent should converge to the continued fraction as $n$ grows larger.
 
@@ -208,21 +239,55 @@ Exercise 11 is a simple computation problem. The $n$th convergent should converg
 p_nq_{n-1} - p_{n-1}q_n = (-1)^{n-1}
 \end{displaymath}}for $n=1,\ldots, N$. Prove that if $a_i \in \Z$ for $i=0,1,\ldots, N$, then $(p_n, q_n) = 1$ for $n=0,1,\ldots, N$.
 
-\textsc{Solution}. 
+\textsc{Solution}. We may write 
+\begin{align*}
+  p_nq_{n-1} - p_{n-1}q_n &= (a_np_{n-1} + p_{n-2})q_{n-1} - p_{n-1}(a_nq_{n-1}+q_{n-2}) \\
+                          &= -(p_{n-1}q_{n-2} - p_{n-2}q_{n-1}) \\
+                          &= (-1)^2 (p_{n-2}q_{n-3} - p_{n-3}q_{n-2}) \\
+                          &= \cdots \\
+                          &= \cdots \\
+                          &= (-1)^{n-1} (p_1q_0 - q_0p_1) \\
+                          &= (-1)^{n-1}.
+\end{align*}
+If $a_i \in \Z$ for $i = 0, 1, \ldots, N$, then $p_n, q_n \in \Z$ for each $0 \leq n \leq N$. Suppose $\gcd(p_n, q_n) = d > 1$. We have proved that $p_nq_{n-1} - p_{n-1}q_n = (-1)^n$.  Then $d$ would divide $\pm 1$, which is absurd. It follows that $\gcd(p_n, q_n) = 1$. \done
 
 \textsc{Exercise 13}. \emph{Let $\langle a_0, a_1, \ldots, a_N\rangle$ be a finite simple continued fraction, and let $p_n$ and $q_n$ be the numbers defined in Exercise $10$. Prove that 
 \begin{displaymath}
 p_nq_{n-2} - p_{n-2}q_n = (-1)^n a_n
 \end{displaymath}for $n=2,\ldots, N$.}
 
-\textsc{Solution}.
+\textsc{Solution}. By Exercise $12$, we have 
+\begin{align*}
+  p_nq_{n-2} - p_{n-2}q_n &= (a_np_{n-1}+ p_{n-2})q_{n-2} - p_{n-2}(a_nq_{n-1} + q_{n-2}) \\
+                          &= a_n(p_{n-1}q_{n-2} - p_{n-2}q_{n-1})\\
+  &= (-1)^n a_n. \done
+\end{align*}
 
-\textsc{Exercise}. \emph{Let $\langle a_0, a_1, \ldots, a_N\rangle$ be a finite simple continued fraction, and let $p_n$ and $q_n$ be the numbers defined in Exercise $10$. Prove that the even convergents are strictly increasing, the odd convergents are strictly decreasing, and every even convergent is less than every odd convergent, that is, 
+\textsc{Exercise 14}. \emph{Let $\langle a_0, a_1, \ldots, a_N\rangle$ be a finite simple continued fraction, and let $p_n$ and $q_n$ be the numbers defined in Exercise $10$. Prove that the even convergents are strictly increasing, the odd convergents are strictly decreasing, and every even convergent is less than every odd convergent, that is, 
 \begin{displaymath}
 \frac{p_0}{q_0} < \frac{p_2}{q_2} < \frac{p_4}{q_4} < \cdots \leq x \leq \cdots < \frac{p_5}{q_5} < \frac{p_3}{q_3} < \frac{p_1}{q_1}.
 \end{displaymath}}
 
-\textsc{Solution}. 
+\textsc{Solution}. By Exercise $13$, we have 
+\begin{align*}
+\frac{p_n}{q_n} - \frac{p_{n-2}}{q_{n-2}} &= \frac{p_nq_{n-2} - p_{n-2}q_n}{q_nq_{n-2}} = \frac{(-1)^n a_n}{q_nq_{n-2}}.
+\end{align*}
+Since $a_n, q_n, q_{n-2}$ are positive integers, this difference has the same sign as $(-1)^n$. Therefore, the even convergents are strictly increasing while the odd convergents are strictly decreasing. Thus, we have now proved 
+\begin{displaymath}
+\frac{p_0}{q_0} < \frac{p_2}{q_2} < \frac{p_4}{q_4} < \cdots \hspace{1cm}\text{and}\hspace{1cm} \cdots < \frac{p_5}{q_5} < \frac{p_3}{q_3} < \frac{p_1}{q_1}.
+\end{displaymath}
+We shall now prove that every odd convergent is greater than any even convergent. By Exercise $12$, we see that 
+\begin{displaymath}
+\frac{p_n}{q_n} - \frac{p_{n-1}}{q_{n-1}} = \frac{p_nq_{n-1} - p_{n-1}q_n}{q_nq_{n-1}} = \frac{(-1)^{n-1}}{q_nq_{n-1}},
+\end{displaymath}
+and so, this difference has the same sign as $(-1)^{n-1}$. Looking at the case when $n$ is odd, it is easy to see that every odd convergent is greater than its predecessor and its successor. Combined with an earlier result we have proved, it follows that every odd convergent is greater than any even convergent. A particular case also shows 
+\begin{displaymath}
+\frac{p_0}{q_0} < x < \frac{p_1}{q_1}.
+\end{displaymath}
+Therefore, we have proved that 
+\begin{displaymath}
+\frac{p_0}{q_0} < \frac{p_2}{q_2} < \frac{p_4}{q_4} < \cdots \leq x \leq \cdots < \frac{p_5}{q_5} < \frac{p_3}{q_3} < \frac{p_1}{q_1}. \done
+\end{displaymath}
 
 \textsc{Exercise 15}. \emph{We define a sequence of integers as follows: 
 \begin{align*}
