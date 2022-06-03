@@ -316,7 +316,19 @@ f_{n+1}f_{n-1} - f_n^2 = (-1)^n
 \end{displaymath}
 for all positive integers $n$.}
 
-\textsc{Solution}.
+\textsc{Solution}. Using the Fibonacci recurrence relation, we obtain 
+\begin{align*}
+  f_{n+1}f_{n-1} - f_n^2 &= (f_n+f_{n-1})f_{n-1} - f_n^2 \\
+                         &= f_nf_{n-1} + f_{n-1}^2 - f_n^2 \\
+                         &= f_n(f_{n-1} - f_n) + f_{n-1}^2 \\
+                         &= (-1)(f_nf_{n-2} - f_{n-1}^2) \\
+                         &= (-1)^2(f_{n-1}f_{n-3} - f_{n-2}^2) \\
+                         &= \cdots \\
+                         &= \cdots \\
+                         &= (-1)^{n-1}(f_2f_0 - f_1^2) \\
+  &= (-1)^n,
+\end{align*}
+where we have used $f_2f_0-f_1^2 = -1$. \done
 
 \textsc{Exercise 19}. \emph{Prove that 
 \begin{displaymath}
@@ -328,7 +340,11 @@ for all $k=0,1,\ldots, n$. Equivalently, $f_n = f_{n-1} + f_{n-2} = 2f_{n-2} + f
 
 \textsc{Exercise 20}. \emph{Prove that $f_n$ divides $f_{ln}$ for all positive integers $l$.}
 
-\textsc{Solution}. By the result of Exercise 19, we can write $f_{ln} = f$.
+\textsc{Solution}. We prove this proposition by induction on $l$. The base case of $l = 1$ follows trivially. Suppose the proposition holds for $l = k$ for some $k\in \Z, k>1$. By the result of Exercise 19, we can write 
+\begin{displaymath}
+  f_{(k+1)n} = f_{kn+n} = f_{n+1}f_{kn} + f_nf_{kn-1}. 
+\end{displaymath}
+Since $f_n$ divides $f_{kn}$ (by induction hypothesis) and $f_n$, it follows that $f_n$ divides $f_{(k+1)n}$. The proposition follows. \done
 
 \textsc{Exercise 21}. \emph{Prove that, for $n\geq 1$, 
 \begin{displaymath}
@@ -380,7 +396,7 @@ Therefore, $15! = 2^{11}\cdot 3^6\cdot 5^3\cdot 7 \cdot 11 \cdot 13$. \done
 
 \textsc{Exercise 11}. \emph{The prime numbers $p$ and $q$ are called twin primes if $|p-q|=2$. Let $p$ and $q$ be primes. Prove that $pq+1$ is a square if and only if $p$ and $q$ are twin primes.}
 
-\textsc{Solution}.
+\textsc{Solution}. Suppose $p$ and $q$ are twin primes. Without loss of generality, we assume $q = p+2$. Then $pq+1 = p(p+2) + 1 = p^2 + 2p + 1 = (p+1)^2$, which is a square. Conversely, suppose $p$ and $q$ are two primes with $pq+1 = a^2$ for some $a\in\Z$. Then $pq = a^2-1 = (a+1)(a-1)$. But $p$ and $q$ are primes, and the only factors they have are $1$ and themselves. It follows that $a+1$ and $a-1$ are $p$ and $q$ themselves so that $|p-q| = |(a+1)-(a-1)| =  2$. Therefore, $p$ and $q$ are twin primes. The proposition follows. \done
 
 \textsc{Exercise 12}. \emph{Prove that if $p$ and $q$ are twin primes greater than $3$, then $p+q$ is divisible by $12$.}
 
@@ -401,15 +417,19 @@ We observe that $p^{v_p(m)+v_p(n)}$ but no higher power of $p$ divides $mn$. By 
 
 \textsc{Exercise 14}. \emph{Let $d$ and $m$ be nonzero integers. Prove that $d$ divides $m$ if and only if $v_p(d)\leq v_p(m)$ for all primes $p$.}
 
-\textsc{Solution}.
+\textsc{Solution}. Suppose $d$ divides $m$. That is, there exists an integer $c$ such that $m = dc$. Suppose $d$ has $p$ as one of its prime divisors. Clearly $v_p(d) \leq v_p(m)$ (otherwise the relation $m=dc$ will not hold). If $p$ is not a prime divisor of $d$, then the relation trivially holds since $v_p(d) = 0$. Conversely, suppose $v_p(d) \leq v_p(m)$ for all primes $p$. Then 
+\begin{displaymath}
+\frac{m}{d} = \frac{\prod_{i=1}p_i^{v_{p_i}(m)}}{\prod_{i=1}p_i^{v_{p_i}(d)}} = \prod_{i=1} p_i^{v_{p_i}(m)-v_{p_i}(d)}
+\end{displaymath}
+is an integer. Consequently, $d$ divides $m$. \done
 
-\textsc{Exercise 15}. \emph{Let $m = \prod_{i=1}^k p_i^{r_i}$, where $p_1, \ldots, p_k$ are distinct primes, $k \geq 2$, and $r_i\geq 1$ for $i=1,\ldots, k$. Let $m_i = mp_i^{-k_i}$ for $i=1,\ldots, k$. Prove that $(m_1, \ldots, m_k) = 1$.}
+\textsc{Exercise 15}. \emph{Let $m = \prod_{i=1}^k p_i^{r_i}$, where $p_1, \ldots, p_k$ are distinct primes, $k \geq 2$, and $r_i\geq 1$ for $i=1,\ldots, k$. Let $m_i = mp_i^{-r_i}$ for $i=1,\ldots, k$. Prove that $(m_1, \ldots, m_k) = 1$.}
 
-\textsc{Solution}.
+\textsc{Solution}. Let $M=\{m_1, \ldots, m_k\}$ and $P=\{ p_1, \ldots, p_k\}$. To prove that $\gcd(m_1, \ldots, m_k) = 1$, it suffices to prove that there is no prime in $P$ that divides all $m_i \in M$. Suppose there is a prime $p_j \in P$ that divides $m_i \in M$ for all $1\leq i \leq k$. Then $p_j$ also divides $m_j$. But $m_j = p_j^{-r_j}m = p_j^{-r_j} \prod_{i=1}^k p_i^{r_i} $, that is, $m_j$ does not have $p_j$ in its prime factorization, which is absurd. It follows that $\gcd(m_1, \ldots, m_k) = 1$ \done
 
 \textsc{Exercise 16}. \emph{Let $a, b$ and $c$ be positive integers. Prove that $(ab, c)=1$ if and only if $(a,c) = (b,c) = 1$.}
 
-\textsc{Solution}.
+\textsc{Solution}. Suppose $(ab, c) = 1$. That is, there is no prime that divides $ab$ and $c$, which is essentially the same as saying there is no prime that divides $a$ and $c$, and there is no prime that divides $b$ and $c$. Consequently, $\gcd(a,c) = \gcd(b,c) = 1$. The other direction can be argued similarly. \done
 
 \textsc{Exercise 17}. \emph{Prove that if $6$ divides $m$, then there exist integers $b$ and $c$ such that $m=bc$ and $6$ divides neither $b$ nor $c$.}
 
@@ -417,7 +437,11 @@ We observe that $p^{v_p(m)+v_p(n)}$ but no higher power of $p$ divides $mn$. By 
 
 \textsc{Exercise 18}. \emph{Prove the following statement or construct a counterexample: If $d$ is composite and $d$ divides $m$, then there exists integers $b$ and $c$ such that $m=bc$ and $d$ divides neither $b$ nor $c$.}
 
-\textsc{Solution}.
+\textsc{Solution}. We shall provide a constructive proof. Let $d = \prod_{i=1}^k p_i^{r_i}$ be its prime factorization. Since $d$ divides $m$, it follows that $m = z \prod_{i=1}^k p_i^{r_i}$ for some integer $z\in \Z$. Since $d$ is composite, there are at least two primes that divide $d$ (the two primes may not be distinct). Let $p_j$ be some prime factor of $d$. We construct $b$ and $c$ as follows: 
+\begin{align*}
+b = z \frac{\prod_{i=1}^k p_i^{r_i}}{ p_j^{r_j}}, \hspace{1cm} c = p_j^{r_j},
+\end{align*}
+so that $m = bc$. If $z$ has no $p_j$ in its prime factorization, and $k>1$, then we are done (because, $d$ does not divide $b$ nor $c$). Suppose $z$ has $p_j$ in its prime factorization. Then we move $p_j^{v_{p_j}(z)}$ from $z$ in $b$ to $c$ (in other words, we are making sure that $d$ does not divide $b$). If $k=1$, a similar construction works (assuming each prime is distinct). In all the cases, $d$ does not divide $b$ nor $c$ but $m = bc$. The proposition follows. \done
 
 \textsc{Exercise 19}. \emph{Let $a$ and $b$ be positive integers. Prove that $(a,bc) = (a,b)(a,c)$ for every positive integer $c$ if and only if $(a,b)=1$.}
 
@@ -437,7 +461,7 @@ Exercises 1-4 can be solved using the sieve of Eratosthenes (although it might b
 
 \textsc{Exercise 5}. \emph{Let $a$ and $n$ be positive integers. Prove that $a^n-1$ is prime only if $a=2$ and $n=p$ is prime. Primes of the form $M_p = 2^p - 1$ are called Mersenne primes. Compute the first five Mersenne primes.}
 
-\textsc{Solution}.
+\textsc{Solution}. Suppose $a^n-1$ is prime. But $a^n-1 = (a-1)(a^{n-1} + a^{n-2} + \cdots + a + 1)$. So, $a-1 = 1$, that is, $a=2$. Suppose $n$ is composite. Let $n = hk$ for some $1 < h, k < n$. Then $a^{hk}-1 = (a^h-1)[(a^h)^{k-1} + (a^h)^{k-2} + \cdots + a^h + 1]$, that is, $a^h-1$ is composite which is absurd. Therefore, $n = p$ is prime. The first five Mersenne primes are $3$, $7$, $31$, $127$, and $8191$. \done
 
 \textsc{Exercise 6}. \emph{Let $k$ be a positive integer. Prove that if $2^k+1$ is prime, then $k= 2^n$. The integer 
 \begin{displaymath}
@@ -445,7 +469,7 @@ F_n = 2^{2^n} + 1
 \end{displaymath}
 is called the nth Fermat number. Primes of the form $2^{2^n}+1$ are called Fermat primes. Show that $F_n$ is prime for $n=1,2,3,4$.}
 
-\textsc{Solution}.
+\textsc{Solution}. We shall prove the proposition by proving its contrapositive. Suppose $k \ne 2^n$. Then $k$ has an odd prime $h>1$ as its factor. So, $k = lh$ for some $1\leq l < k$. A consequence of binomial theorem states that $a-b$ divides $a^m-b^m$ for any $a, b, m\in\Z, m>0$. Putting $a = 2^l, b = -1$, and $m = h$, we see that $2^l+1$ divides $2^{lh}+1$, that is, $2^k+1$ is composite. Therefore, $k$ must be a power of $2$. By computation, we obtain $F_1 = 5$, $F_2 = 17$, $F_3 = 257$, and $F_4 = 65537$. The first three Fermat numbers are obviously prime. To check that $65537$ is prime, we check that no prime less than $256$ (because $\sqrt{65537} \sim 256$) divides $65537$. \done
 
 \textsc{Exercise 7}. \emph{Prove that $F_5$ is divisible by $641$, and so $F_5$ is composite.}
 
@@ -596,12 +620,12 @@ Exercise 1 is a simple computation problem using the Euler totient function (may
 
 \textsc{Solution}. The congruence classes modulo $12$ may be represented as linear combinations of $3$ and $4$ as follows: 
 \begin{align*}
-  0 & \equiv 0\cdot 3 + 0\cdot 4 \mod 12 & 6 & \equiv 2\cdot 3 + 0\cdot 4 \mod 12 \\
-  1 & \equiv 3\cdot 3 + 1\cdot 4 \mod 12 & 7 & \equiv 1\cdot 3 + 1\cdot 4 \mod 12\\
-  2 & \equiv 3\cdot 3 + 2\cdot 4 \mod 12 & 8 & \equiv 0\cdot 3 + 2\cdot 4 \mod 12\\
-  3 & \equiv 1\cdot 3 + 0\cdot 4 \mod 12 & 9 & \equiv 3\cdot 3 + 0\cdot 4 \mod 12\\
-  4 & \equiv 0\cdot 3 + 1\cdot 4 \mod 12 & 10 & \equiv 2\cdot 3 + 1\cdot 4 \mod 12\\
-  5 & \equiv 3\cdot 3 + 2\cdot 4 \mod 12 & 11 & \equiv 1\cdot 3 + 2\cdot 4 \mod 12\\
+  0 & \equiv 0\cdot 3 + 0\cdot 4 \mod 12, & 6 & \equiv 2\cdot 3 + 0\cdot 4 \mod 12,\\
+  1 & \equiv 3\cdot 3 + 1\cdot 4 \mod 12, & 7 & \equiv 1\cdot 3 + 1\cdot 4 \mod 12,\\
+  2 & \equiv 3\cdot 3 + 2\cdot 4 \mod 12, & 8 & \equiv 0\cdot 3 + 2\cdot 4 \mod 12,\\
+  3 & \equiv 1\cdot 3 + 0\cdot 4 \mod 12, & 9 & \equiv 3\cdot 3 + 0\cdot 4 \mod 12,\\
+  4 & \equiv 0\cdot 3 + 1\cdot 4 \mod 12, & 10 & \equiv 2\cdot 3 + 1\cdot 4 \mod 12,\\
+  5 & \equiv 3\cdot 3 + 2\cdot 4 \mod 12, & 11 & \equiv 1\cdot 3 + 2\cdot 4 \mod 12. \done
 \end{align*}
 Exercise 3 is a simple verification.
 
@@ -766,7 +790,19 @@ e_k = 2\cdot 3^{k-1}.
 
 \textsc{Exercise 3}. \emph{Prove that $p$ divides the binomial coefficient $\binom{p}{i} $ for $i=1,2,\ldots, p-1$.}
 
-\textsc{Solution}.
+\textsc{Solution}. By definition 
+\begin{displaymath}
+\binom{p}{i} = \frac{p!}{i!(p-i)!}.
+\end{displaymath}
+
+Using the notation $v_p(m)$ to denote the exponent of the highest power of $p$ that divides $m$, 
+\begin{align*}
+  v_p(\binom{p}{i}) &= v_p(p!) - v_p(i!) - v_p((p-i)!) \\
+                    &= \sum_{j=1}^p v_p(j) - \sum_{j=1}^i v_p(j) - \sum_{j=1}^{p-i} v_p(j) \\
+                    &= v_p(p) + \sum_{j=1}^{p-1} v_p(j) - \sum_{j=1}^i v_p(j) - \sum_{j=1}^{p-i} v_p(j) \\
+                    &= 1,
+\end{align*}
+where we have used the facts that $v_p(p) = 1$, and $p$ does not occur in the prime factorization of any number less than $p$ and so, $v_p(m) = 0$ for all $m < p$. This is how all the summations vanish. Clearly, $p$ divides $\binom{p}{i}$. \done
 
 \textsc{Exercise 4}. \emph{Prove that if $g$ is a primitive root modulo $p^2$, then $g$ is a primitive root modulo $p^k$ for all $k\geq 2$.}
 
@@ -814,6 +850,18 @@ k^3 \equiv 1 \mod 19.
 It is checked that the solutions are $1+19\Z$, $7+19\Z$, and $11+19\Z$. These are the elements of $\ker(f)$. \done
 
 \textsc{Exercise 6}. \emph{Define the map $f: (\Z/23\Z)^{\times} \to (\Z/23\Z)^{\times}$ by $f(x+ 23\Z) = x^3 + 23\Z$. Prove that $f$ is an isomorphism of the multiplicative group $(\Z/23\Z)^{\times}$, that is, prove that $f$ is a homomorphism that is one-one and onto.}
+
+\textsc{Solution}. Homomorphism is proved in the same way as in Exercise $5$. Now, $(\Z/23\Z)^{\times} = \{1, \ldots, 22\}$. The following table completely describes the function (for brevity we drop ``modulo'' with an understanding that all quantities are modulo $23$).
+\begin{longtable}{p{6em} p{6em} p{6em} p{6em}}
+  $f(1) = 1$, & $f(7) = 21$, & $f(13) = 12$, & $f(19) = 5$,\\
+  $f(2) = 8$, & $f(8) = 6$, & $f(14) = 7$, & $f(20) = 19$,\\
+  $f(3) = 4$, & $f(9) = 16$, & $f(15) = 17$, & $f(21) = 15$,\\
+  $f(4) = 18$, & $f(10) = 11$, & $f(16) = 2$, & $f(22) = 22$,\\
+  $f(5) = 10$, & $f(11) = 20$, & $f(17) = 14$, & \\
+  $f(6) = 9$, & $f(12) = 3$, & $f(18) = 13$. & 
+\end{longtable}
+\reduce
+It is easily checked that $f$ is both one-one and onto. Therefore, $f$ is an isomorphism. \done
 
 \subsection{Quadratic Residues}
 
@@ -967,6 +1015,14 @@ That is, $-1$ is a quadratic nonresidue modulo $3$ and $7$. Then $-1$ cannot be 
 \begin{displaymath}
 \frac{m-1}{2} \equiv \frac{k(p-1)}{2} \mod 2.\done
 \end{displaymath}
+
+\textsc{Exercise 15}. \emph{Let $m$ be an odd positive integer with standard factorization $m = \prod_{i=1}^r p_i^{k_i}$. Prove that 
+\begin{displaymath}
+\frac{m-1}{2} \equiv \sum_{i=1}^r \frac{k_i(p_i-1)}{2} \mod 2.
+\end{displaymath}Prove that 
+\begin{displaymath}
+\left( \frac{-1}{m} \right) = (-1)^{(m-1)/2}.
+\end{displaymath}}\textsc{Solution}. We shall prove the proposition by induction on $r$. The base case of $r=1$ reduces to what we proved in Exercise $14$. Suppose the proposition holds for some $r-1\in \Z, r-1>1$.
 
 \subsection{Quadratic Residues to Composite Moduli}
 
