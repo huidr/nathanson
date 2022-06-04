@@ -1040,7 +1040,46 @@ That is, $-1$ is a quadratic nonresidue modulo $3$ and $7$. Then $-1$ cannot be 
   D^{(k)}(f)(x) &= D\left( D^{(k-1)}(f) \right) (x) \hspace{1cm} \text{for } k\geq 1.
 \end{align*}}The polynomial $D^{(k)}(f)$ is called the $k$th derivative of $f$. Prove that if $f(x)$ is a polynomial with integer coefficients, then $D^{(k)}(f)(x) = 0$ if and only if the degree of $f(x)$ is at most $k-1$.
 
-\textsc{Solution}. Let $f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$ be a polynomial of degree $n$ with $a_n \ne 0$, and $a_i \in \Z$ for all $0\leq i \leq n$. Then $D^{(1)}(f)(x) = a_nnx^{n-1} + a_{n-1}(n-1)x^{n-2} + \cdots + a_1$. Following this manner, we can write $D^{(k)}(f)(x) = a_nn(n-1)\cdots (n-k+1)x^{n-k} + a_{n-1}(n-1)(n-2)\cdots (n-k)x^{n-k-1} + \cdots + a_k$. Suppose $D^{(k)}(f)(x) = 0$. Since $a_n\ne 0$, and $x^i\ne 0$ for any $i\in \Z$, we must have $n(n-1)\cdots (n-k+1) = 0$, and so $n$ can be at most $n = k-1$. Conversely, suppose $n$ is at most $k-1$, that is $n \leq k-1$.
+\textsc{Solution}. Let $f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$ be a polynomial of degree $n$ with $a_n \ne 0$, and $a_i \in \Z$ for all $0\leq i \leq n$. Then $D^{(1)}(f)(x) = a_nnx^{n-1} + a_{n-1}(n-1)x^{n-2} + \cdots + a_1$. Following this manner, we can write $D^{(k)}(f)(x) = a_nn(n-1)\cdots (n-k+1)x^{n-k} + a_{n-1}(n-1)(n-2)\cdots (n-k)x^{n-k-1} + \cdots + a_k$. Suppose $D^{(k)}(f)(x) = 0$. Since $a_n\ne 0$, and $x^i\ne 0$ for any $i\in \Z$, we must have $n(n-1)\cdots (n-k+1) = 0$, and so $n$ can be at most $n = k-1$. Conversely, suppose $n$ is at most $k-1$, that is $n \leq k-1$. It is easy to see that $D^{(k)}(f)(x) = 0$ (equivalently, $D^{(k)}(f)(x)$ has no nonzero terms). \done
 
+\textsc{Exercise 4}. \emph{Let $f(x)$ and $g(x)$ be polynomials. Prove the Leibniz formula 
+\begin{displaymath}
+D(f\cdot g)(x) = f(x)\cdot D(g)(x) + D(f)(x)\cdot g(x).
+\end{displaymath}}\textsc{Solution}. Let $f(x) = \sum_{i=0}^m a_ix^i$ and $g(x) = \sum_{j=0}^{n}b_jx^j$ be any two polynomials with $a_m \ne 0$ and $b_n \ne 0$. To make the result as general as it can be, the coefficients $a_i, b_j$ are allowed to be from any ring $R$. Then the formal derivatives of $f$ and $g$ are given by 
+\begin{align*}
+  D(f)(x) &= a_mmx^{m-1} + a_{m-1}(m-1)x^{m-2} + \cdots + a_1, \\
+  D(g)(x) &= b_nnx^{n-1} + b_{n-1}(n-1)x^{n-2} + \cdots + b_1.
+\end{align*}
+Now, $f\cdot g = a_mb_nx^{m+n} + (a_mb_{n-1}+a_{m-1}b_n)x^{m+n-1} + \cdots + (a_1b_0+a_0b_1)x + a_0b_0$ so that 
+\begin{displaymath}
+  D(f\cdot g)(x) = a_mb_n(m+n)x^{m+n-1} + (a_mb_{n-1}+a_{m-1}b_n)(m+n-1)x^{m+n-2} + \cdots + (a_1b_0 + a_0b_1).
+\end{displaymath}
+It becomes a simple computational endeavor to check that $f(x)\cdot D(g)(x) + D(f)(x)\cdot g(x)$ indeed equals the above expansion of $D(f\cdot g)(x)$. \done
+
+\textsc{Exercise 5}. \emph{Let $f(x)$ be a polynomial of degree $n$. Prove Taylor's formula 
+\begin{displaymath}
+f(x+h) = \sum_{k=0}^n \frac{D^{(k)}(f)(x)}{k!} h^k.
+\end{displaymath}}\textsc{Solution}. Let $f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 = \sum_{k=0}^n a_kx^k$ so that $f(x+h) = a_n(x+h)^n + a_{n-1}(x+h)^{n-1} + \cdots + a_0 = \sum_{k=0}^n a_k(x+h)^k$. We want to prove that 
+\begin{displaymath}
+f(x+h) = f(x) + f^{\prime}(x)h + \frac{f^{\prime\prime}(x)}{2!}h^2 + \cdots + \frac{f^{(n)}(x)}{n!}h^n,
+\end{displaymath}
+where we have used the familiar symbols borrowed from calculus, thereby keeping in mind that these (formal) derivatives are different from the ones we encounter in calculus where they are defined in terms of limits. We can write 
+\begin{align*}
+f^{(k)}(x) = \left[\binom{n}{k} a_nx^{n-k} + \binom{n-1}{k}a_{n-1} x^{n-k-1} + \cdots + \binom{k}{k}a_k \right]k!.
+\end{align*}
+Simply expanding the binomial coefficients yield the form of derivatives we are familiar with. By binomial theorem, we obtain
+\begin{align*}
+  f(x+h) &= a_n(x+h)^n + a_{n-1}(x+h)^{n-1} + a_{n-2}(x+h)^{n-2} + \cdots + a_1(x+h) + a_0 \\
+         &= \left[ a_0x^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 \right] + \\
+         &\hspace{4.5mm} \left[n a_nx^{n-1} + (n-1)a_{n-1}x^{n-2} + \cdots + a_1 \right] h + \\
+         &\hspace{4.5mm} \left[ \binom{n}{2}a_nx^{n-2} + \binom{n}{2} a_{n-1}x^{n-3} + \cdots + \binom{n}{2} a_2  \right] h^2 + \\
+         &\hspace{5mm} \cdots \\
+         &\hspace{5mm} \cdots \\
+         &\hspace{4.5mm} \left[ \binom{n}{n-1}a_nx \right] h^{n-1} + \\
+         &\hspace{4.5mm} \left[\binom{n}{n}a_n\right]h^n \\
+         &= f(x) + f^{\prime}(x)h + \frac{f^{\prime\prime}(x)}{2!}h^2 + \cdots + \frac{f^n(x)}{n!} h^n \\
+  &= \sum_{k=0}^n \frac{D^{(k)}(f)(x)}{n!}h^k,
+\end{align*}
+where, in the final step, we get rid of the borrowed symbols. \done
 
 \end{document}
