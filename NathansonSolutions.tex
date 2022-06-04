@@ -747,6 +747,35 @@ Exercise 3 is solved similarly.
 
 \textsc{Solution}. On multiplying the congruence by itself, we have $a^{2^{n+1}} \equiv 1 \mod p$. We observe that $2^{n+1}$ has only $2$ as its prime factor. It is easy to see that there is no $k$ with $1\leq k < 2^{n+1}$ such that $a^k \equiv 1 \mod p$. Therefore, $a$ has order $2^{n+1}\mod p$. \done
 
+\subsection{Pseudoprimes and Carmichael Numbers}
+
+\textsc{Exercise 1}. \emph{Prove that $589$ is composite by computing the least nonnegative residue of $2^{588} \mod 589$.}
+
+\textsc{Solution}. We observe that $588 = 7\cdot 7 \cdot 12$ so that 
+\begin{align*}
+  2^{588} &\equiv 2^7\cdot 2^7 \cdot 2^{12} \mod 589 \\
+          &\equiv 128 \cdot 128 \cdot 562 \mod 589 \\
+          &\equiv 0 \mod 589.
+\end{align*}
+Therefore, $589$ is composite. \done
+
+\textsc{Exercise 2}. \emph{Let $n$ be an odd integer, $n\geq 3$. Prove that there exists a nonnegative integer $u$ such that $n+u^2 = (u+1)^2$. Prove that $n$ is composite if and only if there exist nonnegative integers $u$ and $v$ such that $v > u + 1$ and $n+u^2 = v^2$. Use this method to factor $589$.}
+
+\textsc{Solution}.
+
+\textsc{Exercise 3}. \emph{Prove that $645$ is a pseudoprime to base $2$.}
+
+\textsc{Solution}. We see that $2^{12}\equiv 226 \mod 645$ so that $2^{25} \equiv 2\cdot (2^{12})^2 \equiv 242 \mod 645$. Now,
+\begin{align*}
+  2^{50} \equiv (2^{25})^2 \equiv 514 \mod 645, \\
+  2^{100} \equiv (2^{50})^2 \equiv  391 \mod 645, \\
+  2^{200} \equiv (2^{100})^2 \equiv 16 \mod 645, \\
+  2^{600} \equiv 2^{200}\cdot 2^{200} \cdot 2^{200} \equiv 226 \mod 645.
+\end{align*}
+Therefore, $2^{644} \equiv 2^{600} \cdot 2^{25} \cdot 2^{12} \cdot 2^7 \equiv 1 \mod 645$. So, $645$ is a pseudoprime to base $2$. \done
+
+\textsc{Exercise 4}. \emph{}
+
 \section{Primitive Roots and Quadratic Reciprocity}
 
 \subsection{Polynomials and Primitive Roots}
