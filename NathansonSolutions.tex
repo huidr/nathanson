@@ -1026,4 +1026,21 @@ That is, $-1$ is a quadratic nonresidue modulo $3$ and $7$. Then $-1$ cannot be 
 
 \subsection{Quadratic Residues to Composite Moduli}
 
+\textsc{Exercise 1}. \emph{Let $x_1 = 3$. Construct integers $x_k$ such that $x_k^2 \equiv 2 \mod 7^k$ and $x_k \equiv x_{k-1} \mod 7^{k-1}$ for $k=2,3,4$.}
+
+\textsc{Solution}. Let $f(x) = x^2-2$. Then $f^{\prime}(x) = 2x$. We see that $f(x_1) \equiv 0 \mod 7$ and $f^{\prime}(x_1) \not\equiv 0 \mod 7$. By Hensel's lemma, there exists $x_k$ for all $k\geq 2$ such that $x_k^2 \equiv 2 \mod 7^k$ and $x_k \equiv x_{k-1} \mod 7^{k-1}$. When $k=2$, we must have $x_2^2 \equiv 2 \mod 49$ and $x_2 \equiv 3 \mod 7$. It can be checked that $x_2=10$ satisfies the equations. When $k=3$, we must have $x_3^2 \equiv 2 \mod 343$ and $x_3 \equiv 10 \mod 49$. It can be checked that $x_3 = 108$ satisfies the equations. When $k=4$, we must have $x_4^2 \equiv 2\mod 2401$ and $x_4 \equiv 108 \mod 343$. It can be checked that $x_4 = 2166$ satisfies the given equations. \done
+
+\textsc{Exercise 2}. \emph{Let $p$ be a prime, $p\ne 3$, and let $a$ be an integer not divisible by $p$. Prove that if $a$ is a cubic residue modulo $p$, then $a$ is a cubic residue modulo $p^k$ for every $k \geq 1$.}
+
+\textsc{Solution}. Let $f(x) = x^3 - a$. Then $f^{\prime}(x) = 3x^2$. If $a$ is a cubic residue of $p$, there exists an integer $x_1$ such that $x_1 \not \equiv 0 \mod p$ and $x_1^3 \equiv a \mod p$. Then $x_1^2 \not\equiv 0 \mod p$ (since $p$ is a prime), so that $f^{\prime}(x_1) \not\equiv 0 \mod p$. By Hensel's lemma, there exists $x_k \in \Z$ such that $f(x_k) \equiv 0 \mod p^k$. Therefore, $a$ is a cubic residue modulo $p^k$ for every $k\geq 1$. \done
+
+\textsc{Exercise 3}. \emph{Denote the derivative of the polynomial $f(x)$ by $D(f)(x) = f^{\prime}(x)$. We define 
+\begin{align*}
+  D^{(0)}(f)(x) &= f(x), \\
+  D^{(k)}(f)(x) &= D\left( D^{(k-1)}(f) \right) (x) \hspace{1cm} \text{for } k\geq 1.
+\end{align*}}The polynomial $D^{(k)}(f)$ is called the $k$th derivative of $f$. Prove that if $f(x)$ is a polynomial with integer coefficients, then $D^{(k)}(f)(x) = 0$ if and only if the degree of $f(x)$ is at most $k-1$.
+
+\textsc{Solution}. Let $f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$ be a polynomial of degree $n$ with $a_n \ne 0$, and $a_i \in \Z$ for all $0\leq i \leq n$. Then $D^{(1)}(f)(x) = a_nnx^{n-1} + a_{n-1}(n-1)x^{n-2} + \cdots + a_1$. Following this manner, we can write $D^{(k)}(f)(x) = a_nn(n-1)\cdots (n-k+1)x^{n-k} + a_{n-1}(n-1)(n-2)\cdots (n-k)x^{n-k-1} + \cdots + a_k$. Suppose $D^{(k)}(f)(x) = 0$. Since $a_n\ne 0$, and $x^i\ne 0$ for any $i\in \Z$, we must have $n(n-1)\cdots (n-k+1) = 0$, and so $n$ can be at most $n = k-1$. Conversely, suppose $n$ is at most $k-1$, that is $n \leq k-1$.
+
+
 \end{document}
