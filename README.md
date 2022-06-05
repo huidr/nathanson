@@ -2,7 +2,7 @@
 
 I am working on this repo in my free time. Please reach out to me if you notice any errors. There are a few incomplete solutions as well. I will keep adding more solutions or correcting errors.
 
-The PDF file is [here](https://github.com/ronhuidrom/nathanson-number-theory-solutions/blob/main/NathansonSolutions.pdf).
+The PDF file is [here](https://ronhuidrom.github.io/nathanson-number-theory-solutions/NathansonSolutions.pdf).
 
 ### Usage
 
