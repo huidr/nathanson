@@ -6,7 +6,7 @@ The PDF file is [here](https://github.com/ronhuidrom/nathanson-number-theory-sol
 
 ### Usage
 
-This manual is best used with its parent text ("Elementary Methods in Number Theory" by Melvyn B. Nathanson).  and in some cases, they look more like hints rather than solutions themselves.
+This manual is best used with its parent text ("Elementary Methods in Number Theory" by Melvyn B. Nathanson).  In some exercises, they may look more like hints rather than solutions themselves.
 
 ### History
 
