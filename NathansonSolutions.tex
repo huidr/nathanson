@@ -612,7 +612,7 @@ for each prime $p$ appearing in the factorization of $[a_1, \ldots, a_k]$, which
 
 \textsc{Exercise 36}. \emph{Let $H = \{1, 5, 9, \ldots,\}$ be the arithmetic progression of all positive integers of the form $4k + 1$. Elements of $H$ are called Hilbert numbers. Show that $H$ is closed under multiplication, that is, $x, y \in H$ implies $xy \in H$. An element $x$ of $H$ will be called a Hilbert prime if $x\ne 1$ and $x$ cannot be written as the product of two strictly smaller elements of $H$. Compute all the Hilbert primes up to $100$. Prove that every element of $H$ can be factored into a product of Hilbert primes, but that unique factorization does not hold in $H$.}
 
-\textsc{Solution}. Let $a = 4k + 1$ and $b = 4h + 1$ be any two elements of $H$. Then $ab = (4k + 1)(4h + 1) = 4(4kh + k + h) + 1$ is in $H$ and so, $H$ is closed under multiplication. By computation, all the Hilbert primes less than $100$ are $5$, $9$, $13$, $17$, $21$, $29$, $33$, $37$, $41$, $49$, $53$, $57$, $61$, $69$, $73$, $77$, $81$, $89$, $93$, and $97$. In computing these numbers, we use prime factorization to see if the number can be factored into Hilbert numbers. We shall use induction to prove that every Hilbert number can be factored into a product of Hilbert primes. Let $P(n)$ be the statement that every positive number of the form $4n + 1$ with $n \in \Z, n \geq 0$ can be factored into numbers of the same form. The base cases of $n = 0, 1$ are checked. Suppose $P(n)$ is true for all $n < k$. We shall prove that $P(n)$ is true for $n=k$ as well. If $4k + 1$ is not divisible any 
+\textsc{Solution}. Let $a = 4k + 1$ and $b = 4h + 1$ be any two elements of $H$. Then $ab = (4k + 1)(4h + 1) = 4(4kh + k + h) + 1$ is in $H$ and so, $H$ is closed under multiplication. By computation, all the Hilbert primes less than $100$ are $5$, $9$, $13$, $17$, $21$, $29$, $33$, $37$, $41$, $49$, $53$, $57$, $61$, $69$, $73$, $77$, $81$, $89$, $93$, and $97$. In computing these numbers, we use prime factorization to see if the number can be factored into Hilbert numbers. From the definition of Hilbert prime given in the question, proving that every element of $H$ can be factored into a product of Hilbert primes is rather very simple. If a Hilbert number (say $a$) can be factored into a product of Hilbert primes, then we are done. Otherwise, $a$ is a Hilbert prime and hence we have obtained its factorization. This factorization is not unique. For example, $441 = 9 \cdot 49 = 21 \cdot 21$. \done
 
 \subsection{Euclid's Theorem and the Sieve of Erastosthenes}
 
@@ -658,8 +658,9 @@ has a solution in integers for every integer $b$, and a solution in nonnegative 
 \end{displaymath}}\textsc{Solution}. The following are all the combinations of $(x_1, x_2)$ that satisfy the equation: 
 \begin{align*}
   2 \cdot 23 + 7 \cdot 1 = 53, \hspace{1cm} & 2 \cdot 9 + 7 \cdot 5 = 53,\\
-  2 \cdot 16 + 7 \cdot 3 = 53, \hspace{1cm} & 2 \cdot 2 + 7 \cdot 7 = 53. \done
+  2 \cdot 16 + 7 \cdot 3 = 53, \hspace{1cm} & 2 \cdot 2 + 7 \cdot 7 = 53.
 \end{align*}
+\done
 
 Exercise $3$ may be solved similarly.
 
@@ -706,11 +707,58 @@ x_1 = \frac{7}{3}k - 20; \hspace{1cm} x_2 = 124 - \frac{14}{5}k.
 \end{displaymath}
 Since we are interested only in nonnegative integer solutions, we look into the cases where $k$ is divisible by both $3$ and $5$ such that $x_1$ and $x_2$ are both nonnegative. It is easy to see that the only solution is $(15, 82, 15)$. \done
 
+\textsc{Exercise 10}. \emph{Find all solutions of the Ramanujan-Nagell diophantine equation 
+\begin{displaymath}
+x^2 + 7 = 2^n
+\end{displaymath}
+with $x \leq 1000$.}
+
+\textsc{Solution}. We observe that $1000^2 = 1000000$, and $2^{20}  = 1048576$. Thus, we need only check for $n < 20$. Since powers of $2$ are even, $x^2 + 7$ must be even, that is, $x^2$ must be odd. It follows that $x$ must be odd. Clearly it has no solutions when $n < 3$. We look at the values $\sqrt{2^n - 7}$ for each $3 \leq n \leq 19$ and see if it evaluates to an odd integer. We shall write a solution in the form $(x,n)$. An obvious solution is $(1,3)$. Other solutions are $(3,4)$, $(5,5)$, $(11,7)$, and $(181, 15)$. It is checked that these are all the possible solutions. \done
+
+\textsc{Exercise 11}. \emph{Find all solutions of the Ljunggren diophantine equation 
+\begin{displaymath}
+x^2 - 2y^4 = -1
+\end{displaymath}
+with $x \leq 1000$.}
+
+\textsc{Solution}. We can re-write the equation as $x^2 + 1 = 2y^4$. We observe that $1000^2 = 1000000$ and $27^4 = 531441$. Thus, we need only check for $n < 27$. As in Exercise $10$, we shall write a solution in the form $(x,y)$. An obvious solution is $(1,1)$. It is checked that the only other solution is $(239, 13)$. \done
+
 \section{Congruences}
 
 \subsection{The Ring of Congruence Classes}
 
-Exercises 1-4 are simple computations of modulo arithmetic. Exercise 5 is a special case of Exercise 6, which we will now solve.
+\textsc{Exercise 1}. \emph{Compute the least nonnegative residue of $10^k + 1$ modulo $13$ for $k = 1, 2, 3, 4$.}
+
+\textsc{Solution}. We compute 
+\begin{align*}
+  10^1+1 \equiv 10 \mod 13, \hspace{1cm} &10^3+1 \equiv 12 \mod 13,\\
+  10^2+1 \equiv 9 \mod 13, \hspace{1cm} &10^4+1 \equiv 3 \mod 13.
+\end{align*}
+We simply computed the remainders on division by $13$. \done
+
+\textsc{Exercise 2}. \emph{Compute the least nonnegative residue of $5^{22}$ modulo $23$.}
+
+\textsc{Solution}. We observe that $23$ is a prime. Therefore, Fermat's theorem, $5^{22} \equiv 1 \mod 23$. \done
+
+\textsc{Exercise 3}. \emph{Construct the multiplication table for the ring $\Z/5\Z$.}
+
+\textsc{Solution}. We see that $\Z/5\Z = \{ 0, 1, 2, 3, 4\}$. To construct the multiplication table, we compute all the products $a\cdot b$ for $a, b \in \Z/5\Z$.
+\begin{longtable}{p{2em} p{2em} p{2em} p{2em} p{2em} p{2em}}
+  $\times$ & $0$ & $1$ & $2$ & $3$ & $4$ \\
+  $0$      & $0$ & $0$ & $0$ & $0$ & $0$ \\
+  $1$      & $0$ & $1$ & $2$ & $3$ & $4$ \\
+  $2$      & $0$ & $2$ & $4$ & $1$ & $3$ \\
+  $3$      & $0$ & $3$ & $1$ & $4$ & $2$ \\
+  $4$      & $0$ & $4$ & $3$ & $2$ & $1$
+\end{longtable}
+\reduce
+\done
+
+\textsc{Exercise 4}. \emph{Construct the multiplication table for the ring $\Z/6\Z$.}
+
+\textsc{Solution}. We see that $\Z/6\Z = \{ 0, 1, 2, 3, 4, 5 \}$. As in Exercise $3$, we compute all products $a \cdot b$ for $a, b \in \Z/6\Z$. \done
+
+Exercise 5 is a special case of Exercise 6, which we will now solve.
 
 \textsc{Exercise 6}. \emph{Let $m$ be an odd positive integer. Prove that every integer is congruent modulo $m$ to one of the even integers $0$, $2$, $4$, $6$, $\ldots$, $2m-2$.}
 
@@ -758,6 +806,78 @@ maps every integer to its congruent modulo $2q$ in the set $Y$. The uniqueness f
 \textsc{Solution}. It suffices to prove that $a^4-1$, that is, $(a^2+1)(a+1)(a-1)$ is divisible by $5$. If either $a+1$ or $a-1$ is divisible by $5$ then we are done. Excluding these cases, $a$ can only be one of the forms: $5k+2$ or $5k+3$ for some $k\in\Z$. Suppose $a=5k+2$. Then (by expansion or using binomial theorem) $a^4-1 = 5^4a^4 + 4\cdot 5^3a^3 \cdot 2 + 6\cdot 5^2a^2\cdot 2^2 + 4\cdot 5a\cdot 2^3 + 15$, which is divisible by $5$. The other case of $a$ of the form $5k+3$ is proved similarly. \done
 
 Exercise 12 is exactly the same as Exercise 9 of 1.1.
+
+\textsc{Exercise 13}. \emph{Let $d$ be a positive integer that is a common divisor of $a$, $b$, and $m$. Prove that 
+\begin{displaymath}
+a \equiv b \mod m
+\end{displaymath} if and only if 
+\begin{displaymath}
+\frac{a}{d} \equiv \frac{b}{d} \mod \frac{m}{d}.
+\end{displaymath}}
+
+\textsc{Solution}. Suppose $a \equiv b \mod m$. That is, $m$ divides $a-b$. Or rather, $(a-b)/m$ is an integer. Then $\frac{(a-b)/d}{m/d}$ is also an integer. That is, $m/d$ divides $(a-b)/d$. Or rather, 
+\begin{displaymath}
+\frac{a}{d} \equiv \frac{b}{d} \mod \frac{m}{d}.
+\end{displaymath}
+The converse can be checked similarly. \done
+
+\textsc{Exercise 15}. \emph{Prove that $a_1 \equiv a_2 \mod m$ implies $a_1^k \equiv a_2^k \mod m$ for all $k \geq 1$. Prove that if $f(x)$ is a polynomial with integer coefficients and $a_1 \equiv a_2 \mod m$, then $f(a_1) \equiv f(a_2) \mod m$.}
+
+\textsc{Solution}. Suppose $a_1 \equiv a_2 \mod m$. That is, $m$ divides $a_1 - a_2$. But then $a_1^k - a_2^k = (a_1 - a_2)(a_1^{k-1} + a_1^{k-2}a_2 + \cdots + a_1a_2^{k-2} + a_2^{k-1})$, and so $a_1 - a_2$ divides $a_1^k - a_2^k$. It follows that $m$ divides $a_1^k - a_2^k$. Therefore, $a_1^k \equiv a_2^k \mod m$ for all $k\geq 1$. We observe that $a_1 \equiv a_2 \mod m$ also implies $ca_1 \equiv ca_2 \mod m$ for any integer $c$. Also, $a_1 \equiv a_2 \mod m$ and $a_3 \equiv a_4 \mod m$ implies $a_1 + a_3 \equiv a_2 + a_4 \mod m$. Indeed, when we think of it in terms of divisibility by $m$, it becomes trivial. Let $f(x) = c_nx^n + c_{n-1}x^{n-1} + \cdots + c_1x + c_0$ where $c_i \in \Z$ for $0 \leq i \leq n$. Since $a_2 \equiv a_2 \mod m$, by the implications we have derived above, $f(a_1) \equiv f(a_2) \mod m$. \done
+
+\textsc{Exercise 16}. \emph{(A criterion for divisibility by $9$). Prove that a positive integer $n$ is divisible by $9$ if and only if the sum of its decimal digits is divisible by $9$. (For example, the sum of the decimal digits of $567$ is $5+6+7 = 18$.)}
+
+\textsc{Solution}. Since $a^m - b^m = (a-b)(a^{m-1} + a^{m-2}b + \cdots + ab^{m-2} + b^{m-1})$ for a positive integer $m$ so that $a - b$ divides $a^m - b^m$. Substituting $a = 10$, and $b = 1$, it follows that $9$ divides $10^m-1$. In other words, $10^m \equiv 1 \mod 9$. Let $x$ be any decimal number (base 10). Suppose $x = a_ka_{k-1}\cdots a_1a_0$ where $a_0, a_1, \ldots, a_k$ are its decimal digits. Then it has a unique $10$-acidic representation of the following form 
+\begin{displaymath}
+x = a_0 + a_1\cdot 10 + a_2 \cdot 10^2 + \cdots + a_k \cdot 10^k.
+\end{displaymath}
+This is simply the representation which are used to. Since $10^i \equiv 1 \mod 9$, it follows that $a_i \cdot 10^i \equiv a_i \mod 9$. Summing this congruence over $0\leq i \leq k$, we obtain 
+\begin{displaymath}
+x \equiv \sum_{i=0}^k a_i\cdot 10^i \equiv \sum_{i=0}^k a_i \mod 9.
+\end{displaymath}
+Therefore, $x \equiv 0 \mod 9$ if and only if $\sum_{i=0}^k a_i \equiv 0 \mod 9$. In other words, a decimal number is divisible by $9$ if and only if the sum of its digits is divisible by $9$. \done
+
+\textsc{Exercise 17}. \emph{(A criterion for divisibility by $11$.) Prove that a positive integer $n$ is divisible by $11$ if and only if the alternating sum of its decimal digits is divisible by $11$. (For example, the alternating sum of the decimal digits of $80,729$ is $-9 + 2 -7 + 0 -8 = -22$.)}
+
+\textsc{Solution}.
+
+\textsc{Exercise 18}. \emph{Prove that if $x_1, \ldots, x_m$ is a sequence of $m$ not necessarily distinct integers, then there is a subsequence of consecutive terms whose sum is divisible by $m$, that is, there exists integers $1 \leq k \leq l \leq m$ such that 
+\begin{displaymath}
+\sum_{i=k}^l x_i \equiv 0 \mod m.
+\end{displaymath}}\textsc{Solution}. We consider the $m+1$ integers $0, x_1, x_1+x_2, x_1+x_2+x_3, \ldots, x_1+x_2+\cdots + x_m$. We shall represent them as $s_i$ where $0 \leq i \leq m$ (because $s$ reminds us of sum!). There are $m+1$ such sums $(s_i)$ while there are only $m$ numbers in the complete set of residues modulo $m$. By pigeonhole principle, there are two sums $s_i$ and $s_j$ (say) such that $s_i \equiv s_j \mod m$. Without loss of generality, we assume that $i < j$. Then $s_j - s_i \equiv 0 \mod m$. That is, 
+\begin{displaymath}
+x_{i+1} + x_{i+2} + \cdots + s_j \equiv 0 \mod m.
+\end{displaymath}
+The proposition follows. \done
+
+\textsc{Exercise 19}. \emph{Let $m \geq 2$ and let $d$ be a positive divisor of $m-1$. Let $n = a_0 + a_1m + \cdots + a_km^k$ be the $m$-acidic representation of $n$. Prove that $n \equiv 0 \mod d$ if and only if $a_0 + a_1 + \cdots + a_k \equiv 0 \mod d$.}
+
+\textsc{Solution}. Since $d$ divides $m-1$, we conclude that $d$ also divides $m^k-1$ for any nonnegative integer $k$ (because $m-1$ divides $m^k-1$, see Exercise $16$), and so $m^k \equiv 1 \mod d$. By a result of Exercise $15$, 
+\begin{displaymath}
+n \equiv \sum_{i=0}^k a_im^i \equiv \sum_{i=0}^k a_i \mod d,
+\end{displaymath}
+so that $n \equiv 0 \mod d$ if and only if $a_0 + a_1 + \cdots + a_k \equiv 0 \mod d$. \done
+
+\textsc{Exercise 20}. \emph{Prove that every integer belongs to at least one of the following $6$ congruence classes: 
+\begin{align*}
+  0 &\mod 2 \\
+  0 &\mod 3 \\
+  1 &\mod 4 \\
+  3 &\mod 8 \\
+  7 &\mod 12 \\
+  23 &\mod 24.
+\end{align*}}\textsc{Solution}. Let $n$ be any integer. Then $n$ is of the form $24k + a$ where $0 \leq a \leq 23$. Indeed, $a$ is simply the remainder on division of $n$ by $24$. We shall prove that any $24k + a$ with $0 \leq a \leq 23$ can be reduced to one of the forms (or congruence classes) given in the question. All even numbers, that is, numbers of the form $24k + a$ where $a$ is even is equivalent to $2k$ or they belong to the congruence class ($0 \mod 2$). Similarly, numbers of the form $24k + a$ where $a$ is a multiple of $3$ is equivalent to $3k$ or they belong to the congruence class ($0 \mod 3$). We are left with only the forms $24k + a$ where $a$ is neither even nor multiple of $3$. The form $24k + 1$ is equivalent to $4(6k)+1$, and so it belongs to the congruence class ($1 \mod 4$). The form $24k+ 3$ is equivalent to $8(3k) + 3$, and so it belongs to the congruence class ($3 \mod 8$). The form $24k + 5$ is equivalent to $4(6k+1) + 1$, and so it belongs to the congruence class ($1 \mod 4$). The form $24k + 7$ is equivalent to $12(2k) + 7$, and so it belongs to the congruence class ($7 \mod 12$). The form $24k + 11$ is equivalent to $8(3k + 1) + 3$, and so it belongs to the congruence class ($3 \mod 8$). The form $24k + 13$ is equivalent to $4(6k + 3) + 1$, and so it belongs to the congruence class ($1 \mod 4$). The form $24k + 17$ is equivalent to $4(6k + 4) + 1$, and so it belongs to the congruence class ($1 \mod 4$). The form $24k + 19$ is equivalent to $8(3k + 2) + 3$, and so it belongs to the congruence class ($3 \mod 8$). And then we have the form $24k + 23$ in the congruence class ($23 \mod 24$). \done
+
+\textsc{Exercise 23}. \emph{Let $G$ be the subset of $M_2(\C)$ consisting of the four matrices 
+\begin{displaymath}
+  \begin{pmatrix} 1 & 0 \\ 0 & 1 \end{pmatrix},
+  \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix},
+  \begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix},
+  \begin{pmatrix} 0 & 1 \\ -1 & 0 \end{pmatrix}.
+\end{displaymath}
+Prove that $G$ is a multiplicative group isomorphic to the additive group of congruence classes $\Z/4\Z$.}
+
+\textsc{Solution}. 
 
 \subsection{Linear Congruences}
 
