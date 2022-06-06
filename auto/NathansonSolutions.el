@@ -22,6 +22,10 @@
     "geometry"
     "longtable")
    (TeX-add-symbols
-    "done"))
+    "done")
+   (LaTeX-add-labels
+    "item:4"
+    "item:5"
+    "item:6"))
  :latex)
 

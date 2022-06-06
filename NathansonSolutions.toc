@@ -1,21 +1,22 @@
 \contentsline {section}{\numberline {1}Divisibility and Primes}{4}{section.1}%
 \contentsline {subsection}{\numberline {1.1}Division Algorithm}{4}{subsection.1.1}%
-\contentsline {subsection}{\numberline {1.2}Greatest Common Divisors}{5}{subsection.1.2}%
-\contentsline {subsection}{\numberline {1.3}The Euclidean Algorithm and Continued Fractions}{8}{subsection.1.3}%
-\contentsline {subsection}{\numberline {1.4}The Fundamental Theorem of Arithmetic}{13}{subsection.1.4}%
-\contentsline {subsection}{\numberline {1.5}Euclid's Theorem and the Sieve of Erastosthenes}{16}{subsection.1.5}%
-\contentsline {subsection}{\numberline {1.6}A Linear Diophantine Equation}{17}{subsection.1.6}%
-\contentsline {section}{\numberline {2}Congruences}{19}{section.2}%
-\contentsline {subsection}{\numberline {2.1}The Ring of Congruence Classes}{19}{subsection.2.1}%
-\contentsline {subsection}{\numberline {2.2}Linear Congruences}{20}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}The Euler Phi Function}{20}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Chinese Remainder Theorem}{21}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Euler's Theorem and Fermat's Theorem}{23}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Pseudoprimes and Carmichael Numbers}{23}{subsection.2.6}%
-\contentsline {section}{\numberline {3}Primitive Roots and Quadratic Reciprocity}{24}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Polynomials and Primitive Roots}{24}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Primitive Roots to Composite Moduli}{25}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Power Residues}{26}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Quadratic Residues}{27}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Quadratic Reciprocity Law}{28}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Quadratic Residues to Composite Moduli}{31}{subsection.3.6}%
+\contentsline {subsection}{\numberline {1.2}Greatest Common Divisors}{7}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}The Euclidean Algorithm and Continued Fractions}{10}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}The Fundamental Theorem of Arithmetic}{15}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Euclid's Theorem and the Sieve of Erastosthenes}{22}{subsection.1.5}%
+\contentsline {subsection}{\numberline {1.6}A Linear Diophantine Equation}{23}{subsection.1.6}%
+\contentsline {section}{\numberline {2}Congruences}{24}{section.2}%
+\contentsline {subsection}{\numberline {2.1}The Ring of Congruence Classes}{24}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Linear Congruences}{25}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}The Euler Phi Function}{26}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Chinese Remainder Theorem}{27}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Euler's Theorem and Fermat's Theorem}{28}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Pseudoprimes and Carmichael Numbers}{29}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Public Key Cryptography}{30}{subsection.2.7}%
+\contentsline {section}{\numberline {3}Primitive Roots and Quadratic Reciprocity}{31}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Polynomials and Primitive Roots}{31}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Primitive Roots to Composite Moduli}{32}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Power Residues}{33}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Quadratic Residues}{34}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Quadratic Reciprocity Law}{35}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Quadratic Residues to Composite Moduli}{38}{subsection.3.6}%

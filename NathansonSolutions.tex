@@ -4,7 +4,7 @@
 \usepackage[margin=3cm]{geometry}
 \setlength{\parskip}{8pt}
 \setlength{\parindent}{0pt}
-\newcommand{\done}{\ensuremath{\blacksquare}}
+\newcommand{\done}{\ensuremath{\hfill\square}}
 \usepackage{longtable}
 
 \begin{document}
@@ -55,7 +55,7 @@ The latest version of this text can be found at \hyperref{https://github.com/ron
 
 \subsection{Division Algorithm}
 
-Exercises 1-5 are straightforward. Exercise 6-7 is easily solved using a method generalized from the method of converting decimal numbers to binary numbers. Exercise 8 is again straightforward if we put $n=2k$.
+Exercises 1-5 are straightforward (use prime factorization and division algorithm). Exercise 6-7 is easily solved using a method generalized from the method of converting decimal numbers to binary numbers. Exercise 8 is again straightforward if we put $n=2k$.
 
 \textsc{Exercise 9}. \emph{Prove that $n$ is odd, then $n^2-1$ is divisible by $8$.}
 
@@ -107,11 +107,52 @@ n = a_k m_k + r, \hspace{1cm} \text{where } 0\leq r \leq m_k.
 \end{displaymath}
 The remainder of the proof resembles the proof of unique $m$-acidic representation of an integer $n$ given in the textbook. \done
 
-Exercise 23-24 follow trivially from Exercise 22. Exercise 25-26 are simple applications of well-ordering of natural numbers. 
+\textsc{Exercise 23}. \emph{Prove that every positive integer $n$ can be represented uniquely in the form 
+\begin{displaymath}
+n = \sum_{k=0}^{\infty} a_kk!
+\end{displaymath}
+where $0\leq a_k \leq k$.}
+
+\textsc{Solution}. We observe that $1!, 2!, 3!, \ldots$ is a strictly increasing sequence of positive integers satisfying the conditions of Exercise $22$ and so, it reduces to Exercise $22$. \done
+
+\textsc{Exercise 24}. \emph{Prove that every positive integer $n$ can be uniquely represented in the form 
+\begin{displaymath}
+n = b_0 + b_13 + b_23^2 + \cdots + b_{k-1}3^{k-1} + 3^k,
+\end{displaymath}where $b_i \in \{0, 1, -1\}$ for $i = 0,1,2,\ldots, k-1$.}
+
+\textsc{Solution}. We observe that $1,3,3^2,\ldots$ is a strictly increasing sequence of positive integers satisfying the conditions of Exercise $22$ and so, it reduces to Exercise $22$. \done
+
+\textsc{Exercise 25}. \emph{Let $\N^k$ denote the set of all $k$-tuples of positive integers. We define the lexicographic order on $\N^k$ as follows: For $(a_1, \ldots, a_k), (b_1, \ldots, b_k) \in \N^k$, we write 
+\begin{displaymath}
+(a_1, \ldots, a_k) \preceq (b_1, \ldots, b_k) 
+\end{displaymath} if either $a_i = b_i$ for all $i=1,\ldots, k$, or there exists an integer $j$ such that $a_i=b_i$ for $i<j$ and $a_j < b_j$. Prove that 
+\begin{enumerate}[(a)]
+\item The relation $\preceq$ is reflexive in the sense that if $(a_1,\ldots, a_k) \preceq (b_1, \ldots, b_k) $ and $(b_1, \ldots, b_k) \preceq (a_1, \ldots, a_k)$, then $(a_1, \ldots, a_k) = (b_1, \ldots, b_k)$. 
+\item The relation is transitive in the sense that if $(a_1, \ldots, a_k) \preceq (b_1, \ldots, b_k)$ and $(b_1, \ldots, b_k) \preceq (c_1, \ldots, c_k)$, then $(a_1, \ldots, a_k) \preceq (c_1, \ldots, c_k)$. 
+\item The relation is total in the sense that if $(a_1, \ldots, a_k), (b_1, \ldots, b_k) \in \N^k$, then $(a_1, \ldots, a_k) \preceq (b_1, \ldots, b_k)$ or $(b_1, \ldots, b_k) \preceq (a_1, \ldots, a_k)$.
+\end{enumerate}
+A relation that is reflexive and transitive is called a partial order. A partial order that is total is called a total order. Thus, the lexicographic order is a total order on the set of $k$-tuples of positive integers.}
+
+\textsc{Solution}. For the proofs, we shall use the well-ordering of natural numbers.
+\begin{enumerate}[(a)]
+\item\label{item:4} Suppose $(a_1,\ldots, a_k) \preceq (b_1,\ldots, b_k)$ and $(b_1,\ldots, b_k) \preceq (a_1, \ldots, a_k)$. Then $a_1 \leq b_1$ and $b_1 \leq a_1$, so that $a_1 = b_1$. Since $a_1 = b_1$, we must have $a_2 \leq b_2$, and $b_2 \leq a_2$, so that $a_2 = b_2$ and so on. It follows that $(a_1,\ldots, a_k) = (b_1, \ldots, b_k)$. 
+\item\label{item:5} Suppose $(a_1,\ldots, a_k) \preceq (b_1,\ldots, b_k)$ and $(b_1,\ldots, b_k) \preceq (c_1, \ldots, c_k)$. Then there exists $r$ with $1 \leq r \leq k$ and $s$ with $1 \leq s \leq k$ such that $a_r < b_r$, $a_i = b_i$ for all $1 \leq i < r$, and $b_s < c_s$, $b_j = c_j$ for all $1 \leq j < s$. Two cases are possible: either $r \leq s$ or $s < r$. Suppose $r \leq s$. Then $a_r < c_r$, $a_i = c_i$ for all $1 \leq i < r$, so that $(a_1, \ldots, a_k) \preceq (c_1, \ldots, c_k)$. For the case when $s < r$, we have $a_s < c_s$, $a_i = c_i$ for all $1 \leq i < s$, so that $(a_1, \ldots, a_k) \preceq (c_1, \ldots, c_k)$.
+\item\label{item:6} Suppose $(a_1, \ldots, a_k), (b_1, \ldots, b_k) \in \N^k$. We assume that $a_i \ne b_i$ for some $1 \leq i \leq n$, otherwise $(a_1, \ldots, a_k) = (b_1, \ldots, b_k)$ so that $(a_1, \ldots, a_k) \preceq (b_1, \ldots, b_k)$ and $(b_1, \ldots, b_k) \preceq (a_1, \ldots, a_k)$. Then we may assume that $i$ is the smallest positive integer such that $a_i \ne b_i$. Then either $a_i < b_i$ or $b_i < a_i$ according to which $(a_1, \ldots, a_k) \preceq (b_1, \ldots, b_k)$ or $(b_1, \ldots, b_k) \preceq (a_1, \ldots, a_k)$. \done
+\end{enumerate}
+
+\textsc{Exercise 26}. \emph{Prove that $\N^k$ with the lexicographic order satisfies the following minimum principle: Every nonempty set of $k$-tuples of positive integers contain a smallest element.}
+
+\textsc{Solution}. Let $S$ be any nonempty set of $k$-tuples of positive integers. We represent elements of $S$ by $a_i$ and we shall use the notation: $a_i \coloneqq (a_{i1}, \ldots, a_{ik})$. If $|S| = 1$, we are done. Let $|S| = n \ne 1$. Then we define a set $S_1 \subset S$ which contains all $a_i \in S$ with the smallest $1$st coordinate ($a_{i1}$) among elements of $S$. The set $S_1$ is well-defined since the $1$st coordinates are natural numbers and the set $\N$ is well-ordered (any nonempty subset of $\N$ has a least element). Thus, all elements $a_i \in S_1$ have the same $1$st coordinate. In the same way, we define the set $S_j \subset S_{j-1}$ which contains all $a_i \in S_{j-1}$ with the smallest $j$th coordinate ($a_{ij}$) among elements of $S_{j-1}$. Clearly $S_j$ is well-defined (use the same arguments as above). Now, we look at $S_k$. By our construction, if $a_j \in S_k$, then $a_j \preceq a_i$ for all $a_i \in S$, so that $a_j$ is the smallest element in $S$. \done
 
 \subsection{Greatest Common Divisors}
 
-Exercises 1-3 are straightforward using Euclid's division algorithm.
+Exercises 1-2 are straightforward using Euclid's algorithm. For Exercise 2, we use the fact that $\gcd(168, 252, 294) = \gcd(\gcd(168, 252), 294)$.
+
+\textsc{Exercise 3}. \emph{Find integers $x$ and $y$ such that $13x + 15y = 1$.}
+
+\textsc{Solution}. Let $x = 7$ and $y = -6$. Then $13x + 15y = 1$. \done
+
+In the above exercise, the B\'ezout's coefficients $x$ and $y$ can be found using Euclidean algorithm.
 
 \textsc{Exercise 4}. \emph{Construct four relatively prime integers $a,b,c,d$ such that no three of them are relatively prime}.
 
@@ -210,9 +251,28 @@ Exercises 1-3 are simple computations using the Euclidean algorithm. Exercise 4 
 
 \textsc{Solution}. Let $p/q$ be the rational number corresponding to the finite simple continued fraction $x=\langle a_0, a_1,\ldots,a_N \rangle$. Since $a_0, a_1, \ldots, a_N$ are the partial quotients in the Euclidean algorithm on the division of $p$ by $q$, it follows that $[x] = a_0$ (because $a_0$ is the quotient of $p$ when divided by $q$). Also, $\{x\} = x - [x] = x=\langle a_0, a_1,\ldots,a_N \rangle - a_0 = 1/\langle a_1, a_2,\ldots,a_N \rangle$. \done
 
-\textsc{Exercise 8}.
+\textsc{Exercise 8}. \emph{Let $\frac{a}{b}$ be a rational number that is not an integer. Prove that there exist unique integers $a_0, a_1, \ldots, a_N$ such that $a_i\geq 1$ for $i=1,\ldots, N-1, a_N \geq 2$, and 
+\begin{displaymath}
+\frac{a}{b} = \langle a_0, a_1, \ldots, a_{N-1}, a_N \rangle.
+\end{displaymath}}\textsc{Solution}. Let $a/b = \langle a_0, a_1, \ldots, a_{N-1}, a_N \rangle = \langle b_0, b_1, \ldots, b_{N-1}, b_N \rangle$. Then, by Exercise $7$, $a_0 = [a/b] = b_0$, and 
+\begin{displaymath}
+\langle a_1, \ldots, a_N \rangle = \frac{1}{\{a/b\}} = x_1 \text{ (say)}.
+\end{displaymath}
+By Exercise $7$ again, $a_1 = [x_1] = b_1$, and 
+\begin{displaymath}
+\langle a_2, \ldots, a_N \rangle = \frac{1}{\{x_1\}} = x_2 \text{ (say)}.
+\end{displaymath}
+Since $0 < \{a/b\} < 1$, we must have $x_1 = 1/\{a/b\} > 1$. Thus, $a_1 \geq 1$.
+Continuing this further, we obtain $a_i = b_i$ for all $0 \leq i \leq N$ such that $a_i \geq 1$ for $i = 1, \ldots, N-1$, $a_N \geq 2$. The last step ($N$th) should be careful for we can write $2$ as $1 + \frac{1}{1}$. Therefore, we make it sure that $a_N \geq 2$ to remove this ambiguity. \done
 
-Exercise 9 is obvious once we expand the continued fraction.
+\textsc{Exercise 9}. \emph{Prove that 
+\begin{displaymath}
+\langle a_0, a_1, \ldots, a_N, a_{N+1} \rangle = \langle a_0, a_1, \ldots, a_N + \frac{1}{a_{N+1}} \rangle.
+\end{displaymath}}\textsc{Solution}. This should be obvious since both of them have the same expansion given below
+\begin{displaymath}
+a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cdots \cfrac{1}{\ldots + \cfrac{1}{a_N + \cfrac{1}{a_{N+1}}}}}}.
+\end{displaymath}
+Therefore, $\langle a_0, a_1, \ldots, a_N, a_{N+1} \rangle = \langle a_0, a_1, \ldots, a_N + \frac{1}{a_{N+1}} \rangle$. \done
 
 \textsc{Exercise 10}. \emph{Let $\langle a_0, a_1,\ldots,a_N \rangle$ be a finite simple continued fraction. Define $p_0 = a_0$, $p_1 = a_1a_0+1$, and $p_n = a_np_{n-1} + p_{n-2}$ for $n=2,\ldots, N$. Define $q_0=1$, $q_1=a_1$, and $q_n = a_nq_{n-1} + q_{n-2}$ for $n=2,\ldots, N$. Prove that 
 \begin{displaymath}
@@ -445,7 +505,7 @@ so that $m = bc$. If $z$ has no $p_j$ in its prime factorization, and $k>1$, the
 
 \textsc{Exercise 19}. \emph{Let $a$ and $b$ be positive integers. Prove that $(a,bc) = (a,b)(a,c)$ for every positive integer $c$ if and only if $(a,b)=1$.}
 
-\textsc{Solution}.
+\textsc{Solution}. Suppose $\gcd(a,b) = 1$. There is no prime that divides both $a$ and $b$. Whatever common prime factor $a$ and $bc$ has, it must be a common prime factor of $a$ and $c$. It follows that $\gcd(a, bc) = \gcd(a, c) = \gcd(a,b) \gcd(a, c)$.
 
 \textsc{Exercise 20}. \emph{Let $m_1, \ldots, m_k$ be pairwise relatively prime positive integers, and let $d$ divide $m_1\cdots m_k$. Prove that for each $i = 1, \ldots, k$ there exists a unique divisor $d_i$ of $m_i$ such that $d= d_1\cdots d_k$.}
 
@@ -454,6 +514,105 @@ so that $m = bc$. If $z$ has no $p_j$ in its prime factorization, and $k>1$, the
 d_i \coloneqq \prod_p^{M_i} p^{v_p(d)}
 \end{displaymath}
 for each $1 \leq i \leq k$ and $p\in M_i$. Clearly $d = d_1\cdots d_k$. By construction, each $d_i$ is unique. \done
+
+\textsc{Exercise 22}. \emph{Let $n\geq 2$, and let $x$ be a rational number. Prove that $\sqrt[n]{x}$ is rational if and only if $x = y^n$ for some rational number $y$.}
+
+\textsc{Solution}. Suppose $x=y^n$ for some rational number $y$. Then $\sqrt[n]{x} = \sqrt[n]{y^n} = y$, which is rational. Conversely, suppose $\sqrt[n]{x}$ is rational. Then $\sqrt[n]{x} = \frac{p}{q}$ for some integers $p, q \ne 0$ so that $x = (\frac{p}{q})^n = y^n$, where $y = p/q$ is a rational number. \done
+
+\textsc{Exercise 23}. \emph{Let $m_1, \ldots, m_k$ be positive integers and $m = [m_1, \ldots, m_k]$. Prove that there exist positive integers $d_1, \ldots, d_k$ such that $d_i$ is a divisor of $m_i$ for $i=1, \ldots, k, (d_i, d_j) = 1$ for $1 \leq i < j \leq n$, and $m = [d_1, \ldots, d_k] = d_1\cdots d_k$.}
+
+\textsc{Solution}. Let $m = [m_1, \ldots, m_k] = \prod_{i=0}^N p_i^{r_i}$ be its prime factorization. We pick $p_1$ (the first prime that divides $m$). Clearly there is at least one number $m_i$ such that its prime factorization has $p_1^{r_1}$ as its factor. If there are multiple such $m_i$'s we choose the one that comes first, that is, the one with the smallest index $i$. Suppose $m_j$ is the number chosen under this convention. Then we put $p_1^{r_1}$ into a new set $M_j$. Likewise, we pick $p_2$, and repeat the same process. In fact, we go through this process for all primes that divide $m$. After that is done, if $M_i$ does not already exist for any $1 \leq i \leq k$, we construct $M_i$ and let $M_i = \{1\}$. Then we construct the following $k$ numbers:
+\begin{align*}
+  d_i =
+  \begin{cases}
+    \prod p_i^{r_i} & \text{where } p_i^{r_i} \in M_i, \\
+    1 & \text{if } M_i=\{1\}.
+  \end{cases}
+\end{align*}
+We observe that $d_i$ divides $m_i$ for all $1 \leq i \leq k$. Also, $\gcd(d_i, d_j) = 1$ for all $1 \leq i,j \leq k$ (because, by our construction, no prime $p_i$ will divide both $d_i$ and $d_j$). Consequently $ m = [d_1, \ldots, d_k] = d_1\cdots d_k$. \done
+
+\textsc{Exercise 24}. \emph{Prove that for any positive integers $a$ and $b$, 
+\begin{displaymath}
+[a,b] = \frac{ab}{(a,b)}.
+\end{displaymath}}\textsc{Solution}. Let $a = \prod p^{v_p(a)}$ and $b = \prod p^{v_p(b)}$ be their prime factorizations so that 
+\begin{displaymath}
+(a, b) = \prod p^{\min\{v_p(a), v_p(b)\}}, \hspace{1cm} [a,b] = \prod p^{\max\{v_p(a), v_p(b)\}}.
+\end{displaymath}
+Since $\min\{v_p(a), v_p(b)\} + \max\{v_p(a), v_p(b)\} = v_p(a) + v_p(b)$, it follows that 
+\begin{displaymath}
+(a, b)[a, b] = \prod p^{\min\{v_p(a), v_p(b)\} + \max\{v_p(a), v_p(b)\}} = \prod p^{v_p(a) + v_p(b)} = ab.
+\end{displaymath}
+The proposition follows. \done
+
+\textsc{Exercise 25}. \emph{Let $a$ and $b$ be positive integers with $(a,b) = d$. Prove that 
+\begin{displaymath}
+\left[ \frac{a}{d}, \frac{b}{d} \right] = \frac{[a,b]}{d}.
+\end{displaymath}}\textsc{Solution}. Let $a = \prod p^{v_p(a)}$ and $b = \prod p^{v_p(b)}$ be their prime factorizations so that 
+\begin{displaymath}
+d = \gcd(a, b) = \prod p^{\min\{v_p(a), v_p(b)\}},
+\end{displaymath}
+and
+\begin{displaymath}
+\frac{a}{d} = \prod p^{v_p(a) - \min\{v_p(a), v_p(b)\}}, \hspace{1cm} \frac{b}{d} = \prod p^{v_{p(b)} - \min\{v_p(a), v_p(b)\}}.
+\end{displaymath}
+We see that $\max\{ v_p(a) -\min\{v_p(a), v_p(b)\}, v_{p(b)} - \min\{v_p(a), v_p(b)\} \} = \max\{ v_p(a), v_p(b) \} - \min\{v_p(a), v_p(b)\}$. Therefore, 
+\begin{align*}
+  \left[ \frac{a}{d}, \frac{b}{d} \right] &= \prod p^{\max\{ v_p(a) -\min\{v_p(a), v_p(b)\}, v_{p(b)} - \min\{v_p(a), v_p(b)\} \}} \\
+                                          &= \prod p^{\max\{ v_p(a), v_p(b) \} - \min\{v_p(a), v_p(b)\}} \\
+  &= \prod p^{\max\{ v_p(a), v_p(b) \}} / \prod p^{\min\{v_p(a), v_p(b)\}} \\
+  &= \frac{[a,b]}{d}.
+\end{align*}
+The proposition follows. \done
+
+\textsc{Exercise 26}. \emph{Prove that for any positive integers $a, b, c,$ 
+\begin{displaymath}
+[a, b, c] = \frac{abc(a,b,c)}{(a,b)(b,c)(c,a)}.
+\end{displaymath}}\textsc{Solution}. Considering how we tackled Exercises $24$-$25$, it suffices to prove that
+\begin{displaymath}
+\max\{ v_p(a), v_p(b), v_p(c) \} = \frac{v_p(a)v_p(b)v_p(c)  \min\{ v_p(a), v_p(b), v_p(c) \}}{\min\{ v_a(p) v_b(p) v_c(p)  \}},
+\end{displaymath}
+or rather 
+\begin{displaymath}
+\max\{x, y, z\} = \frac{xyz \min\{ x, y, z \}}{ \min\{ x, y \} \min\{ y, z \}\min\{ z, x \}},
+\end{displaymath}
+
+where $x,y,z$ are any three positive integers. Clearly maximum and minimum functions are symmetric, that is, the order in which its arguments are written makes no difference. For instance, $\max\{ x,y,z \} = \max\{ y,z,x \}$. Thus, without loss of generality, we may assume $x \leq y \leq z$. Using this relation, we verify the equation we have written above. Indeed, both the left hand side and right hand side evaluate to $z$, and we are done. \done
+
+\textsc{Exercise 27}. \emph{Let $a_1, \ldots, a_k$ be positive integers. Prove that $[a_1, \ldots, a_k] = a_1\cdots a_k$ if and only if the integers $a_1, \ldots, a_k$ are pairwise relatively prime.}
+
+\textsc{Solution}. Suppose $[a_1, \ldots, a_k] = a_1\cdots a_k$. It follows that 
+\begin{displaymath}
+\max\{ v_p(a_1), \ldots, v_p(v_k) \} = \sum_{i=1}^k v_p(a_i)
+\end{displaymath}
+for each prime $p$ appearing in the factorization of $[a_1, \ldots, a_k]$, which is possible only when $v_p(a_i) = 0$ for all $i$ with one exception. So, any prime $p$ dividing $m_j$ will not divide any other $m_i$ with $i \ne j$. It follows that the integers $a_1, \ldots, a_k$ are pairwise relatively prime. Conversely, suppose $\gcd(a_i, a_j) = 1$ for all $1 \leq i, j \leq k$. It is easy to see that the above equation holds, and so the proposition is true. \done
+
+\textsc{Exercise 28}. \emph{Let $a$ and $b$ be positive integers and $p$ a prime. Prove that if $p$ divides $[a,b]$ and $p$ divides $a+b$, then $p$ divides $(a,b)$.}
+
+\textsc{Solution}.
+
+\textsc{Exercise 31}. \emph{A positive integer is called square-free if it is the product of distinct prime numbers. Prove that every positive integer can be written uniquely as the product of a square and a square-free integer.}
+
+\textsc{Solution}. Let $a$ be any positive integer and let $a = \prod_{i=1}^k p_i^{r_i}$ be its prime factorization. We pick the first prime $p_1$. If $r_1$ is odd, we can write $p\cdot p^{r_i - 1}$ so that $r_i-1$ is even and so, $p^{r_i-1}$ is a square. If $r_1$ is even, we leave it as it is (because it is already a square). We repeat the process for each prime $p_i$ where $1 \leq i \leq k$. Thus, we are left with distinct primes $p_i$ and squares $p_i^{r_i}$ (or $p_i^{r_i-1}$). The product of these distinct primes is a radical and the product of the squares is a square. Therefore, $a$ is written as the product of a square and a square-free integer. The uniqueness follows from the fact that this is the only way to write $a$ as the product of a square and a square-free integer (this is implicit in the construction we have used). \done
+
+\textsc{Exercise 32}. \emph{Prove that the set of all rational numbers of the form $a/b$, where $a, b \in \Z$ and $b$ is square-free, is an additive subgroup of $\Q$.}
+
+\textsc{Solution}. Let $S$ be the set of all rational numbers of the form $a/b$, where $a, b \in \Z$ and $b$ is square-free. Clearly $0 \in S$. It is easy to see that $0$ is the identity element in $S$ (after all, $S$ is a subset of $\Q$). If $x \in S$, then $-x \in S$ (after all, they have the same denominator) such that $x + (-x) = 0 = (-x) + x$. Let $x,y \in S$. It is easy to see that $x+y \in S$. This is because the denominator of $x+y$ is the lowest common multiple (lcm) of the denominators of $x$ and $y$, but the highest power of any prime in the denominators of $x$ and $y$ is the prime itself so that the lcm contains only distinct primes. It follows that $S$ is an additive subgroup of $\Q$. \done
+
+\textsc{Exercise 33}. A powerful number is a positive integer $n$ such that if a prime $p$ divides $n$, then $p^2$ divides $n$. Prove that every powerful number can be written as the product of a square and a cube. Construct examples to show that this representation of powerful numbers is not unique.
+
+\textsc{Solution}. Let $n$ be a powerful number. Since $p^2$ divides $n$ whenever $p$ divides $n$, it follows that $n$ has a prime factorization of the form $n = \prod_{i=1}^k p_i^{r_i}$ such that $r_i \geq 2$ for all $1 \leq i \leq k$. We pick the first prime $p_1$. Either $r_1$ is odd or even. If $r_1$ is odd, then we can write $r_1 = 3 + r_1^{\prime}$ (and hence $p^{r_1} = p^3\cdot p^{r_1^{\prime}}$) where $r_1^{\prime}$ is even. This is possible because $r_i \geq 2$. We continue this for all primes $p_i$ appearing in the factorization of $n$. The product (say $b$) of all even powers of primes is a square and the product (say $c$) of all cubes of primes is definitely a cube, so that $n = bc$. It is easy to see that, unlike Exercise $34$, this construction is not unique. For instance, we could write $p^6$ as either $(p^2p^2)^2$ (which is a square) or $(p^2)^3$ (which is a cube). \done
+
+\textsc{Exercise 34}. \emph{Prove that $m$ is square-free if and only if \emph{rad}$(m) = m$.}
+
+\textsc{Solution}. Suppose $m$ is square-free. Then $m$ is a product of distinct primes. If follows that rad$(m) = m$. Conversely, suppose rad$(m) = m$. This is possible only when the highest power of every prime that divides $m$ is the prime itself. Consequently, $m$ is a product of distinct primes, and so $m$ is square-free. \done
+
+\textsc{Exercise 35}. \emph{Prove that \emph{rad($mn$)} = \emph{rad($m$)} \emph{rad($n$)} if and only if $(m, n) = 1$.}
+
+\textsc{Solution}. Suppose rad($mn$) = rad($m$) rad($n$). Since the left hand side is a product of distinct primes, it follows that rad($m$) and rad($n$) have no prime factor in common. But every prime factor of $m$ is also a factor of rad($m$). Likewise for $n$. Therefore, $m$ and $n$ have no prime factor in common. Consequently, $\gcd(m,n) = 1$. The argument for the other direction is similar. \done
+
+\textsc{Exercise 36}. \emph{Let $H = \{1, 5, 9, \ldots,\}$ be the arithmetic progression of all positive integers of the form $4k + 1$. Elements of $H$ are called Hilbert numbers. Show that $H$ is closed under multiplication, that is, $x, y \in H$ implies $xy \in H$. An element $x$ of $H$ will be called a Hilbert prime if $x\ne 1$ and $x$ cannot be written as the product of two strictly smaller elements of $H$. Compute all the Hilbert primes up to $100$. Prove that every element of $H$ can be factored into a product of Hilbert primes, but that unique factorization does not hold in $H$.}
+
+\textsc{Solution}. Let $a = 4k + 1$ and $b = 4h + 1$ be any two elements of $H$. Then $ab = (4k + 1)(4h + 1) = 4(4kh + k + h) + 1$ is in $H$ and so, $H$ is closed under multiplication. By computation, all the Hilbert primes less than $100$ are $5$, $9$, $13$, $17$, $21$, $29$, $33$, $37$, $41$, $49$, $53$, $57$, $61$, $69$, $73$, $77$, $81$, $89$, $93$, and $97$. In computing these numbers, we use prime factorization to see if the number can be factored into Hilbert numbers. We shall use induction to prove that every Hilbert number can be factored into a product of Hilbert primes. Let $P(n)$ be the statement that every positive number of the form $4n + 1$ with $n \in \Z, n \geq 0$ can be factored into numbers of the same form. The base cases of $n = 0, 1$ are checked. Suppose $P(n)$ is true for all $n < k$. We shall prove that $P(n)$ is true for $n=k$ as well. If $4k + 1$ is not divisible any 
 
 \subsection{Euclid's Theorem and the Sieve of Erastosthenes}
 
@@ -774,7 +933,62 @@ Therefore, $589$ is composite. \done
 \end{align*}
 Therefore, $2^{644} \equiv 2^{600} \cdot 2^{25} \cdot 2^{12} \cdot 2^7 \equiv 1 \mod 645$. So, $645$ is a pseudoprime to base $2$. \done
 
-\textsc{Exercise 4}. \emph{}
+\textsc{Exercise 4}. \emph{Prove that $1729$ is a pseudoprime to bases $2$, $3$, and $5$.}
+
+\textsc{Solution}. As in Exercise $3$, it is checked that $2^{1728} \equiv 1 \mod 1729$, $3^{1728} \equiv 1 \mod 1729$, and $5^{1728} \equiv 1 \mod 1729$. \done
+
+\textsc{Exercise 5}. \emph{Prove that $1105$ is a Carmichael number.}
+
+\textsc{Solution}. Let $b$ be an integer relatively prime to $1105$. We need to show that $b^{1104} \equiv 1 \mod 1105$. We observe that $1105 = 5 \cdot 13 \cdot 17$. By Fermat's little theorem, we obtain 
+\begin{align*}
+  b^4 \equiv 1 \mod 5 \hspace{1cm} &\text{so that} \hspace{1cm} b^{1104} \equiv (b^4)^{276} \mod 5,\\
+  b^{12} \equiv 1 \mod 13 \hspace{1cm} &\text{so that} \hspace{1cm} b^{1104} \equiv (b^{12})^{92} \mod 13,\\
+  b^{16} \equiv 1 \mod 17 \hspace{1cm} &\text{so that} \hspace{1cm} b^{1104} \equiv (b^{16})^{69} \mod 17.
+\end{align*}
+It follows that $b^{1104} \equiv 1 \mod 1105$. So, $1105$ is a Carmichael number. \done
+
+\textsc{Exercise 6}. \emph{Let $n$ be a product of distinct primes. Prove that if $p-1$ divides $n-1$ for every prime $p$ that divides $n$, then $n$ is a Carmichael number.}
+
+\textsc{Solution}. This solution is simply a generalization of Exercise $5$. Let $n = \prod_{i=0}^k p_i$ where $p_i \ne p_j$ when $i \ne j$. Let $b$ be an integer relatively prime to $n$. By Fermat's little theorem, 
+\begin{displaymath}
+b^{p_i-1} \equiv 1 \mod p_i \hspace{1cm} \text{so that} \hspace{1cm} b^{n-1} \equiv (b^{p_i-1})^{(n-1)/(p_i-1)} \equiv 1 \mod p_i,
+\end{displaymath}
+for each $0\leq i \leq k$, and $(n-1)/(p_i-1)$ is an integer (since $p_i-1$ divides $n-1$). It follows that $b^{n-1} \equiv 1 \mod n$. So, $n$ is a Carmichael number. \done
+
+\textsc{Exercise 7}. \emph{Prove that $6601$ is a Carmichael number.}
+
+\textsc{Solution}. Prime factorization of $6601$ yields $6601 = 7 \cdot 23 \cdot 41$. It is checked that $6, 22,$ and $40$ divide $6600$. By Exercise $7$, it follows that $6601$ is a Carmichael number. \done
+
+\subsection{Public Key Cryptography}
+
+\textsc{Exercise 1}. \emph{Consider the secret key cryptosystem constructed from the prime $p = 947$ and the encoding key $e = 167$. Encipher the plaintext $P=2$. Find a decrypting key and decipher the ciphertext $C=3$.}
+
+\textsc{Solution}. Since $0< P < 947$ and $\gcd(167, 946) = 1$, we compute
+\begin{displaymath}
+C \equiv 2^{167} \equiv 172 \mod 947,
+\end{displaymath}
+so that $C = 172$ is the ciphertext. Since $167\cdot 465 \equiv 1 \mod 947$, it follows that $d=465$ is a decrypting key. We see that 
+\begin{displaymath}
+P \equiv C^d \equiv 3^{465} \equiv 376 \mod 947,
+\end{displaymath}
+so that $P = 376$ is the plaintext. \done
+
+\textsc{Exercise 2}. \emph{Consider the primes $p=53$ and $q=61$. Let $m = pq$. Prove that $e=7$ is relatively prime to $\varphi(m)$. Find a positive integer $d$ such that $ed \equiv 1 \mod \varphi(m)$.}
+
+\textsc{Solution}. Euler totient function yields $\varphi(m) = 3120$. We see that $3120 = 2^4 \cdot 3 \cdot 5 \cdot 13$. Since $7$ is not a prime factor of $3120$, it follows that $e = 7$ is relatively prime to $\varphi(m)$. We need to find a positive integer $d$ such that $7\cdot d \equiv 1 \mod 3120$.
+We observe that $d = 1783$ satisfies the condition. \done
+
+\textsc{Exercise 3}. \emph{The integer $6059$ is the product of two distinct primes, and $\varphi(6059) = 5904$. Use Theorem $2.19$ to compute the prime divisors of $6059$.}
+
+\textsc{Solution}. By Theorem $2.19$, the prime divisors of $6059$ are roots of the quadratic equation 
+\begin{displaymath}
+x^2 - 156x + 6059 = 0.
+\end{displaymath}
+On solving, we see that $73$ and $83$ are its roots. It can be checked that $73\cdot 83 = 6059$. \done
+
+\textsc{Exercise 4}. \emph{The probability that an integer chosen at random between $1$ and $n$ is relatively prime to $n$ is $\varphi(n)/n$. Let $n=pq$, where $p$ and $q$ are two distinct primes greater than $x$. Prove that the probability that a randomly chosen positive integer up to $x$ is relatively prime to $n$ is greater than $(1-1/x)^{2}$. If $x=200$, this probability is greater than $0.99$.}
+
+\textsc{Solution}. 
 
 \section{Primitive Roots and Quadratic Reciprocity}
 
