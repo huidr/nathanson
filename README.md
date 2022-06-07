@@ -1,12 +1,17 @@
 # Solutions to Nathanson's Elementary Methods in Number Theory
 
-I am working on this repo in my free time. Please reach out to me if you notice any errors. There are a few incomplete solutions as well. I will keep adding more solutions or correcting errors.
-
-The PDF file is [here](https://ronhuidrom.github.io/nathanson-number-theory-solutions/NathansonSolutions.pdf).
+Version: 0.5 \
+License: GPL v3.0 \
+Last updated: June 7, 2022 \
+File: [PDF](https://ronhuidrom.github.io/nathanson-number-theory-solutions/NathansonSolutions.pdf) (available for download)
 
 ### Usage
 
 This manual is best used with its parent text ("Elementary Methods in Number Theory" by Melvyn B. Nathanson).  In some exercises, they may look more like hints rather than solutions themselves.
+
+### Scope
+
+As of now, it only contains solutions to the first three chapters.
 
 ### History
 
@@ -15,3 +20,10 @@ This solution manual is an indirect product of my (pre) summer work at ISI (Delh
 ### Future
 
 I plan to cover more chapters and add more solutions in near future.
+
+### Bugs
+
+There could be typos and errors. I fix them whenever I see them. Report them if you happen to find them. I would be pleased.
+
+Reach me at [ronhuidrom@gmail.com](ronhuidrom@gmail.com).
+
