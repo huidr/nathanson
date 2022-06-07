@@ -1324,17 +1324,36 @@ From the above table, it follows that $\left(\frac{3}{11}\right) = 1$ and $\left
 
 \textsc{Exercise 4}. \emph{Use Theorem $3.14$ and Theorem $3.16$ to find all primes $p$ for which $-2$ is a quadratic residue.}
 
-\textsc{Solution}. By Theorem $3.14$ and Theorem $3.16$, we have 
+\textsc{Solution}. By Theorem $3.14$, 
 \begin{displaymath}
-\left( \frac{-2}{p} \right) = \left( \frac{-1}{p} \right) \left( \frac{2}{p} \right) = (-1)^{(p-1)/2}(-1)^{(p^2-1)/8} = (-1)^{\frac{1}{8}(p-1)(p+5)}.
+\left( \frac{-1}{p} \right) = (-1)^{(p-1)/2}.
 \end{displaymath}
-
-%\textsc{Exercise 5}. \emph{Use Gauss's lemma to find all primes $p$ for which $-2$ is a quadratic residue.}
+By Theorem $3.16$, 
+\begin{displaymath}
+\left( \frac{2}{p} \right) = (-1)^{(p^2-1)/8}.
+\end{displaymath}
+It follows that 
+\begin{displaymath}
+\left( \frac{-2}{p} \right) = \left( \frac{-1}{p} \right) \left( \frac{2}{p} \right) = (-1)^{(p-1)/2 + (p^2-1)/8} = (-1)^{\frac{(p+5)(p-1)}{8}}.
+\end{displaymath}
+This gives all primes $p$ for which $-2$ is a quadratic residue. \done
 
 %\textsc{Solution}. Let $p$ be an odd prime. By Exercise $3$, $S=\{2, 4, 6, \ldots, p-1\}$ is a Gaussian set modulo $p$.
 %\begin{longtable}{p{12em}}
 %  $-2 \cdot 2 \equiv $
-%\end{longtable}
+   %  \end{longtable}
+
+\textsc{Exercise 7}. \emph{Find all primes $p$ for which $4$ is a quadratic residue.}
+
+\textsc{Solution}. By Theorem $3.16$, 
+\begin{displaymath}
+\left( \frac{2}{p} \right) = (-1)^{(p^2-1)/8},
+\end{displaymath}
+so that 
+\begin{displaymath}
+\left( \frac{4}{p} \right) = \left( \frac{2}{p} \right) \left( \frac{2}{p} \right) = (-1)^{(p^2-1)/4}.
+\end{displaymath}
+Any prime $p$ satisfies either $1 \mod 4$ or $3 \mod 4$. Substituting these values in the above relation, we obtain that $\left( \frac{4}{p} \right) = 1$ in each case. It follows that $4$ is a quadratic residue modulo every prime $p$. \done
 
 \textsc{Exercise 8}. \emph{Let $p$ be an odd prime. Prove that the Legendre symbol is a homomorphism from the multiplicative group $(\Z/p\Z)^{\times}$ into $\{\pm 1\}$. What is the kernel of this homomorphism?}
 
@@ -1343,6 +1362,23 @@ From the above table, it follows that $\left(\frac{3}{11}\right) = 1$ and $\left
 \left( \frac{ab}{p} \right) = \left( \frac{a}{p} \right) \left( \frac{b}{p} \right)
 \end{displaymath}
 for all $a,b \in (\Z/p\Z)^{\times}$. The kernel is the set of all $a\in (\Z/p\Z)^{\times}$ which are quadratic residue modulo $p$. \done
+
+\textsc{Exercise 11}. \emph{A binary quadratic form is a polynomial 
+\begin{displaymath}
+f(x,y) = ax^2 + bxy + cy^2, \hspace{1cm} \text{where $a, b, c$ are integers.}
+\end{displaymath}
+The discriminant of this form is the integer $d = b^2 - 4ac$. Show that 
+\begin{displaymath}
+4af(x,y) = (2ax + by)^2 - dy^2.
+\end{displaymath}}\textsc{Solution}. By expanding, 
+\begin{align*}
+  (2ax + by)^2 - dy^2 &= 4a^2x^2 + 4abxy + b^2y^2 - b^2y^2 - 4acy^2 \\
+                      &= 4a(ax + bxy + cy^2) \\
+                      &= 4af(x),
+\end{align*}
+which is what we wanted to show. \done
+
+\textsc{Exercise 12.} \emph{}
 
 \subsection{Quadratic Reciprocity Law}
 
