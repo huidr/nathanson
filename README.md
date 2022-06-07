@@ -25,5 +25,5 @@ I plan to cover more chapters and add more solutions in near future.
 
 There could be typos and errors. I fix them whenever I see them. Report them if you happen to find them. I would be pleased.
 
-Reach me at [ronhuidrom@gmail.com](ronhuidrom@gmail.com).
+Reach me at ronhuidrom@gmail.com.
 
