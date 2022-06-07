@@ -8,15 +8,15 @@
 \contentsline {section}{\numberline {2}Congruences}{25}{section.2}%
 \contentsline {subsection}{\numberline {2.1}The Ring of Congruence Classes}{25}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Linear Congruences}{29}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}The Euler Phi Function}{29}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Chinese Remainder Theorem}{30}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Euler's Theorem and Fermat's Theorem}{32}{subsection.2.5}%
-\contentsline {subsection}{\numberline {2.6}Pseudoprimes and Carmichael Numbers}{32}{subsection.2.6}%
-\contentsline {subsection}{\numberline {2.7}Public Key Cryptography}{34}{subsection.2.7}%
-\contentsline {section}{\numberline {3}Primitive Roots and Quadratic Reciprocity}{35}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Polynomials and Primitive Roots}{35}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Primitive Roots to Composite Moduli}{35}{subsection.3.2}%
-\contentsline {subsection}{\numberline {3.3}Power Residues}{36}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Quadratic Residues}{37}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Quadratic Reciprocity Law}{38}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Quadratic Residues to Composite Moduli}{41}{subsection.3.6}%
+\contentsline {subsection}{\numberline {2.3}The Euler Phi Function}{30}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Chinese Remainder Theorem}{31}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Euler's Theorem and Fermat's Theorem}{33}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.6}Pseudoprimes and Carmichael Numbers}{34}{subsection.2.6}%
+\contentsline {subsection}{\numberline {2.7}Public Key Cryptography}{36}{subsection.2.7}%
+\contentsline {section}{\numberline {3}Primitive Roots and Quadratic Reciprocity}{36}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Polynomials and Primitive Roots}{36}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Primitive Roots to Composite Moduli}{37}{subsection.3.2}%
+\contentsline {subsection}{\numberline {3.3}Power Residues}{38}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Quadratic Residues}{39}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Quadratic Reciprocity Law}{40}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Quadratic Residues to Composite Moduli}{44}{subsection.3.6}%
