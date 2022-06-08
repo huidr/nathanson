@@ -37,7 +37,7 @@
 \pagebreak
 \hspace{0pt}
 \vfill
-These are my solutions to the first three chapters of the Nathanson's text (mentioned in the cover title). At the moment, not all problems are solved. Similar problems are omitted. Some simple computational problems are also omitted. A few solutions are incomplete (I will complete them soon) and they can be identified with their lack of \done{} symbol. I have discovered that a few solutions have errors (I will correct them soon). I have thoroughly enjoyed solving all these problems on my own.
+These are my solutions to the first three chapters of the Nathanson's text (mentioned in the cover title). At the moment, not all problems are solved. Similar problems are omitted. Some simple computational problems are also omitted. A few solutions are incomplete (I will complete them soon) and they can be identified with their lack of $\square{}$ symbol. I have discovered that a few solutions have errors (I will correct them soon). I have thoroughly enjoyed solving all these problems on my own.
 
 The latest version of this text can be found at \hyperref{https://github.com/ronhuidrom/nathanson-number-theory-solutions/blob/main/NathansonSolutions.pdf}{}{}{https://github.com/ronhuidrom/nathanson-number-theory-solutions/blob/main/NathansonSolutions.pdf} --- I update it everyday as I keep adding more solutions (or correcting errors).
 
@@ -1606,5 +1606,46 @@ Simply expanding the binomial coefficients yield the form of derivatives we are 
   &= \sum_{k=0}^n \frac{D^{(k)}(f)(x)}{n!}h^k,
 \end{align*}
 where, in the final step, we get rid of the borrowed symbols. \done
+
+\section{Fourier Analysis on Finite Abelian Groups}
+
+\subsection{The Structure of Finite Abelian Groups}
+
+\textsc{Exercise 1}. \emph{Let $G = \Z/12\Z$ be the additive group of congruence class modulo $12$. Compute $G(2)$ and $G(3)$ and show explicitly that $G(2) \cong \Z/4\Z$, $G(3) \cong \Z/3\Z$, and 
+\begin{displaymath}
+\Z/12\Z \cong \Z/4\Z \oplus \Z/3\Z.
+\end{displaymath} }\textsc{Solution}. By computation, the orders of all the elements of $\Z/12\Z$ are given below
+\begin{longtable}{p{4em} p{4em} p{4em} p{4em}}
+  Element & Order & Element & Order \\
+  0 & 1 & 6 & 2 \\
+  1 & 12 & 7 & 12 \\
+  2 & 6 & 8 & 3 \\
+  3 & 4 & 9 & 4 \\
+  4 & 3 & 10 & 6 \\
+  5 & 12 & 11 & 12,
+\end{longtable}\reduce
+so that $G(2) = \{0, 3, 6, 9\}$ and $G(3) = \{0, 4, 8\}$. Let $f : \Z/4\Z \to G(2)$ be a function defined by $f(x) = 3x$. Since there are only four elements in both the sets, it is easily checked that the function is one-one and onto. Indeed, $0 \sends 1$, $1 \sends 3$, $2 \sends 6$, and $3 \sends 9$. Homomorphism follows from the fact that $f(x+y) = 3(x+y) = 3x + 3y = f(x) + f(y)$. Therefore, $G(2) \cong \Z/4\Z$. Let $g : \Z/3/Z \to G(3)$ be a function defined by $g(x) = 4x$. This function is also one-one and onto. Indeed, $0 \sends 0$, $1 \sends 4$, and $2 \sends 8$. This is also a homomorphism in the same way $f$ was a homomorphism. Therefore $G(3) \cong \Z/3\Z$.
+
+\textsc{Exercise 2}. \emph{Let $G$ be an abelian group, written additively, and let $G_1, \ldots, G_k$ be subgroups of $G$. Prove that $G_1 + \cdots + G_k$ is a subgroup of $G$.}
+
+\textsc{Solution}. Since $0 \in G_1, \cdots, G_k$, it follows that $0 \in G_1 + \cdots + G_k$. Suppose $g \in G_1 \cdots + G_k$. Then there exist $g_i \in G_i$ for each $1 \leq i \leq k$ such that $\sum_{i=1}^k g_i = g$. Clearly $-g_i \in G_i$ for each $1 \leq i \leq k$ so that $-g = -\sum_{i=1}^k g_i \in G_1 + \cdots + G_k$. Suppose $x, y \in G_1 + \cdots + G_k$. Then there exist $x_i, y_i \in G_i$ for each $1 \leq i \leq k$ such that $\sum_{i=1}^k x_i = x$ and $\sum_{i=1}^k y_i = y$. Clearly $x + y = \sum_{i=1}^k x_i + \sum_{i=1}^k y_i = \sum_{i=1}^k (x_i + y_i) \in G_1 + \cdots + G_k$. It follows that $G_1 + \cdots + G_k$ is a subgroup of $G$. \done
+
+\textsc{Exercise 3}. \emph{Let $G$ be an abelian group, written additively, and let $G_1, \ldots, G_k$ be subgroups of $G$ such that $G = G_1 + \cdots + G_k$. Prove that $|G| \leq |G_1|\cdots |G_k|$. Prove that $G = G_1 \oplus \cdots \oplus G_k$ if and only if $|G| = |G_1|\cdots |G_k|$.}
+
+\textsc{Exercise 4}. \emph{Let $G$ be an abelian group, written additively, and let $G_1, \ldots, G_k$ be subgroups of $G$ such that $G = G_1 + \cdots + G_k$. Prove that $G = G_1 \oplus \cdots \oplus G_k$ if and only if the only representation of $0$ in the form $0 = g_1 + \cdots + g_k$ with $g_i \in G_i$ is $g_1 = \cdots = g_k = 0$.}
+
+\textsc{Solution}. One direction is trivial. If $G = G_1 \oplus \cdots \oplus G_k$, then $0 = 0 + \cdots + 0$ is the only representation of $0$ (because each representation is unique in direct sum). Conversely, suppose this is the only representation of $0$. We shall prove that every $g \in G$ has a unique representation in the form $g = g_1 + \cdots + g_k$ with $g_i \in G_i$. Suppose there is another representation $g = g_1^{\prime} + \cdots + g_k^{\prime}$ with $g_i^{\prime} \in G_i$. Then, on subtraction, $g - g = 0 = g_1 - g_1^{\prime} + \cdots + g_k - g_k^{\prime}$ with $g_i - g_i^{\prime} \in G_k$. But the only representation of $0$ is $0 = 0 + \cdots + 0$. It follows that $g_i = g_i^{\prime}$ for each $1 \leq i \leq k$. It follows that $G = G_1 + \oplus \cdots \oplus G_k$. \done
+
+\textsc{Exercise 5}. \emph{Let $G_1, \cdots, G_k$ be subgroups of an abelian group $G$ such that $G = G_1 \oplus \cdots \oplus G_k$. Prove that $G \cong G_1 \times \cdots \times G_k$.}
+
+\textsc{Exercise 6}. \emph{Let $G$ be an additive abelian group. For every prime number $p$, let $G(p)$ denote the set of all elements of $G$ whose order is a power of $p$. Prove that $G(p)$ is a subgroup of $G$.}
+
+\textsc{Solution}. The identity $0 \in G(p)$. Because the order of $0$ is $1 = p^0$. Suppose $g \in G(p)$. Let ord$(g) = p^r$. In other words, $p^rg = 0$ and $sg \ne 0$ for any $s < p^r$. Clearly $-p^rg = 0$ and $-sg \ne 0$ for any $s < p^r$. Thus, ord$(-g) = p^r$ and $-g \in G(p)$. Let $x, y \in G(p)$. Let ord$(x) = p^u$ and ord$(y) = p^v$. Then $p^ux = 0, p^vy = 0$ but $s_1x \ne 0, s_2y \ne 0$ for all $s_1 < p^u, s_2 < p^v$.
+
+\textsc{Exercise 7}. \emph{Let $f: G \to H$ be a group homomorphism, and let $g\in G$. Prove that the order of $f(g)$ in $H$ divides the order of $g$ in $G$. Prove that if $G$ is a $p$-group and $f$ is surjective , then $H$ is a $p$-group.}
+
+\subsection{Characters of Finite Abelian Groups}
+
+
 
 \end{document}

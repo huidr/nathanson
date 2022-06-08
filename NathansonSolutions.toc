@@ -20,3 +20,6 @@
 \contentsline {subsection}{\numberline {3.4}Quadratic Residues}{39}{subsection.3.4}%
 \contentsline {subsection}{\numberline {3.5}Quadratic Reciprocity Law}{41}{subsection.3.5}%
 \contentsline {subsection}{\numberline {3.6}Quadratic Residues to Composite Moduli}{45}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Fourier Analysis on Finite Abelian Groups}{47}{section.4}%
+\contentsline {subsection}{\numberline {4.1}The Structure of Finite Abelian Groups}{47}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Characters of Finite Abelian Groups}{48}{subsection.4.2}%
