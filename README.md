@@ -11,7 +11,7 @@ This manual is best used with its parent text ("Elementary Methods in Number The
 
 ### Scope
 
-As of now, it only contains solutions to the first three chapters. Solutions to chapter 4 is being prepared currently.
+As of now, it only contains solutions to the first three chapters. Solutions to chapter 4 is currently being prepared.
 
 ### History
 
