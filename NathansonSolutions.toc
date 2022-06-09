@@ -23,3 +23,4 @@
 \contentsline {section}{\numberline {4}Fourier Analysis on Finite Abelian Groups}{47}{section.4}%
 \contentsline {subsection}{\numberline {4.1}The Structure of Finite Abelian Groups}{47}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Characters of Finite Abelian Groups}{48}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Elementary Fourier Analysis}{52}{subsection.4.3}%
