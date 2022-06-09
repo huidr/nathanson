@@ -6,6 +6,7 @@
 \setlength{\parindent}{0pt}
 \newcommand{\done}{\ensuremath{\hfill\square}}
 \usepackage{longtable}
+\allowdisplaybreaks
 
 \begin{document}
 \setlength{\abovedisplayskip}{0pt}
@@ -1660,14 +1661,79 @@ so that $G(2) = \{0, 3, 6, 9\}$ and $G(3) = \{0, 4, 8\}$. Let $f : \Z/4\Z \to G(
 \end{displaymath}
 We have the character table
 \begin{longtable}{ r | r | r |}
-  & 0 & 1 \\
+  & $0$ & $1$ \\
   \hline
-  $\psi_0$ & 1 & 1 \\
+  $\psi_0$ & $1$ & $1$ \\
   \hline
-  $\psi_1$ & 1 & -1 \\
+  $\psi_1$ & $1$ & $-1$ \\
   \hline
 \end{longtable} 
-\item d
+\item 
 \end{enumerate}
+
+\textsc{Exercise 2}. \emph{Compute the character table for the cyclic group of order $6$.}
+
+\textsc{Solution}. We have, $C_6 = \{0, 1, \ldots, 5\}$, and $\widehat{C_6} = \{ \psi_a : a = 0, 1, \ldots, 5 \}$ where 
+\begin{displaymath}
+\psi_a(j) = e^{\frac{2\pi i a j}{6}} = e^{\frac{\pi i a j}{3}} \hspace{1cm} \text{for } j \in C_6.
+\end{displaymath}
+We have the character table
+\renewcommand{\arraystretch}{1.5}
+\begin{longtable}{ r | r | r | r | r | r | r |}
+  & $0$ & $1$ & $2$ & $3$ & $4$ & $5$ \\
+  \hline
+  $\psi_0$ & $1$ & $1$ & $1$ & $1$ & $1$ & $1$ \\
+  \hline
+  $\psi_1$ & $1$ & $e^{\frac{\pi i}{3}}$ & $e^{\frac{2\pi i}{3}}$ & $e^{\pi i}$ & $e^{\frac{4\pi i}{3}}$ & $e^{\frac{5\pi i}{3}}$ \\
+  \hline
+  $\psi_2$ & $1$ & $e^{\frac{2\pi i}{3}}$ & $e^{\frac{4\pi i}{3}}$ & $1$ & $e^{\frac{2\pi i}{3}}$ & $e^{\frac{4\pi i}{3}}$ \\
+  \hline
+  $\psi_3$ & $1$ & $e^{\pi i}$ & $1$ & $e^{\pi i}$ & $1$ & $e^{\pi i}$ \\
+  \hline
+  $\psi_4$ & $1$ & $e^{\frac{4\pi i}{3}}$ & $e^{\frac{2\pi i}{3}}$ & $1$ & $e^{\frac{4\pi i}{3}}$ & $e^{\frac{2\pi i}{3}}$ \\
+  \hline
+  $\psi_5$ & $1$ & $e^{\frac{5\pi i}{3}}$ & $e^{\frac{4\pi i}{3}}$ & $e^{\pi i}$ & $e^{\frac{2\pi i}{3}}$ & $e^{\frac{\pi i}{3}}$ \\
+  \hline                                                        
+\end{longtable}\reduce
+\done
+
+\textsc{Exercise 3}. \emph{Let $G$ be a finite cyclic group of order $n$. Define the characters $\psi_a$ on $G$ by $(4.1)$. Prove that 
+\begin{enumerate}[(a)]
+\item $\psi_a \psi_b = \psi_{a+b}$, 
+\item $\psi_a^{-1} = \psi_{-a}$, 
+\item $\psi_a = \psi_b$ if and only if $a \equiv b \mod n$.
+\end{enumerate}}
+
+\textsc{Solution}. By $(4.1)$, 
+\begin{displaymath}
+\psi_a(jg_0) = e^{2 \pi i aj/n} \hspace{1cm} \text{for } a\in \Z.
+\end{displaymath} 
+\begin{enumerate}[(a)]
+\item For $a, b \in \Z$, we obtain 
+\begin{displaymath}
+\psi_a\psi_b(jg_0) = \psi_a(jg_0)\psi_b(jg_0) = e^{2 \pi i aj/n} e^{2 \pi i bj/n} = e^{2\pi i (a+b)j/n} = \psi_{a+b}(jg_0).
+\end{displaymath} 
+\item For $a\in \Z$, we obtain
+\begin{displaymath}
+\psi_a^{-1}(jg_0) = \psi_a(-jg_0) = e^{2\pi i (-a)j/n} = \psi_{-a}(jg_0).
+\end{displaymath} 
+\item For $a, b \in \Z$, we obtain 
+\begin{displaymath}
+\psi_a(jg_0) = \psi_b(jg_0) \iff e^{2\pi i a j/n} = e^{2\pi i bj/n} \iff a \equiv b \mod n
+\end{displaymath}
+\end{enumerate}
+\done
+
+\textsc{Exercise 4}. \emph{Prove that if $G$ is cyclic and $g\in G$, $g\ne 0$, then $\psi_1(g) \ne 1$.}
+
+\textsc{Solution}. Let $G = \{ jg_0 : j = 0, 1, \ldots, n-1 \}$. By $(4.1)$, 
+\begin{displaymath}
+\psi_1(jg_0) = e^{2\pi i j/n}.
+\end{displaymath}
+Since $g \ne 0$, it follows that $j\ne 0$. But the $n$th roots of unity form vertices of a regular $n$-gon and there is only one vertex at $1$ which occurs when $j = 0$. Consequently, $\psi_1(g) \ne 1$. \done
+
+\textsc{Exercise 5}. \emph{Prove that the map $\Psi$ defined by $4.3$ is a one-to-one homomorphism.}
+
+\textsc{Solution}. 
 
 \end{document}
