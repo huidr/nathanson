@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.27)  4 JUN 2022 22:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.27)  10 JUN 2022 00:02
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -496,7 +496,7 @@ Package hyperref Info: Option `colorlinks' set `true' on input line 45.
 Here is how much of TeX's memory you used:
  7342 strings out of 481176
  108207 string characters out of 5914225
- 414516 words of memory out of 5000000
+ 414522 words of memory out of 5000000
  24219 multiletter control sequences out of 15000+600000
  403430 words of font info for 27 fonts, out of 8000000 for 9000
  59 hyphenation exceptions out of 8191

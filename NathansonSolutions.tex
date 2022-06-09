@@ -1774,7 +1774,16 @@ and
                            &= e^{2\pi i(ax+by)/m},
 \end{align*}
 so that $\psi_{a,b}(x+mu, y+mu)$ does not depend on the choice of $u$. 
-\item 
+\item Suppose $\psi_{a,b} = \psi_{c,d}$ for $a, b, c, d \in \Z$. Then
+\begin{displaymath}
+e^{2\pi i (ax+by)/m} = e^{2\pi i (cx+dy)/m} \iff e^{2\pi i ax/m} e^{2\pi i by/m} = e^{2\pi i cx/m} e^{2\pi i dy/m}.
+\end{displaymath}
+Since the above equality is true for all values of $x$ and $y$, we must have 
+\begin{displaymath}
+e^{2\pi i ax/m} = e^{2\pi i cx/m} \hspace{1cm} \text{and} \hspace{1cm} e^{2\pi i by/m} = e^{2\pi i dy/m}.
+\end{displaymath}
+It follows that $2\pi i x (a-b)/m = 2\pi i x u$, that is, $a = b + mu$. Therefore, $a \equiv b \mod m$. Likewise, $b \equiv d \mod n$. The other direction follows trivially. 
+\item We shall prove that $\psi_{a,b}: \Z/m\Z \times \Z/m\Z \to \C^{\times}$ is a homomorphism.
 \end{enumerate}
 
 \end{document}
