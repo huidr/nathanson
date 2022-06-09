@@ -1783,7 +1783,28 @@ Since the above equality is true for all values of $x$ and $y$, we must have
 e^{2\pi i ax/m} = e^{2\pi i cx/m} \hspace{1cm} \text{and} \hspace{1cm} e^{2\pi i by/m} = e^{2\pi i dy/m}.
 \end{displaymath}
 It follows that $2\pi i x (a-b)/m = 2\pi i x u$, that is, $a = b + mu$. Therefore, $a \equiv b \mod m$. Likewise, $b \equiv d \mod n$. The other direction follows trivially. 
-\item We shall prove that $\psi_{a,b}: \Z/m\Z \times \Z/m\Z \to \C^{\times}$ is a homomorphism.
+\item We shall prove that $\psi_{a,b}: \Z/m\Z \times \Z/m\Z \to \C^{\times}$ is a homomorphism. Let $(x, y), (x^{\prime}, y^{\prime}) \in \Z/m\Z$. By definition of $\psi_{a,b}$, it follows that 
+\begin{align*}
+  \psi_{a,b}(x+ x^{\prime} + m\Z, y + y^{\prime} + m\Z) &= e^{2\pi i [a(x+x^{\prime}) + b(y+y^{\prime})]/m} \\
+                                                        &= e^{2\pi i (ax+by)/m + 2\pi i (ax^{\prime}+by^{\prime})/m} \\
+                                                        &= e^{2\pi i (ax+by)/m} e^{2\pi i (ax^{\prime} + by^{\prime})/m} \\
+  &= \psi_{a,b}(x + m\Z, y + m\Z) \psi_{a,b} (x^{\prime} + m\Z, y^{\prime} + m\Z)
+\end{align*} 
+\item By Theorem $4.5$, $G \cong \widehat{G}$. If we could find a set $S$ which contains characters of $G$ such that $|S|=|G|$, then we can conclude that $S = \widehat G$. We define 
+\begin{displaymath}
+S \coloneqq \{ \psi_{a,b} : a, b = 0,1,\ldots, m-1\}.
+\end{displaymath}
+In (c), we proved that $\psi_{a,b}$ is a character of $G$. From (b), each $\psi_{a,b}$ is unique for $a, b = 0,1,\ldots, m-1$. It follows that $|S|=m^2 = |G|$. It follows that $\widehat{G} = \{ \psi_{a,b}: a,b = 0, 1,\ldots, m-1 \}$. \done
 \end{enumerate}
+
+\textsc{Exercise 8}. \emph{Let $p$ be a prime number, and let $G = (\Z/p\Z)^{\times}$ be the multiplicative group of units in the field $\Z/p\Z$. Let $g$ be a primitive root modulo $p$. For every integer $a$, define the function $\chi_a : G \to C^{\times}$ as follows: If $(x,p) = 1$ and $x \equiv g^y \mod p$, then 
+\begin{displaymath}
+\chi_a(x + p\Z) = e^{2\pi ay/(p-1)} = e_{p-1}(ay).
+\end{displaymath} 
+\begin{enumerate}[(a)]
+\item Prove that $\chi_a$ is a character, that is, $\chi_a \in \widehat{G}$. 
+\item Prove that $\chi_a = \chi_b$ if and only if $a \equiv b \mod p-1$. 
+\item Prove that $\widehat{G} = \{ \chi_a : a = 0, 1, \ldots, p-2 \}$.  
+\end{enumerate}}
 
 \end{document}
