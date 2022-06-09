@@ -2,7 +2,7 @@
 
 Version: 0.5 \
 License: GPL v3.0 \
-Last updated: June 8, 2022 \
+Last updated: June 9, 2022 \
 File: [PDF](https://ronhuidrom.github.io/nathanson-number-theory-solutions/NathansonSolutions.pdf) (available for download)
 
 ### Usage
