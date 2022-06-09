@@ -1734,6 +1734,47 @@ Since $g \ne 0$, it follows that $j\ne 0$. But the $n$th roots of unity form ver
 
 \textsc{Exercise 5}. \emph{Prove that the map $\Psi$ defined by $4.3$ is a one-to-one homomorphism.}
 
-\textsc{Solution}. 
+\textsc{Exercise 6}. \emph{Consider the map $\langle , \rangle : G \times \widehat{G} \to C^{\times}$ defined by 
+\begin{displaymath}
+\langle g, \chi \rangle = \chi(g).
+\end{displaymath}
+Prove that 
+\begin{displaymath}
+\langle g+g^{\prime}, \chi \rangle = \langle g, \chi \rangle \langle g^{\prime}, \chi \rangle \hspace{1cm} \text{and} \hspace{1cm} \langle g, \chi \chi^{\prime} \rangle = \langle g, \chi \rangle \langle g, \chi^{\prime} \rangle
+\end{displaymath}
+for all $g, g^{\prime} \in G$ and $\chi, \chi^{\prime} \in \widehat{G}$.}
+
+\textsc{Solution}. Let $g, g^{\prime} \in G$. Let $\chi, \chi^{\prime} \in \widehat{G}$. Then 
+\begin{displaymath}
+\langle g+g^{\prime}, \chi \rangle = \chi(g + g^{\prime}) = \chi(g) \chi(g^{\prime}) = \langle g, \chi \rangle \langle g^{\prime}, \chi \rangle,
+\end{displaymath}
+and 
+\begin{displaymath}
+\langle g, \chi\chi^{\prime} \rangle = \chi\chi^{\prime}(g) = \chi(g)\chi^{\prime}(g) = \langle g, \chi \rangle \langle g^{\prime} \chi \rangle.
+\end{displaymath}
+\done
+
+\textsc{Exercise 7}. \emph{Let $G = \Z/m\Z \times \Z/m\Z$. For integers $a$ and $b$, we define the function $\psi_{a,b}$ on $G$ by 
+\begin{displaymath}
+\psi_{a,b}(x+m\Z, y+m\Z) = e^{2\pi i(ax+by)/m} = e_m(ax + by).
+\end{displaymath} 
+\begin{enumerate}[(a)]
+\item Prove that $\psi_{a,b}$ is well-defined. 
+\item Prove that $\psi_{a,b} = \psi_{c,d}$ if and only if $a \equiv c \mod m$ and $b \equiv d \mod m$. 
+\item Prove that $\psi_{a,b}$ is a character of the group $G$. 
+\item Prove that $\widehat{G} = \{\psi_{a,b}: a, b = 0, 1, \ldots, m-1\}$. 
+\end{enumerate}}
+
+\textsc{Solution}.
+\begin{enumerate}[(a)]
+\item Let $u \in \Z$. That $\psi_{a,b}$ is well-defined is obvious from the following 
+\begin{align*}
+  \psi_{a,b}(x+mu, y + mu) &= e^{2\pi i (ax + amu + by + bmu)/m} \\
+                           &= e^{2\pi i(ax+by)/m}\cdot e^{2\pi iu(a+b)} \\
+                           &= e^{2\pi i(ax+by)/m},
+\end{align*}
+so that $\psi_{a,b}(x+mu, y+mu)$ does not depend on the choice of $u$. 
+\item 
+\end{enumerate}
 
 \end{document}

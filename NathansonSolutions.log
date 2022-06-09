@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.27)  9 JUN 2022 22:21
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.27)  9 JUN 2022 23:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -591,8 +591,8 @@ Package rerunfilecheck Info: File `NathansonSolutions.out' has not changed.
 (rerunfilecheck)             Checksum: 6B4010E967737A69D6CA3FE0A5014CD3;1926.
  ) 
 Here is how much of TeX's memory you used:
- 9399 strings out of 481176
- 139922 string characters out of 5914225
+ 9405 strings out of 481176
+ 139964 string characters out of 5914225
  479271 words of memory out of 5000000
  26070 multiletter control sequences out of 15000+600000
  412191 words of font info for 59 fonts, out of 8000000 for 9000
@@ -613,10 +613,10 @@ b></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr
 /share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/
 texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on NathansonSolutions.pdf (50 pages, 367279 bytes).
+Output written on NathansonSolutions.pdf (50 pages, 369483 bytes).
 PDF statistics:
- 465 PDF objects out of 1000 (max. 8388607)
- 393 compressed objects within 4 object streams
- 105 named destinations out of 1000 (max. 500000)
+ 474 PDF objects out of 1000 (max. 8388607)
+ 401 compressed objects within 5 object streams
+ 111 named destinations out of 1000 (max. 500000)
  201 words of extra memory for PDF output out of 10000 (max. 10000000)
 
