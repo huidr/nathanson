@@ -1866,6 +1866,95 @@ which is the Haar measure. \done
 
 \textsc{Exercise 4}. \emph{Let $U : L^2(G) \to L^2(\widehat{G})$ be a linear transformation such that $U(\delta_a)(\chi) = \overline{\chi}(a)$ for all $\chi \in \widehat{G}$. Prove that $U$ is the Fourier transform, that is, $U(f) = \widehat{f}$ for all $f\in L^2(G)$.}
 
+\textsc{Exercise 5.} \emph{(Cauchy-Schwarz inequality) Let $f, g \in L^2(G)$. Prove that 
+\begin{displaymath}
+|(f,g)| \leq ||f||_2 ||g||_2.
+\end{displaymath}}
 
+\textsc{Exercise 6}. \emph{Prove that if $f,g\in L^2(G)$, then 
+\begin{displaymath}
+||f+g||_2 \leq ||f||_2 + ||g||_2.
+\end{displaymath}}
+
+\textsc{Exercise 7}. \emph{Let $\chi_1, \chi_2 \in \widehat{G}$. Prove that 
+\begin{displaymath}
+\widehat{\chi_1} (\chi_2) =
+\begin{cases}
+  n & \text{if } \chi_1 = \chi_2 \\
+  0 & \text{if } \chi_1 \ne \chi_2.
+\end{cases}
+\end{displaymath}}
+
+\textsc{Exercise 10}. \emph{For functions $f_1, f_2 \in L^2(G)$, we define the convolution $f_1*f_2 \in L^2(G)$ by 
+\begin{displaymath}
+f_1 * f_2 (a) = \int_G f_1(a-x) f_2(x) dx = \sum_{a\in G} f_1(a-x) f_2(x).
+\end{displaymath} 
+\begin{enumerate}[(a)]
+\item Prove that 
+\begin{displaymath}
+f_1 * f_2 (a) = \sum_{x+y = a} f_1(x) f_2(y).
+\end{displaymath} 
+\item Prove that convolution is commutative, that is, 
+\begin{displaymath}
+f_1 * f_2 = f_2 * f_1.
+\end{displaymath} 
+\item Prove that convolution is associative, that is, 
+\begin{displaymath}
+(f_1 * f_2) * f_3 = f_1 * (f_2 * f_3).
+\end{displaymath} 
+\item Prove that, if $f_1, \ldots, f_k \in L^2(G),$ then 
+\begin{displaymath}
+f_1 * \cdots * f_k (a) = \sum_{x_1 + \cdots + x_k = a} f_1(x_1) \cdots f_k(x_k)
+\end{displaymath}
+\end{enumerate}}
+
+\textsc{Solution}. 
+\begin{enumerate}[(a)]
+\item Let $a-x = y$. Since the summation is over the group, 
+\begin{displaymath}
+f_1*f_2(a) = \sum_{a \in G} f_1(a-x) f_2(x) = \sum_{x+y = a}f_1(y)f_2(x).
+\end{displaymath}
+The above expression is symmetric in $x$ and $y$ (both of them are only dummy variables), so we may interchange them. It follows that 
+\begin{displaymath}
+f_1 * f_2 (a) = \sum_{x+y = a} f_1(x) f_2(y).
+\end{displaymath} 
+\item 
+\item By definition of convolution, 
+\begin{align*}
+  (f_1 * f_2) * f_3 (a) &= \sum_{u + z = a} f_1*f_2(u) f_3(z) \\
+                        &= \sum_{u + z = a} \left( \sum_{x+y = u} f_1(x)f_2(y) \right) f_3(z) \\
+                        &= \sum_{x+y+z = a} f_1(x) f_2(y) f_3(z).
+\end{align*}
+Likewise, it is checked that 
+\begin{displaymath}
+  f_1 * (f_2 * f_3)(a) = \sum_{x+y+z = a} f_1(x) f_2(y) f_3(z).
+\end{displaymath}
+The associativity follows. 
+\item Since convolution is associative, we can drop the parenthesis. It is easy to see that the proposition follows by induction. Indeed, we have already proved the base case. Proving $P(k) \implies P(k+1)$ follows almost exactly the same way as the proof of associativity in (c). \done
+\end{enumerate}
+
+\textsc{Exercise 11}. \emph{Let $\chi \in \widehat{G}$. Prove that 
+\begin{displaymath}
+\underbrace{\chi * \cdots * \chi}_{k\ \text{times}}(a) = \sum_{x_1 + x_2 + \cdots + x_k = a} \chi(x_1 + x_2 + \cdots + x_k).
+\end{displaymath}}\textsc{Solution}. By Exercise $10$ (d), 
+\begin{align*}
+  \underbrace{\chi * \cdots * \chi}_{k\ \text{times}}(a) &= \sum_{x_1 + x_2 + \cdots + x_k = a} \chi(x_1) \chi(x_2) \cdots \chi(x_k) \\
+  &= \sum_{x_1 + x_2 + \cdots + x_k = a} \chi(x_1 + x_2 + \cdots + x_k),
+\end{align*}
+where we have used the fact that $\chi$ is a homomorphism. \done
+
+\textsc{Exercise 12}. \emph{Let $p$ be a prime number, and define $l_p \in L^2(\Z/p\Z)$ by 
+\begin{displaymath}
+l_p(a + p\Z) = \left( \frac{a}{p} \right),
+\end{displaymath}
+where $\left( \frac{\cdot}{p} \right)$ is the Legendre symbol. Prove that 
+\begin{displaymath}
+  \underbrace{l_p * \cdots * l_p}_{k\ \text{times}}(a + p\Z) = \sum_{\substack {x_1 + x_2 + \cdots + x_k = p\\ 1 \leq x_i \leq p-1}} \left( \frac{x_1x_2\cdots x_k}{p} \right).
+\end{displaymath}}\textsc{Solution}. By Exercise $10$ (d), 
+\begin{align*}
+  \underbrace{l_p * \cdots * l_p}_{k\ \text{times}}(a + p\Z) &= 
+\end{align*}
+
+\subsection{Poisson Summation}
 
 \end{document}
