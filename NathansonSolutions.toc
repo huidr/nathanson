@@ -24,4 +24,4 @@
 \contentsline {subsection}{\numberline {4.1}The Structure of Finite Abelian Groups}{49}{subsection.4.1}%
 \contentsline {subsection}{\numberline {4.2}Characters of Finite Abelian Groups}{50}{subsection.4.2}%
 \contentsline {subsection}{\numberline {4.3}Elementary Fourier Analysis}{53}{subsection.4.3}%
-\contentsline {subsection}{\numberline {4.4}Poisson Summation}{56}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.4}Poisson Summation}{57}{subsection.4.4}%

@@ -1949,10 +1949,12 @@ l_p(a + p\Z) = \left( \frac{a}{p} \right),
 \end{displaymath}
 where $\left( \frac{\cdot}{p} \right)$ is the Legendre symbol. Prove that 
 \begin{displaymath}
-  \underbrace{l_p * \cdots * l_p}_{k\ \text{times}}(a + p\Z) = \sum_{\substack {x_1 + x_2 + \cdots + x_k = p\\ 1 \leq x_i \leq p-1}} \left( \frac{x_1x_2\cdots x_k}{p} \right).
+  \underbrace{l_p * \cdots * l_p}_{k\ \text{times}}(a + p\Z) = \sum_{\substack {x_1 + x_2 + \cdots + x_k = a\\ 1 \leq x_i \leq p-1}} \left( \frac{x_1x_2\cdots x_k}{p} \right).
 \end{displaymath}}\textsc{Solution}. By Exercise $10$ (d), 
 \begin{align*}
-  \underbrace{l_p * \cdots * l_p}_{k\ \text{times}}(a + p\Z) &= 
+  \underbrace{l_p * \cdots * l_p}_{k\ \text{times}}(a + p\Z) &= \sum_{\substack {x_1 + x_2 + \cdots + x_k = a\\ 1 \leq x_i \leq p-1}} l_p( x_1 ) l_p(x_2) \cdots l_p(x_k) \\
+                                                             &= \sum_{\substack {x_1 + x_2 + \cdots + x_k = a\\ 1 \leq x_i \leq p-1}} \left( \frac{x_1}{p} \right) \left( \frac{x_2}{p} \right) \cdots \left( \frac{x_k}{p} \right) \\
+  &= \sum_{\substack {x_1 + x_2 + \cdots + x_k = a\\ 1 \leq x_i \leq p-1}} \left( \frac{x_1x_2\cdots x_k}{p} \right).
 \end{align*}
 
 \subsection{Poisson Summation}

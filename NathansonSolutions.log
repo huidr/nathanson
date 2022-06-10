@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.27)  11 JUN 2022 02:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.27)  11 JUN 2022 02:51
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -596,13 +596,13 @@ Overfull \vbox (10.29001pt too high) has occurred while \output is active []
 ] [39] [40] [41] [42] [43] [44] [45] [46] [47] [48] [49
 
 ] [50] [51] [52]
-[53] [54] [55] [56] (./NathansonSolutions.aux)
+[53] [54] [55] [56] [57] (./NathansonSolutions.aux)
 Package rerunfilecheck Info: File `NathansonSolutions.out' has not changed.
 (rerunfilecheck)             Checksum: 2AB35C9034F03230B270A9B83C2E762E;2070.
  ) 
 Here is how much of TeX's memory you used:
- 9429 strings out of 481176
- 140164 string characters out of 5914225
+ 9430 strings out of 481176
+ 140171 string characters out of 5914225
  479277 words of memory out of 5000000
  26072 multiletter control sequences out of 15000+600000
  412191 words of font info for 59 fonts, out of 8000000 for 9000
@@ -625,10 +625,10 @@ hare/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/t
 exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/
 texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/t
 exmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on NathansonSolutions.pdf (56 pages, 403193 bytes).
+Output written on NathansonSolutions.pdf (57 pages, 403981 bytes).
 PDF statistics:
- 535 PDF objects out of 1000 (max. 8388607)
- 454 compressed objects within 5 object streams
- 133 named destinations out of 1000 (max. 500000)
+ 539 PDF objects out of 1000 (max. 8388607)
+ 457 compressed objects within 5 object streams
+ 134 named destinations out of 1000 (max. 500000)
  217 words of extra memory for PDF output out of 10000 (max. 10000000)
 
