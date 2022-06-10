@@ -1967,7 +1967,9 @@ In these exercises, $G$ is a finite abelian group of order $n$.
 
 \textsc{Solution}. From the definition of the multiplication of matrices, 
 \begin{displaymath}
-AB = \sum_{d}^{}
-\end{displaymath}
+\text{tr}(AB) = \sum_{i=1}^{n}(AB)_{ii} = \sum_{i=1}^{n}\sum_{k=1}^{n} a_{ik}b_{ki} = \sum_{k=1}^n \sum_{i=1}^n b_{ki} a_{ik} = \sum_{k=1}^n (BA)_{kk} = \text{tr}(BA).
+\end{displaymath}\done
+
+\textsc{Exercise 2}. \emph{Define the matrices $R$ and $S$ by $(4.12)$ and $(4.13)$. Prove that $S = R^{-1}$.}
 
 \end{document}
