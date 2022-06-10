@@ -723,6 +723,7 @@ x^2 - 2y^4 = -1
 with $x \leq 1000$.}
 
 \textsc{Solution}. We can re-write the equation as $x^2 + 1 = 2y^4$. We observe that $1000^2 = 1000000$ and $27^4 = 531441$. Thus, we need only check for $n < 27$. As in Exercise $10$, we shall write a solution in the form $(x,y)$. An obvious solution is $(1,1)$. It is checked that the only other solution is $(239, 13)$. \done
+\clearpage
 
 \section{Congruences}
 
@@ -1183,6 +1184,7 @@ On solving, we see that $73$ and $83$ are its roots. It can be checked that $73\
 
 \textsc{Solution}. 
 
+\clearpage
 \section{Primitive Roots and Quadratic Reciprocity}
 
 \subsection{Polynomials and Primitive Roots}
@@ -1608,6 +1610,7 @@ Simply expanding the binomial coefficients yield the form of derivatives we are 
 \end{align*}
 where, in the final step, we get rid of the borrowed symbols. \done
 
+\clearpage
 \section{Fourier Analysis on Finite Abelian Groups}
 
 \subsection{The Structure of Finite Abelian Groups}
@@ -1823,6 +1826,45 @@ In (c), we proved that $\psi_{a,b}$ is a character of $G$. From (b), each $\psi_
 
 \subsection{Elementary Fourier Analysis}
 
+In these exercises, $G$ is a finite abelian group.
+
+\textsc{Exercise 1}. \emph{Let $f,g \in L^2(G)$. Prove that 
+\begin{displaymath}
+(g,f) = \overline{(f,g)}.
+\end{displaymath}}\textsc{Solution}. By definition of inner product on $L^2(G)$, we obtain 
+\begin{displaymath}
+  (g, f) = \int_G g\overline{f} = \sum_{x\in G} g(x) \overline{f(x)} = \overline{\sum_{x\in G} f(x) \overline{g(x)}} = \overline{\int_G f\overline{g}} = \overline{(f,g)}.
+\end{displaymath}\done
+
+\textsc{Exercise 2}. \emph{Let $f \in L^2(G)$. Prove that if $c\in L^2(\widehat{G})$ and $f=(1/n)\sum_{\chi \in \widehat{G}} c(\chi) \chi$, then $c(\chi) = \widehat{f}(\chi)$.}
+
+\textsc{Solution}. By a consequence of the orthogonality relations (Thoerem $4.7$), 
+\begin{displaymath}
+(\chi_1, \chi_2) =
+\begin{cases}
+  n & \text{if } \chi_1 = \chi_2 \\
+  0 & \text{if } \chi_2 \ne \chi_2.
+\end{cases}
+\end{displaymath}
+That is, $\widehat{G} = \{\chi_1, \ldots, \chi_n\}$ is an orthogonal set. Consequently, $\widehat{G}$ is linearly independent. But $|\widehat{G}| = n = \dim L^2(G)$. It follows that $\widehat{G}$ is a basis for $L^2(G)$. The first part of the proof of Theorem $4.8$ establishes the Fourier series of $f$ as 
+\begin{displaymath}
+f = \frac{1}{n} \sum_{\chi \in \widehat{G}} \widehat{f}(\chi) \chi.
+\end{displaymath}
+Since $\widehat{G}$ is a basis, this representation must be unique so that $c(\chi) = \widehat{f}(\chi)$. \done
+
+\textsc{Exercise 3}. \emph{Prove that the Haar measure on $G$ is unique, that is, there exists a unique function $\mu$ on the subsets of $G$ such that $\mu$ is additive, translation invariant, and $\mu (G) = n$.}
+
+\textsc{Solution}. Let $\mu$ be a function on subsets of $G$ such that $\mu$ is additive, translation invariant, and $\mu(G) = n$. We shall prove that $\mu$ is the Haar measure, that is, $\mu(U) = |U|$ for any $U \subset G$. Let $U = \{0\}$. Then for any $a \in G$, by translation invariance, we must have $\mu(U) = \mu(a + U)$. That is, $\mu(\{0\}) = \mu(\{a\})$. Indeed, for any $a, b\in G$, we have $\mu(\{a\}) = \mu(\{b\})$. By additivity, 
+\begin{displaymath}
+\mu(G) = \mu(\bigcup_{a\in G} \{a\}) = \sum_{a\in G} \mu(\{a\}) = n.
+\end{displaymath}
+But $|G| = n$. It follows that $\mu(\{a\}) = 1$. Again, by additivity, for any $U \subset G$, 
+\begin{displaymath}
+\mu(U) = \sum_{a\in U} 1 = |U|,
+\end{displaymath}
+which is the Haar measure. \done
+
+\textsc{Exercise 4}. \emph{Let $U : L^2(G) \to L^2(\widehat{G})$ be a linear transformation such that $U(\delta_a)(\chi) = \overline{\chi}(a)$ for all $\chi \in \widehat{G}$. Prove that $U$ is the Fourier transform, that is, $U(f) = \widehat{f}$ for all $f\in L^2(G)$.}
 
 
 

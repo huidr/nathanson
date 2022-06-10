@@ -5,22 +5,22 @@
 \contentsline {subsection}{\numberline {1.4}The Fundamental Theorem of Arithmetic}{15}{subsection.1.4}%
 \contentsline {subsection}{\numberline {1.5}Euclid's Theorem and the Sieve of Erastosthenes}{22}{subsection.1.5}%
 \contentsline {subsection}{\numberline {1.6}A Linear Diophantine Equation}{23}{subsection.1.6}%
-\contentsline {section}{\numberline {2}Congruences}{25}{section.2}%
-\contentsline {subsection}{\numberline {2.1}The Ring of Congruence Classes}{25}{subsection.2.1}%
+\contentsline {section}{\numberline {2}Congruences}{26}{section.2}%
+\contentsline {subsection}{\numberline {2.1}The Ring of Congruence Classes}{26}{subsection.2.1}%
 \contentsline {subsection}{\numberline {2.2}Linear Congruences}{30}{subsection.2.2}%
-\contentsline {subsection}{\numberline {2.3}The Euler Phi Function}{30}{subsection.2.3}%
-\contentsline {subsection}{\numberline {2.4}Chinese Remainder Theorem}{31}{subsection.2.4}%
-\contentsline {subsection}{\numberline {2.5}Euler's Theorem and Fermat's Theorem}{33}{subsection.2.5}%
+\contentsline {subsection}{\numberline {2.3}The Euler Phi Function}{31}{subsection.2.3}%
+\contentsline {subsection}{\numberline {2.4}Chinese Remainder Theorem}{32}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Euler's Theorem and Fermat's Theorem}{34}{subsection.2.5}%
 \contentsline {subsection}{\numberline {2.6}Pseudoprimes and Carmichael Numbers}{35}{subsection.2.6}%
 \contentsline {subsection}{\numberline {2.7}Public Key Cryptography}{36}{subsection.2.7}%
-\contentsline {section}{\numberline {3}Primitive Roots and Quadratic Reciprocity}{37}{section.3}%
-\contentsline {subsection}{\numberline {3.1}Polynomials and Primitive Roots}{37}{subsection.3.1}%
-\contentsline {subsection}{\numberline {3.2}Primitive Roots to Composite Moduli}{37}{subsection.3.2}%
+\contentsline {section}{\numberline {3}Primitive Roots and Quadratic Reciprocity}{38}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Polynomials and Primitive Roots}{38}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Primitive Roots to Composite Moduli}{38}{subsection.3.2}%
 \contentsline {subsection}{\numberline {3.3}Power Residues}{39}{subsection.3.3}%
-\contentsline {subsection}{\numberline {3.4}Quadratic Residues}{39}{subsection.3.4}%
-\contentsline {subsection}{\numberline {3.5}Quadratic Reciprocity Law}{41}{subsection.3.5}%
-\contentsline {subsection}{\numberline {3.6}Quadratic Residues to Composite Moduli}{45}{subsection.3.6}%
-\contentsline {section}{\numberline {4}Fourier Analysis on Finite Abelian Groups}{47}{section.4}%
-\contentsline {subsection}{\numberline {4.1}The Structure of Finite Abelian Groups}{47}{subsection.4.1}%
-\contentsline {subsection}{\numberline {4.2}Characters of Finite Abelian Groups}{48}{subsection.4.2}%
-\contentsline {subsection}{\numberline {4.3}Elementary Fourier Analysis}{52}{subsection.4.3}%
+\contentsline {subsection}{\numberline {3.4}Quadratic Residues}{40}{subsection.3.4}%
+\contentsline {subsection}{\numberline {3.5}Quadratic Reciprocity Law}{42}{subsection.3.5}%
+\contentsline {subsection}{\numberline {3.6}Quadratic Residues to Composite Moduli}{46}{subsection.3.6}%
+\contentsline {section}{\numberline {4}Fourier Analysis on Finite Abelian Groups}{49}{section.4}%
+\contentsline {subsection}{\numberline {4.1}The Structure of Finite Abelian Groups}{49}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Characters of Finite Abelian Groups}{50}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Elementary Fourier Analysis}{53}{subsection.4.3}%
