@@ -1,7 +1,7 @@
 # Solutions to Nathanson's Elementary Methods in Number Theory
 
 Version: 0.5 \
-License: GPL v3.0 \
+License: GPL v3.0
 
 ### Usage
 
