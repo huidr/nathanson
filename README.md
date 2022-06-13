@@ -7,15 +7,13 @@ License: GPL v3.0
 
 This is a solution manual (in preparation) for the popular textbook [Elementary Methods in Number Theory](https://link.springer.com/book/10.1007/b98870#:~:text=Elementary%20Methods%20in%20Number%20Theory%20begins%20with%20%22a%20first%20course,%2C%20prime%20numbers%2C%20and%20congruences) by Melvyn B. Nathanson and as such, it is best used with the parent text. 
 
-### Scope
-
-As of now, it only contains solutions to the first three chapters. Solutions to chapter 4 is currently in preparation.
-
 ### History
 
 This solution manual is an indirect product of my (pre) summer work at ISI (Delhi) in 2022. Indeed, I solved these problems in preparation for it. I thoroughly enjoyed solving these problems but I quickly realized typesetting them in TeX/LaTex and putting them on GitHub would add more value to them. This was how this repo came into being.
 
-### Future
+### Present and Beyond
+
+As of now, it only contains solutions to the first three chapters. Solutions to chapter 4 is currently in preparation. 
 
 I plan to cover more chapters and add more solutions in near future.
 
