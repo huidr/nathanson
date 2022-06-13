@@ -5,7 +5,7 @@ License: GPL v3.0
 
 ### About the Book
 
-Djdjd
+This is a solution manual (in preparation) for the popular textbook [Elementary Methods in Number Theory]() 
 
 ### Usage
 
