@@ -1,4 +1,4 @@
-# Solutions to Nathanson's Elementary Methods in Number Theory
+## Solutions to Nathanson's Elementary Methods in Number Theory
 
 Version: 0.1 (beta) \
 License: GPL v3.0
