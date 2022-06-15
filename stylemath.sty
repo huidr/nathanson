@@ -1,0 +1,66 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{custom-quick-math}
+%[2022/02/09 v0.1 A custom-made LaTeX package for stylish math writing]
+
+%\RequirePackage[margin=1in]{geometry}
+\RequirePackage[bookmarksdepth=4]{hyperref}
+\RequirePackage{pdfpages}
+\RequirePackage{xcolor}
+\RequirePackage[shortlabels]{enumitem}
+\setlist[itemize]{itemsep=1pt, topsep=0pt}
+\setlist[enumerate]{itemsep=1pt, topsep=0pt}
+
+\RequirePackage{mathtools}
+\RequirePackage{amssymb}
+\RequirePackage{amsthm}
+\RequirePackage{amsfonts}
+
+%\swapnumbers
+\theoremstyle{plain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{conjecture}[theorem]{Conjecture}
+
+\theoremstyle{defintion}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{axiom}[theorem]{Axiom}
+\newtheorem{example}[theorem]{Example}
+\newtheorem{exercise}[theorem]{Exercise}
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+\newtheorem*{note}{Note}
+
+\theoremstyle{definition}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem*{solution}{Solution}
+
+\hypersetup{
+		colorlinks=true,
+		linkcolor=blue,
+		filecolor=magenta,
+		urlcolor=blue
+              }
+\linespread{1}
+
+\newcommand{\tab}{\hspace*{2em}}
+
+\newcommand{\R}{\ensuremath{\mathbb{R}} }
+\newcommand{\C}{\ensuremath{\mathbb{C}} }
+\newcommand{\F}{\ensuremath{\mathbb{F}} }
+\newcommand{\N}{\ensuremath{\mathbb{N}} }
+\newcommand{\Z}{\ensuremath{\mathbb{Z}} }
+\newcommand{\Q}{\ensuremath{\mathbb{Q}} }
+
+\newcommand{\sends}{\ensuremath{\rightsquigarrow}}
+
+\newcommand{\Wlog}{Without loss of generality}
+\newcommand{\wrt}{with respect to}
+\newcommand{\st}{such that}
+
+\newcommand{\reduce}{\vspace*{-1em}}
+
+\endinput
+

@@ -1,5 +1,5 @@
 \documentclass[11pt, leqno]{article}
-\usepackage{custom-quick-math}
+\usepackage{stylemath}
 \usepackage{tocloft}
 \usepackage[margin=3cm]{geometry}
 \setlength{\parskip}{8pt}
@@ -2031,7 +2031,27 @@ That $f$ is one-one easily follows from the fact that the discrete logarithm $j$
 
 \textsc{Exercise 5}. \emph{Prove that the dual group of $(\Z/p\Z)^{\times}$ is the set of functions $\chi_b$ defined by Exercise $4$ for $b = 0, 1, \ldots, p-2$.}
 
-\textsc{Proof}.
+\textsc{Proof}. By Exercise $4$, $\chi_b$ is a character of $(\Z/p\Z)^{\times}$ for each integer $b$. Let $c$ be some integer such that $\chi_b = \chi_c$, that is, for all $j$
+\begin{align*}
+  \chi_b(g^j + p\Z) &= \chi_c(g^j + p\Z) \\
+  e^{2\pi i bj /(p-1)} &= e^{2\pi i cj /(p-1)},
+\end{align*}
+which is true only when $b \equiv c \mod p-1$. Therefore, $\chi_b$ is distinct for each $b$ in $(p-1)\Z$. We have now found $p-1$ distinct characters of $(\Z/p\Z)^{\times}$. But $G \cong \widehat{G}$ for every finite abelian group $G$. Since $|(\Z/p\Z)^{\times}| = p-1$, we conclude that the dual group of $(\Z/p\Z)^{\times}$ is the set of functions $\chi_b$ for $b = 0,1,\ldots, p-2$. \done
+
+\textsc{Exercise 6}. \emph{Prove that 
+\begin{displaymath}
+  \chi_b^{-1} = \overline{\chi_b} = \chi_{p-1-b}
+\end{displaymath}
+for $b = 0,1, \ldots, p-2$.}
+
+\textsc{Proof}. Since $\chi_b \overline{\chi_b}(g^j + p\Z) = e^{2\pi i bj/(p-1)} e^{-2\pi i bj/(p-1)} = 1$ for all $b$, we conclude that $\chi_b^{-1} = \overline{\chi_b}$. Also, 
+\begin{align*}
+  \chi_{p-1-b}(g^j + p\Z) &= e^{2\pi i (p-1-b)j/(p-1)} \\
+                          &= e^{2\pi i - 2\pi b/(p-1)} \\
+                          &= e^{- 2\pi b/(p-1)} \\
+                          &= \overline{\chi_b}(g^j + p\Z)
+\end{align*}
+It follows that $\chi_b^{-1} = \overline{\chi_b} = \chi_{p-1-b}$. \done
 
 \subsection{The Sign of the Gauss Sum}
 
@@ -2040,4 +2060,18 @@ That $f$ is one-one easily follows from the fact that the discrete logarithm $j$
 
 \subsection{Ideals and Radicals}
 
+\textsc{Exercise 1}. \emph{Determine \emph{rad}$(3^n)$ and \emph{rad}$(n!)$ for all $n \geq 0$.}
+
+\textsc{Solution}. Since $3$ is the only prime that divides $3^n$, we obtain rad$(3^n) = 3$. Since all primes $\leq n$ are the only prime divisors of $n!$, we obtain rad$(n!) = \sum_{p\leq n} p$ where $p$ is a prime. \done
+
+\textsc{Exercise 2}. \emph{Let $m$ and $n$ be nonzero integers. Prove that \emph{rad}$(mn) \leq $ \emph{rad}$(m)$\emph{rad}$(n)$ if and only if $(m,n) = 1$.}
+
+\textsc{Proof}. 
+
 \end{document}
+
+% LICENSE.md
+% NathansonSolutions
+% NathansonSolutions
+% README.md
+% stylemath.sty
