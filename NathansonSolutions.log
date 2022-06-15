@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.27)  16 JUN 2022 01:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.21 (TeX Live 2020/Debian) (preloaded format=pdflatex 2021.10.27)  16 JUN 2022 02:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -601,11 +601,11 @@ Overfull \vbox (12.19pt too high) has occurred while \output is active []
 [54] [55] [56] [57] [58]
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2017.
+(hyperref)                removing `math shift' on input line 2039.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
-(hyperref)                removing `math shift' on input line 2017.
+(hyperref)                removing `math shift' on input line 2039.
 
 [59
 
@@ -639,7 +639,7 @@ exlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/share/texlive
 /texmf-dist/fonts/type1/public/amsfonts/cm/cmti8.pfb></usr/share/texlive/texmf-
 dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-d
 ist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on NathansonSolutions.pdf (59 pages, 419012 bytes).
+Output written on NathansonSolutions.pdf (59 pages, 420782 bytes).
 PDF statistics:
  577 PDF objects out of 1000 (max. 8388607)
  492 compressed objects within 5 object streams

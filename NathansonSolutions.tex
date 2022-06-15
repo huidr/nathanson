@@ -1988,6 +1988,56 @@ from which we obtain $B = SRB$. The columns of the matrix $B$, being the basis e
 
 \subsection{Gauss Sums and Quadratic Reciprocity}
 
+\textsc{Exercise 1}. \emph{Show that} 
+\begin{displaymath}
+\tau(5) = 2 \left( \cos \frac{\pi}{5} + \cos \frac{2\pi}{5} \right).
+\end{displaymath}\textsc{Proof}. By the definition of the classical Gauss sum, 
+\begin{align*}
+  \tau(5) &= \sum_{k=1}^4 \left( \frac{k}{5} \right) e^{2\pi i k/5} \\
+          &= \left( \frac{1}{5} \right) e^{2\pi i/5} + \left( \frac{2}{5} \right) e^{4\pi i/5} + \left( \frac{3}{5} \right) e^{6\pi i/5} + \left( \frac{4}{5} \right) e^{8\pi i/5} \\
+          &= 2 \left( \cos \frac{\pi}{5} + \cos \frac{2\pi}{5} \right).
+\end{align*}
+\done
 
+Exercise $2$ is solved similarly.
+
+\textsc{Exercise 3}. \emph{Let $p$ be an odd prime and $\chi_0$ the principal character modulo $p$. Prove that if $p$ divides $a$, then $\tau(a, \chi_0) = p-1$.}
+
+\textsc{Proof}. Since $p$ divides $a$, we obtain $e^{2\pi i a k/p} = 1$ for all $k \in \Z$. Then 
+\begin{align*}
+  \tau(\chi_0, a) = \widehat{\chi_0}(\psi_{-a}) = \sum_{k=0}^{p-1} \chi_0(k+ p\Z) e^{2\pi i ak/p} = \sum_{k=1}^{p-1} 1 = p-1,
+\end{align*}
+where we have used $\chi_0(p\Z) = 0$ and $\chi_0(k + p\Z) = 1$ when $\gcd(k, p) = 1$.\done
+
+\textsc{Exercise 4}. \emph{Let $g$ be a primitive root modulo the prime $p$. Prove that, for every integer $b$, the function $\chi_b$ defined by 
+\begin{displaymath}
+\chi_b(g^j + p\Z) = e^{2\pi i bj / (p-1)} = e_{p-1}(bj)
+\end{displaymath}
+is a multiplicative character modulo $p$.}
+
+\textsc{Proof}. Since $g$ is a primitive root modulo $p$, by uniqueness of the discrete logarithm, every congruence class in $(\Z/p\Z)^{\times}$ is uniquely of the form $g^j + p\Z$ for $j = 0, 1, \ldots, p-2$. But $e^{2\pi i bj/(p-1)}$ is an additive character modulo $p-1$. Therefore, if we can prove that $(\Z/p\Z)^{\times}$ is isomorphic to $\Z/(p-1)\Z$, then we are done. Indeed, we claim that they are isomorphic and the isomorphism is given by the map $f: (\Z/p\Z)^{\times} \to \Z/(p-1)\Z$ defined by 
+\begin{displaymath}
+f(g^j + p\Z) = j + (p-1)\Z,
+\end{displaymath}
+where $i$ is the discrete logarithm to base $g$. That $f$ is a homomorphism is easily verified for 
+\begin{align*}
+  f((g^i + p\Z)(g^j + p\Z)) &= f(g^i\cdot g^j + p\Z) \\
+                            &= f(g^{i+j} + p\Z) \\
+                            &= i+j + (p-1)\Z \\
+                            &= (i + (p-1)\Z) + (j + (p-1)\Z) \\
+                            &= f(g^i+(p-1)\Z) + f(g^j + (p-1)\Z).
+\end{align*}
+That $f$ is one-one easily follows from the fact that the discrete logarithm $j$ is unique in $(p-1)\Z$. It follows that $f$ is also onto since $(\Z/p\Z)^{\times}$ and $\Z/(p-1)\Z$ have the same number of elements. \done
+
+\textsc{Exercise 5}. \emph{Prove that the dual group of $(\Z/p\Z)^{\times}$ is the set of functions $\chi_b$ defined by Exercise $4$ for $b = 0, 1, \ldots, p-2$.}
+
+\textsc{Proof}.
+
+\subsection{The Sign of the Gauss Sum}
+
+\clearpage
+\section{The $abc$ Conjecture}
+
+\subsection{Ideals and Radicals}
 
 \end{document}
