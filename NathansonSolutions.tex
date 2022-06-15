@@ -5,8 +5,16 @@
 \setlength{\parskip}{8pt}
 \setlength{\parindent}{0pt}
 \newcommand{\done}{\ensuremath{\hfill\square}}
+\definecolor{darkpowderblue}{rgb}{0.0, 0.2, 0.6}
 \usepackage{longtable}
 \allowdisplaybreaks
+
+\hypersetup{
+		colorlinks=true,
+		linkcolor=blue,
+		filecolor=magenta,
+		urlcolor=darkpowderblue
+		}
 
 \begin{document}
 \setlength{\abovedisplayskip}{0pt}
@@ -40,7 +48,7 @@
 \vfill
 These are my solutions to the first three chapters of the Nathanson's text (mentioned in the cover title). At the moment, not all problems are solved. Similar problems are omitted. Some simple computational problems are also omitted. A few solutions are incomplete (I will complete them soon) and they can be identified with their lack of $\square{}$ symbol. I have discovered that a few solutions have errors (I will correct them soon). I have thoroughly enjoyed solving all these problems on my own.
 
-The latest version of this text can be found at \hyperref{https://github.com/ronhuidrom/nathanson-number-theory-solutions/blob/main/NathansonSolutions.pdf}{}{}{https://github.com/ronhuidrom/nathanson-number-theory-solutions/blob/main/NathansonSolutions.pdf} --- I update it everyday as I keep adding more solutions (or correcting errors).
+The latest version of this text can be found at $\langle$\hyperref{https://github.com/ronhuidrom/nathanson-number-theory/blob/main/NathansonSolutions.pdf}{}{}{github.com/ronhuidrom/nathanson-number-theory/blob/main/NathansonSolutions.pdf}$\rangle$ --- I update it everyday as I keep adding more solutions (or correcting errors).
 
 \hfill Ronald
 \vfill
@@ -60,23 +68,23 @@ Exercises 1-5 are straightforward (use prime factorization and division algorith
 
 \textsc{Exercise 9}. \emph{Prove that $n$ is odd, then $n^2-1$ is divisible by $8$.}
 
-\textsc{Solution}. We put $n=2k-1$ for some $k\in\Z$. Then $n^2-1$ equals $4k^2-4k$, that is, $4k(k-1)$. Since either $k$ or $k-1$ is even, the product $k(k-1)$ is even. It follows that $n^2-1$ is divisible by $8$. \done
+\textsc{Proof}. We put $n=2k-1$ for some $k\in\Z$. Then $n^2-1$ equals $4k^2-4k$, that is, $4k(k-1)$. Since either $k$ or $k-1$ is even, the product $k(k-1)$ is even. It follows that $n^2-1$ is divisible by $8$. \done
 
 \textsc{Exercise 10}. \emph{Prove that $n^3-n$ is divisible by $6$ for every integer $n$.}
 
-\textsc{Solution}. By expanding $n^3-n$ to $n(n-1)(n+1)$, we see that it is a sum of $3$ consecutive integers. Clearly, at least one of them is a even number (say $2k$) and another one is a multiple of $3$ (say $3h$). Therefore, $n^3-n$ has $6hk$ as its factor and hence is divisible by $6$. \done
+\textsc{Proof}. By expanding $n^3-n$ to $n(n-1)(n+1)$, we see that it is a sum of $3$ consecutive integers. Clearly, at least one of them is a even number (say $2k$) and another one is a multiple of $3$ (say $3h$). Therefore, $n^3-n$ has $6hk$ as its factor and hence is divisible by $6$. \done
 
 Exercise 11 is straightforward if we put $a=dk$. Exercises 12-14 are easily solved using a similar approach. 
 
 \textsc{Exercise 15}. \emph{Prove by induction that $n\leq 2^{n-1}$ for all positive integers $n$.}
 
-\textsc{Solution}. The case of $n=1$ is easily verified. Suppose the proposition holds for $n=k$ for some $k\in\Z, k>0$. Then $k \leq 2^{k-1}$, which implies, $k+1 \leq 2^{k-1}+1 \leq 2^{k+1-1}$ (because adding $1$ to a positive integer cannot make it greater than multiplying the same integer by $2$). Therefore, by induction, the proposition is true for all positive integers $n$. \done
+\textsc{Proof}. The case of $n=1$ is easily verified. Suppose the proposition holds for $n=k$ for some $k\in\Z, k>0$. Then $k \leq 2^{k-1}$, which implies, $k+1 \leq 2^{k-1}+1 \leq 2^{k+1-1}$ (because adding $1$ to a positive integer cannot make it greater than multiplying the same integer by $2$). Therefore, by induction, the proposition is true for all positive integers $n$. \done
 
 Exercises 16-17 are easy exercises of using induction.
 
 \textsc{Exercise 19}. \emph{Let $a$ and $d$ be integers with $d\geq 1$. Prove that there exist unique integers $q^{\prime}$ and $r^{\prime}$ such that $a=dq^{\prime} + r^{\prime}$ and $-d/2 < r^{\prime} \leq d/2$.}
 
-\textsc{Solution}. Let $S$ be the set of integers of the form $a-dx$ with $x\in\Z$. We choose $r^{\prime} = a-dx$ such that $-d/2 < a-dx \leq d/2$. It is possible to choose such an $r^{\prime}$ because $a-dx$ is an arithmetic progression with common difference $d$, and $|d/2 - (-d/2)| = d$. Then we set $q^{\prime} = x$ so that $a = dq^{\prime} + r^{\prime}$. To prove uniqueness, we assume $a = dq_1 + r_1$ with $-d/2 < r_1 \leq d/2$. Since $-d/2 < r_1, r^{\prime} \leq d/2$, and $a = dq_1+r_1 = dq^{\prime} + r^{\prime}$, it follows that 
+\textsc{Proof}. Let $S$ be the set of integers of the form $a-dx$ with $x\in\Z$. We choose $r^{\prime} = a-dx$ such that $-d/2 < a-dx \leq d/2$. It is possible to choose such an $r^{\prime}$ because $a-dx$ is an arithmetic progression with common difference $d$, and $|d/2 - (-d/2)| = d$. Then we set $q^{\prime} = x$ so that $a = dq^{\prime} + r^{\prime}$. To prove uniqueness, we assume $a = dq_1 + r_1$ with $-d/2 < r_1 \leq d/2$. Since $-d/2 < r_1, r^{\prime} \leq d/2$, and $a = dq_1+r_1 = dq^{\prime} + r^{\prime}$, it follows that 
 \begin{displaymath}
 |r_1 - r^{\prime}| \leq d-1, \hspace{1cm} \text{and} \hspace{1cm} d(q_1-q^{\prime}) = r^{\prime} - r_1.
 \end{displaymath}
@@ -90,7 +98,7 @@ Exercise 20 is a straightforward computation using the definition of binomial co
 
 \textsc{Exercise 21}. \emph{Prove that the product of any $k$ consecutive integers is always divisible by $k!$.}
 
-\textsc{Solution}. Any $k$ consecutive integers are of the form $n, n-1, \ldots, n-(k-1)$. Their product can be written as 
+\textsc{Proof}. Any $k$ consecutive integers are of the form $n, n-1, \ldots, n-(k-1)$. Their product can be written as 
 \begin{displaymath}
 \frac{n(n-1)\cdots (n-k+1)(n-k)(n-k-1)\cdots 2\cdot 1}{(n-k)!} = \frac{n!}{(n-k)!}.
 \end{displaymath}
@@ -102,7 +110,7 @@ where both terms on the right side are integers (by induction hypothesis). There
 
 \textsc{Exercise 22}. \emph{Let $m_0, m_1, m_2,\ldots$ be a strictly increasing sequence of positive integers such that $m_0=1$ and $m_i$ divides $m_{i+1}$ for all $i\geq 0$. Prove that every positive integer $n$ can be represented uniquely in the form $n = \sum_{i=0}^{\infty}a_im_i$, where $0\leq a_i \leq m_{i+1}/m_i-1$ for all $i\geq 0$ and $m_i=0$ for all but finitely many integers $i$.}
 
-\textsc{Solution}. Any strictly increasing sequence of positive integers is unbounded. Thus, given any positive integer $n$, there exists $k\in\Z, k\geq 0$ such that $m_k \leq n < m_{k+1}$. For $k\geq 0$, let $P(k)$ be the statement that every integer in the interval $m_k \leq n < m_{k+1}$ has a unique representation in the form $\sum_{i=0}^{\infty} a_im_i$, where $0\leq a_i \leq m_{i+1}/m_i-1$ for all $i\geq 0$ and $m_i=0$ for all but finitely many integers $i$. Clearly $P(0)$ holds since $n=a_0$ is the unique representation if $1 \leq n \leq m_1$. Let $k\geq 1$ and suppose the statements $P(0)$, $P(1)$, $\ldots, P(k-1)$ hold. We shall prove $P(k)$. Let $m_k \leq n \leq m_{k+1}$. Then, by division algorithm, 
+\textsc{Proof}. Any strictly increasing sequence of positive integers is unbounded. Thus, given any positive integer $n$, there exists $k\in\Z, k\geq 0$ such that $m_k \leq n < m_{k+1}$. For $k\geq 0$, let $P(k)$ be the statement that every integer in the interval $m_k \leq n < m_{k+1}$ has a unique representation in the form $\sum_{i=0}^{\infty} a_im_i$, where $0\leq a_i \leq m_{i+1}/m_i-1$ for all $i\geq 0$ and $m_i=0$ for all but finitely many integers $i$. Clearly $P(0)$ holds since $n=a_0$ is the unique representation if $1 \leq n \leq m_1$. Let $k\geq 1$ and suppose the statements $P(0)$, $P(1)$, $\ldots, P(k-1)$ hold. We shall prove $P(k)$. Let $m_k \leq n \leq m_{k+1}$. Then, by division algorithm, 
 \begin{displaymath}
 n = a_k m_k + r, \hspace{1cm} \text{where } 0\leq r \leq m_k.
 \end{displaymath}
@@ -114,14 +122,14 @@ n = \sum_{k=0}^{\infty} a_kk!
 \end{displaymath}
 where $0\leq a_k \leq k$.}
 
-\textsc{Solution}. We observe that $1!, 2!, 3!, \ldots$ is a strictly increasing sequence of positive integers satisfying the conditions of Exercise $22$ and so, it reduces to Exercise $22$. \done
+\textsc{Proof}. We observe that $1!, 2!, 3!, \ldots$ is a strictly increasing sequence of positive integers satisfying the conditions of Exercise $22$ and so, it reduces to Exercise $22$. \done
 
 \textsc{Exercise 24}. \emph{Prove that every positive integer $n$ can be uniquely represented in the form 
 \begin{displaymath}
 n = b_0 + b_13 + b_23^2 + \cdots + b_{k-1}3^{k-1} + 3^k,
 \end{displaymath}where $b_i \in \{0, 1, -1\}$ for $i = 0,1,2,\ldots, k-1$.}
 
-\textsc{Solution}. We observe that $1,3,3^2,\ldots$ is a strictly increasing sequence of positive integers satisfying the conditions of Exercise $22$ and so, it reduces to Exercise $22$. \done
+\textsc{Proof}. We observe that $1,3,3^2,\ldots$ is a strictly increasing sequence of positive integers satisfying the conditions of Exercise $22$ and so, it reduces to Exercise $22$. \done
 
 \textsc{Exercise 25}. \emph{Let $\N^k$ denote the set of all $k$-tuples of positive integers. We define the lexicographic order on $\N^k$ as follows: For $(a_1, \ldots, a_k), (b_1, \ldots, b_k) \in \N^k$, we write 
 \begin{displaymath}
@@ -134,7 +142,7 @@ n = b_0 + b_13 + b_23^2 + \cdots + b_{k-1}3^{k-1} + 3^k,
 \end{enumerate}
 A relation that is reflexive and transitive is called a partial order. A partial order that is total is called a total order. Thus, the lexicographic order is a total order on the set of $k$-tuples of positive integers.}
 
-\textsc{Solution}. For the proofs, we shall use the well-ordering of natural numbers.
+\textsc{Proof}. For the proofs, we shall use the well-ordering of natural numbers.
 \begin{enumerate}[(a)]
 \item\label{item:4} Suppose $(a_1,\ldots, a_k) \preceq (b_1,\ldots, b_k)$ and $(b_1,\ldots, b_k) \preceq (a_1, \ldots, a_k)$. Then $a_1 \leq b_1$ and $b_1 \leq a_1$, so that $a_1 = b_1$. Since $a_1 = b_1$, we must have $a_2 \leq b_2$, and $b_2 \leq a_2$, so that $a_2 = b_2$ and so on. It follows that $(a_1,\ldots, a_k) = (b_1, \ldots, b_k)$. 
 \item\label{item:5} Suppose $(a_1,\ldots, a_k) \preceq (b_1,\ldots, b_k)$ and $(b_1,\ldots, b_k) \preceq (c_1, \ldots, c_k)$. Then there exists $r$ with $1 \leq r \leq k$ and $s$ with $1 \leq s \leq k$ such that $a_r < b_r$, $a_i = b_i$ for all $1 \leq i < r$, and $b_s < c_s$, $b_j = c_j$ for all $1 \leq j < s$. Two cases are possible: either $r \leq s$ or $s < r$. Suppose $r \leq s$. Then $a_r < c_r$, $a_i = c_i$ for all $1 \leq i < r$, so that $(a_1, \ldots, a_k) \preceq (c_1, \ldots, c_k)$. For the case when $s < r$, we have $a_s < c_s$, $a_i = c_i$ for all $1 \leq i < s$, so that $(a_1, \ldots, a_k) \preceq (c_1, \ldots, c_k)$.
@@ -143,7 +151,7 @@ A relation that is reflexive and transitive is called a partial order. A partial
 
 \textsc{Exercise 26}. \emph{Prove that $\N^k$ with the lexicographic order satisfies the following minimum principle: Every nonempty set of $k$-tuples of positive integers contain a smallest element.}
 
-\textsc{Solution}. Let $S$ be any nonempty set of $k$-tuples of positive integers. We represent elements of $S$ by $a_i$ and we shall use the notation: $a_i \coloneqq (a_{i1}, \ldots, a_{ik})$. If $|S| = 1$, we are done. Let $|S| = n \ne 1$. Then we define a set $S_1 \subset S$ which contains all $a_i \in S$ with the smallest $1$st coordinate ($a_{i1}$) among elements of $S$. The set $S_1$ is well-defined since the $1$st coordinates are natural numbers and the set $\N$ is well-ordered (any nonempty subset of $\N$ has a least element). Thus, all elements $a_i \in S_1$ have the same $1$st coordinate. In the same way, we define the set $S_j \subset S_{j-1}$ which contains all $a_i \in S_{j-1}$ with the smallest $j$th coordinate ($a_{ij}$) among elements of $S_{j-1}$. Clearly $S_j$ is well-defined (use the same arguments as above). Now, we look at $S_k$. By our construction, if $a_j \in S_k$, then $a_j \preceq a_i$ for all $a_i \in S$, so that $a_j$ is the smallest element in $S$. \done
+\textsc{Proof}. Let $S$ be any nonempty set of $k$-tuples of positive integers. We represent elements of $S$ by $a_i$ and we shall use the notation: $a_i \coloneqq (a_{i1}, \ldots, a_{ik})$. If $|S| = 1$, we are done. Let $|S| = n \ne 1$. Then we define a set $S_1 \subset S$ which contains all $a_i \in S$ with the smallest $1$st coordinate ($a_{i1}$) among elements of $S$. The set $S_1$ is well-defined since the $1$st coordinates are natural numbers and the set $\N$ is well-ordered (any nonempty subset of $\N$ has a least element). Thus, all elements $a_i \in S_1$ have the same $1$st coordinate. In the same way, we define the set $S_j \subset S_{j-1}$ which contains all $a_i \in S_{j-1}$ with the smallest $j$th coordinate ($a_{ij}$) among elements of $S_{j-1}$. Clearly $S_j$ is well-defined (use the same arguments as above). Now, we look at $S_k$. By our construction, if $a_j \in S_k$, then $a_j \preceq a_i$ for all $a_i \in S$, so that $a_j$ is the smallest element in $S$. \done
 
 \subsection{Greatest Common Divisors}
 
@@ -151,47 +159,47 @@ Exercises 1-2 are straightforward using Euclid's algorithm. For Exercise 2, we u
 
 \textsc{Exercise 3}. \emph{Find integers $x$ and $y$ such that $13x + 15y = 1$.}
 
-\textsc{Solution}. Let $x = 7$ and $y = -6$. Then $13x + 15y = 1$. \done
+\textsc{Proof}. Let $x = 7$ and $y = -6$. Then $13x + 15y = 1$. \done
 
 In the above exercise, the B\'ezout's coefficients $x$ and $y$ can be found using Euclidean algorithm.
 
 \textsc{Exercise 4}. \emph{Construct four relatively prime integers $a,b,c,d$ such that no three of them are relatively prime}.
 
-\textsc{Solution}. Consider the canonical decompositions (prime factorizations): $2\cdot3\cdot5$,  $3\cdot5\cdot7\cdot$, $5\cdot7\cdot11$ and $7\cdot11\cdot13$. It is easy to verify that all four of them are relatively prime but no three of them are relatively prime. \done
+\textsc{Proof}. Consider the canonical decompositions (prime factorizations): $2\cdot3\cdot5$,  $3\cdot5\cdot7\cdot$, $5\cdot7\cdot11$ and $7\cdot11\cdot13$. It is easy to verify that all four of them are relatively prime but no three of them are relatively prime. \done
 
 The approach outlined above may be generalized to any number of integers. Exercise 5 becomes trivial once we realize that $n$ and $n+2$ cannot have a common factor greater than $2$. Exercises 6-8 are all similar (the idea is to use B\'ezout's identity), so we will solve only Exercise 8.
 
 \textsc{Exercise 8}. \emph{Prove that $n!+1$ and $(n+1)!+1$ are relatively prime for every integer $n$.}
 
-\textsc{Solution}. Let $a = n!+1$ and $b = (n+1)!+1$. Let $x = n+1$ and $y = -n$. Then $xa + yb = 1$, that is $\gcd(a,b)=1$. The proposition follows. \done
+\textsc{Proof}. Let $a = n!+1$ and $b = (n+1)!+1$. Let $x = n+1$ and $y = -n$. Then $xa + yb = 1$, that is $\gcd(a,b)=1$. The proposition follows. \done
 
 \textsc{Exercise 9}. \emph{Let $a,b$ and $d$ be positive integers. Prove that if $(a,b)=1$ and $d$ divides $a$, then $(d,b)=1$.}
 
-\textsc{Solution}. Suppose, for the sake of contradiction, $\gcd(d,b) = g$ for some $g\ne 1$. Then $b=gh$ and $d=gk$ for some $h,k \in \Z$. Since $d$ divides $a$, we may write $a = dq = gkq$ for some $q\in\Z$. It follows that $\gcd(a,b) = \gcd(gkq, gh) \ne 1$ since $g\ne 1$ is a common factor, which contradicts our premise. The proposition follows. \done
+\textsc{Proof}. Suppose, for the sake of contradiction, $\gcd(d,b) = g$ for some $g\ne 1$. Then $b=gh$ and $d=gk$ for some $h,k \in \Z$. Since $d$ divides $a$, we may write $a = dq = gkq$ for some $q\in\Z$. It follows that $\gcd(a,b) = \gcd(gkq, gh) \ne 1$ since $g\ne 1$ is a common factor, which contradicts our premise. The proposition follows. \done
 
 Exercises 10-12 are simple applications of divisibility and gcd. Exercise 13 is easily solved using induction on the size $n$ of the set A (consider the base cases of $n=1$ and $n=2$).
 
 \textsc{Exercise 14}. \emph{Let $a,b,c,d$ be integers such that $ad-bc=1$. For integers $u$ and $v$, define $u^{\prime}=au+bv$ and $v^{\prime}=cu+dv$. Prove that $(u,v)=(u^{\prime},v^{\prime})$.}
 
-\textsc{Solution}.
+\textsc{Proof}.
 
 Exercise 15 is straightforward in that reflexivity follows from choosing $t=1$, symmetry follows from considering $1/t$ and transitivity follows from repeated multiplication.
 
 \textsc{Exercise 16}. \emph{Consider $(25/6, -5, 10/3) \in \Q^3$. Find all triples $(a_0,a_1,a_2)$ of relatively prime integers such that $(a_0,a_1,a_2)\sim (25/6, -5, 10/3)$}.
 
-\textsc{Solution}. Multiplication by $t=6$ convinces us to look for triplets $(a_0,a_1,a_2)$ of relatively prime integers such that $(a_0,a_1,a_2)\sim (25, -5, 10)\sim (5, -1, 2)$. We need to consider only the integral values of $t$. Clearly, $(5, -1, 2)$ is one such triplet. The other triplet is $(-5, 1, -2)$. There are no other triplets since any value of $t\ne \pm 1$ ensures that $a_0,a_1,a_2$ are no longer relatively prime since, of course, $t$ will be a common factor. \done
+\textsc{Proof}. Multiplication by $t=6$ convinces us to look for triplets $(a_0,a_1,a_2)$ of relatively prime integers such that $(a_0,a_1,a_2)\sim (25, -5, 10)\sim (5, -1, 2)$. We need to consider only the integral values of $t$. Clearly, $(5, -1, 2)$ is one such triplet. The other triplet is $(-5, 1, -2)$. There are no other triplets since any value of $t\ne \pm 1$ ensures that $a_0,a_1,a_2$ are no longer relatively prime since, of course, $t$ will be a common factor. \done
 
 Exercise 17 is similar to how we treated Exercise 16 (above). Exercises 18-19 are straightforward --- we just verify the axioms of a group (closure, existence of identity and inverse).
 
 \textsc{Exercise 20}. \emph{Let $H$ be a nonempty subset of an additive abelian group $G$. Prove that $H$ is a subgroup if and only if $x-y \in H$ for all $x,y\in H$.}
 
-\textsc{Solution}. Suppose $H$ is a subgroup of $G$. That is, $H$ is a group in its own right, and all the group axioms hold in $H$. Let $x,y\in H$. Then, $-y \in H$ (existence of inverse) and $x-y = x+(-y) \in H$ (closure). Conversely, suppose $x-y \in H$ for all $x,y\in H$. Clearly $0 \in H$ since $x-x=0$ for any $x\in H$. Also, $-x \in H$ for any $x\in H$ since $-x = 0-x$. Finally for any $x,y\in H$, we see that $x+y = x-(-y) \in H$. It follows that $H$ is a subgroup. \done
+\textsc{Proof}. Suppose $H$ is a subgroup of $G$. That is, $H$ is a group in its own right, and all the group axioms hold in $H$. Let $x,y\in H$. Then, $-y \in H$ (existence of inverse) and $x-y = x+(-y) \in H$ (closure). Conversely, suppose $x-y \in H$ for all $x,y\in H$. Clearly $0 \in H$ since $x-x=0$ for any $x\in H$. Also, $-x \in H$ for any $x\in H$ since $-x = 0-x$. Finally for any $x,y\in H$, we see that $x+y = x-(-y) \in H$. It follows that $H$ is a subgroup. \done
 
 Exercise 21 follows trivially from closure under multiplication (and addition). Exercises 22-23 are simple applications of elementary set theory and group axioms.
 
 \textsc{Exercise 24}. \emph{Prove that every nonzero subgroup of $\Z$ is isomorphic to $\Z$.}
 
-\textsc{Solution}. Every subgroup of $\Z$ is of the form $d\Z$ for some $d\in\Z, d\geq 0$. Consider the map $\varphi: d\Z \to \Z$ defined by $\varphi (d\cdot z) = z$ or equivalently, $\varphi(z) = z/d$. It is easily checked that $\varphi$ satisfies the conditions of a homomorphism and that $\varphi$ is a bijection, that is, $\varphi$ gives the isomorphism. \done
+\textsc{Proof}. Every subgroup of $\Z$ is of the form $d\Z$ for some $d\in\Z, d\geq 0$. Consider the map $\varphi: d\Z \to \Z$ defined by $\varphi (d\cdot z) = z$ or equivalently, $\varphi(z) = z/d$. It is easily checked that $\varphi$ satisfies the conditions of a homomorphism and that $\varphi$ is a bijection, that is, $\varphi$ gives the isomorphism. \done
 
 \textsc{Exercise 25}. \emph{Let $G$ be the set of all matrices of the form 
 \begin{displaymath}
@@ -199,7 +207,7 @@ Exercise 21 follows trivially from closure under multiplication (and addition). 
 \end{displaymath}
 with $a\in\Z$ and matrix multiplication as the binary operation. Prove that $G$ is an abelian group isomorphic to $\Z$.}
 
-\textsc{Solution}. Let $a, b \in \Z$. Then 
+\textsc{Proof}. Let $a, b \in \Z$. Then 
 \begin{displaymath}
 \begin{pmatrix} 1 & a \\ 0 & 1 \end{pmatrix} \begin{pmatrix} 1 & b \\ 0 & 1 \end{pmatrix} = \begin{pmatrix} 1 & a+b \\ 0 & 1 \end{pmatrix}.
 \end{displaymath} Closure under multiplication and commutativity follows trivially. The identity element is then the identity matrix of order $2$ itself. The inverse element of $\displaystyle \begin{pmatrix} 1 & a \\ 0 & 1 \end{pmatrix}$ is $\displaystyle \begin{pmatrix} 1 & -a \\ 0 & 1 \end{pmatrix}$. Thus $G$ is an abelian group under matrix multiplication.
@@ -214,19 +222,19 @@ Exercise 26 is straightforward by considering a particular case (example).
 
 \textsc{Exercise 27}. \emph{Let $\R$ be the additive group of real numbers and $\R^+$ the multiplicative group of positive real numbers. Let $\exp: \R \to \R^+$ be the exponential map $\exp(x) = e^x$. Prove that the exponential map is a group isomorphism.}
 
-\textsc{Solution}. The exponential map is a group homomorphism since $e^{x+y}=e^x\cdot e^y$ for all $x,y \in \R$. To see that it is also a bijection, we consider its inverse map, the natural logarithm, $\ln(z)$ for $z\in\R^+$. Therefore, the exponential map is a group isomorphism. \done
+\textsc{Proof}. The exponential map is a group homomorphism since $e^{x+y}=e^x\cdot e^y$ for all $x,y \in \R$. To see that it is also a bijection, we consider its inverse map, the natural logarithm, $\ln(z)$ for $z\in\R^+$. Therefore, the exponential map is a group isomorphism. \done
 
 \textsc{Exercise 28}. \emph{Let $G$ and $H$ be groups which $e$ the identity in $H$. Let $f:G\to H$ be a group homomorphism. The kernel of $f$ is the set $f^{-1}(e) = \{x\in G : f(x) = e \in H \} \subset G$. The image of $f$ is the set $f(G) = \{f(x) : x\in G\} \subset H$. Prove that the kernel of $f$ is a subgroup of $G$, and the image of $f$ is a subgroup of $H$.}
 
-\textsc{Solution}. Let $x,y\in \ker(f)$. Then $f(x+y) = f(x) + f(y) = e + e = e$ and so, $x+y \in \ker(f)$. We must be careful that the two operations $+$ mean different things: the first one is between elements in $G$; the second one is between elements in $H$. Let $e_G$ be the identity element of $G$. Clearly $f(x) = f(x + e_G) = f(x) + f(e_G)$ for every $x \in G$, and so, $f(e_G) = e$. That is, $e_G \in \ker(f)$. Finally, $e = f(e_G) = f(x - x) = f(x) + f(-x) = e + f(-x) = f(-x)$ for every $x\in \ker(f)$. That is, $-x\in \ker(f)$ for every $x\in \ker(f)$. It follows that $\ker(f)$ is a subgroup of $G$. Let $I$ be the image of $f$ in $H$. Since $f(e_G) = e$, we see that $e\in I$. Let $x, y \in I$. Then there exists $a, b \in G$ such that $f(a) = x$ and $f(b) = y$. Clearly $f(a + b) = f(a) + f(b) = x + y$ so that $x+y \in I$. Also, $e = f(e_G) = f(a - a) = f(a) + f(-a) = x + f(-a)$ so that $-x = f(-a)$. That is, $-x \in I$ for all $x\in I$. Consequently, $I$ is a subgroup of $H$. \done
+\textsc{Proof}. Let $x,y\in \ker(f)$. Then $f(x+y) = f(x) + f(y) = e + e = e$ and so, $x+y \in \ker(f)$. We must be careful that the two operations $+$ mean different things: the first one is between elements in $G$; the second one is between elements in $H$. Let $e_G$ be the identity element of $G$. Clearly $f(x) = f(x + e_G) = f(x) + f(e_G)$ for every $x \in G$, and so, $f(e_G) = e$. That is, $e_G \in \ker(f)$. Finally, $e = f(e_G) = f(x - x) = f(x) + f(-x) = e + f(-x) = f(-x)$ for every $x\in \ker(f)$. That is, $-x\in \ker(f)$ for every $x\in \ker(f)$. It follows that $\ker(f)$ is a subgroup of $G$. Let $I$ be the image of $f$ in $H$. Since $f(e_G) = e$, we see that $e\in I$. Let $x, y \in I$. Then there exists $a, b \in G$ such that $f(a) = x$ and $f(b) = y$. Clearly $f(a + b) = f(a) + f(b) = x + y$ so that $x+y \in I$. Also, $e = f(e_G) = f(a - a) = f(a) + f(-a) = x + f(-a)$ so that $-x = f(-a)$. That is, $-x \in I$ for all $x\in I$. Consequently, $I$ is a subgroup of $H$. \done
 
 \textsc{Exercise 29}. \emph{Define the map $f: \Z \to \Z$ by $f(n)=3n$. Prove that $f$ is a group homomorphism and determine the kernel and image of $f$.}
 
-\textsc{Solution}. Let $n,m \in \Z$. Then $f(n+m) = 3(n+m) = 3n + 3m = f(n) + f(m)$. Thus $f$ is a group homomorphism. Let $k\in \ker(f)$. Then $f(k) = 0$, that is, $3k = 0$ which is true only when $k=0$. Thus $\ker(f) = \{0\}$. Clearly the image of $f$ is the set of multiples of $3$. \done
+\textsc{Proof}. Let $n,m \in \Z$. Then $f(n+m) = 3(n+m) = 3n + 3m = f(n) + f(m)$. Thus $f$ is a group homomorphism. Let $k\in \ker(f)$. Then $f(k) = 0$, that is, $3k = 0$ which is true only when $k=0$. Thus $\ker(f) = \{0\}$. Clearly the image of $f$ is the set of multiples of $3$. \done
 
 \textsc{Exercise 30}. \emph{Let $\Gamma_m$ denote the multiplicative group of $m$th roots of unity. Prove that the map $f: \Z \to \Gamma_m$ defined by $f(k) = e^{2\pi i k/m}$ is a group homomorphism. What is the kernel of this homomorphism?}
 
-\textsc{Solution}. Let $h, k \in \Z$. Then $f(h+k) = e^{2\pi i (h+k)/m} = e^{2\pi i h/m}\cdot e^{2\pi i k/m} = f(h)\cdot f(k)$. This proves the homomorphism. Let $k\in \ker(f)$. Then $f(k) = e^{2\pi i k/m} = 1$, which is true only when $k/m$ is an integer. Thus $\ker(k)$ is the set of multiples of $m$. \done
+\textsc{Proof}. Let $h, k \in \Z$. Then $f(h+k) = e^{2\pi i (h+k)/m} = e^{2\pi i h/m}\cdot e^{2\pi i k/m} = f(h)\cdot f(k)$. This proves the homomorphism. Let $k\in \ker(f)$. Then $f(k) = e^{2\pi i k/m} = 1$, which is true only when $k/m$ is an integer. Thus $\ker(k)$ is the set of multiples of $m$. \done
 
 \textsc{Exercise 31}. \emph{Let $G = [0,1)$ be the interval of real numbers $x$ such that $0\leq x < 1$. We define a binary operation $x*y$ for numbers $x,y\in G$ as follows: 
 \begin{displaymath}
@@ -240,7 +248,7 @@ Prove that $G$ is an abelian group with this operation. This group is denoted by
 
 \emph{Define the map $f: \R \to \R/\Z$ by $f(t) = \{t\}$, where $\{t\}$ denotes the fractional part of $t$. Prove that $f$ is a group homomorphism. What is the kernel of this homomorphism.}
 
-\textsc{Solution}. Closure under $*$ follows from its definition. Clearly, the identity element is $0$. It is easily checked that the inverse of $a$ ($a\in G$) is $1-a$. Commutativity follows from the definition of $*$ (since the expression remains the same when $x$ and $y$ are interchanged).
+\textsc{Proof}. Closure under $*$ follows from its definition. Clearly, the identity element is $0$. It is easily checked that the inverse of $a$ ($a\in G$) is $1-a$. Commutativity follows from the definition of $*$ (since the expression remains the same when $x$ and $y$ are interchanged).
 
 Let $s, t \in \R$. Then $f(s+t) = \{s + t\} = \{s\} * \{t\} = f(s)*f(t)$. This proves the homomorphism. Clearly $\ker(f)$ is the set $\Z$ of integers. \done
 
@@ -250,12 +258,12 @@ Exercises 1-3 are simple computations using the Euclidean algorithm. Exercise 4 
 
 \textsc{Exercise 7}. \emph{Let $x=\langle a_0, a_1,\ldots,a_N \rangle$ be a finite simple continued fraction whose partial quotients $a_i$ are integers, with $N \geq 1$ and $a_N \geq 2$. Let $[x]$ denote the integer part of $x$ and $\{x\}$ the fractional part of $x$. Prove that $[x]=a_0$ and $\{x\} = 1/\langle a_1, a_2,\ldots,a_N \rangle$.}
 
-\textsc{Solution}. Let $p/q$ be the rational number corresponding to the finite simple continued fraction $x=\langle a_0, a_1,\ldots,a_N \rangle$. Since $a_0, a_1, \ldots, a_N$ are the partial quotients in the Euclidean algorithm on the division of $p$ by $q$, it follows that $[x] = a_0$ (because $a_0$ is the quotient of $p$ when divided by $q$). Also, $\{x\} = x - [x] = x=\langle a_0, a_1,\ldots,a_N \rangle - a_0 = 1/\langle a_1, a_2,\ldots,a_N \rangle$. \done
+\textsc{Proof}. Let $p/q$ be the rational number corresponding to the finite simple continued fraction $x=\langle a_0, a_1,\ldots,a_N \rangle$. Since $a_0, a_1, \ldots, a_N$ are the partial quotients in the Euclidean algorithm on the division of $p$ by $q$, it follows that $[x] = a_0$ (because $a_0$ is the quotient of $p$ when divided by $q$). Also, $\{x\} = x - [x] = x=\langle a_0, a_1,\ldots,a_N \rangle - a_0 = 1/\langle a_1, a_2,\ldots,a_N \rangle$. \done
 
 \textsc{Exercise 8}. \emph{Let $\frac{a}{b}$ be a rational number that is not an integer. Prove that there exist unique integers $a_0, a_1, \ldots, a_N$ such that $a_i\geq 1$ for $i=1,\ldots, N-1, a_N \geq 2$, and 
 \begin{displaymath}
 \frac{a}{b} = \langle a_0, a_1, \ldots, a_{N-1}, a_N \rangle.
-\end{displaymath}}\textsc{Solution}. Let $a/b = \langle a_0, a_1, \ldots, a_{N-1}, a_N \rangle = \langle b_0, b_1, \ldots, b_{N-1}, b_N \rangle$. Then, by Exercise $7$, $a_0 = [a/b] = b_0$, and 
+\end{displaymath}}\textsc{Proof}. Let $a/b = \langle a_0, a_1, \ldots, a_{N-1}, a_N \rangle = \langle b_0, b_1, \ldots, b_{N-1}, b_N \rangle$. Then, by Exercise $7$, $a_0 = [a/b] = b_0$, and 
 \begin{displaymath}
 \langle a_1, \ldots, a_N \rangle = \frac{1}{\{a/b\}} = x_1 \text{ (say)}.
 \end{displaymath}
@@ -269,7 +277,7 @@ Continuing this further, we obtain $a_i = b_i$ for all $0 \leq i \leq N$ such th
 \textsc{Exercise 9}. \emph{Prove that 
 \begin{displaymath}
 \langle a_0, a_1, \ldots, a_N, a_{N+1} \rangle = \langle a_0, a_1, \ldots, a_N + \frac{1}{a_{N+1}} \rangle.
-\end{displaymath}}\textsc{Solution}. This should be obvious since both of them have the same expansion given below
+\end{displaymath}}\textsc{Proof}. This should be obvious since both of them have the same expansion given below
 \begin{displaymath}
 a_0 + \cfrac{1}{a_1 + \cfrac{1}{a_2 + \cdots \cfrac{1}{\ldots + \cfrac{1}{a_N + \cfrac{1}{a_{N+1}}}}}}.
 \end{displaymath}
@@ -280,7 +288,7 @@ Therefore, $\langle a_0, a_1, \ldots, a_N, a_{N+1} \rangle = \langle a_0, a_1, \
 \langle a_0, a_2,\ldots,a_n \rangle = \frac{p_n}{q_n}
 \end{displaymath}}for $n=0,1,\ldots, N$. The continued fraction $\langle a_0, a_1,\ldots,a_n \rangle $ is called the $n$th \emph{convergent} of the continued fraction $\langle a_0, a_1, \ldots, a_N\rangle$.
 
-\textsc{Solution}. We prove this using induction on $n$. The base case of $n=0$ follows immediately. When $n=1$, $p_1/q_1 = (a_1a_0+1)/a_1$, which is the continued fraction $\langle a_0, a_1 \rangle$. Suppose the proposition holds for $n=k$. That is, 
+\textsc{Proof}. We prove this using induction on $n$. The base case of $n=0$ follows immediately. When $n=1$, $p_1/q_1 = (a_1a_0+1)/a_1$, which is the continued fraction $\langle a_0, a_1 \rangle$. Suppose the proposition holds for $n=k$. That is, 
 \begin{displaymath}
 \langle a_0, a_1, \ldots, a_k \rangle = \frac{p_k}{q_k} = \frac{a_kp_{k-1} + q_{k-2}}{a_kq_{k-1} + q_{k-2}}.
 \end{displaymath}
@@ -300,7 +308,7 @@ Exercise 11 is a simple computation problem. The $n$th convergent should converg
 p_nq_{n-1} - p_{n-1}q_n = (-1)^{n-1}
 \end{displaymath}}for $n=1,\ldots, N$. Prove that if $a_i \in \Z$ for $i=0,1,\ldots, N$, then $(p_n, q_n) = 1$ for $n=0,1,\ldots, N$.
 
-\textsc{Solution}. We may write 
+\textsc{Proof}. We may write 
 \begin{align*}
   p_nq_{n-1} - p_{n-1}q_n &= (a_np_{n-1} + p_{n-2})q_{n-1} - p_{n-1}(a_nq_{n-1}+q_{n-2}) \\
                           &= -(p_{n-1}q_{n-2} - p_{n-2}q_{n-1}) \\
@@ -317,7 +325,7 @@ If $a_i \in \Z$ for $i = 0, 1, \ldots, N$, then $p_n, q_n \in \Z$ for each $0 \l
 p_nq_{n-2} - p_{n-2}q_n = (-1)^n a_n
 \end{displaymath}for $n=2,\ldots, N$.}
 
-\textsc{Solution}. By Exercise $12$, we have 
+\textsc{Proof}. By Exercise $12$, we have 
 \begin{align*}
   p_nq_{n-2} - p_{n-2}q_n &= (a_np_{n-1}+ p_{n-2})q_{n-2} - p_{n-2}(a_nq_{n-1} + q_{n-2}) \\
                           &= a_n(p_{n-1}q_{n-2} - p_{n-2}q_{n-1})\\
@@ -329,7 +337,7 @@ p_nq_{n-2} - p_{n-2}q_n = (-1)^n a_n
 \frac{p_0}{q_0} < \frac{p_2}{q_2} < \frac{p_4}{q_4} < \cdots \leq x \leq \cdots < \frac{p_5}{q_5} < \frac{p_3}{q_3} < \frac{p_1}{q_1}.
 \end{displaymath}}
 
-\textsc{Solution}. By Exercise $13$, we have 
+\textsc{Proof}. By Exercise $13$, we have 
 \begin{align*}
 \frac{p_n}{q_n} - \frac{p_{n-2}}{q_{n-2}} &= \frac{p_nq_{n-2} - p_{n-2}q_n}{q_nq_{n-2}} = \frac{(-1)^n a_n}{q_nq_{n-2}}.
 \end{align*}
@@ -357,7 +365,7 @@ Therefore, we have proved that
   f_n &= f_{n-1} + f_{n-2} \text{ for } n\geq 2.
 \end{align*}The integer $f_n$ is called the $n$th Fibonacci number. Compute the Fibonacci numbers $f_n$ for $n= 2,3,\ldots, 12$. Prove that $(f_n, f_{n+1}) = 1$ for all nonnegative integers $n$.}
 
-\textsc{Solution}. The recurrence relation yields $f_2=1$, $f_3=2$, $f_4=3$, $f_5 = 5$, $f_6 = 8$, $f_7 = 13$, $f_8 = 21$, $f_9 = 34$, $f_{10} = 55$, $f_{11} = 89$, and $f_{12} = 144$. We now prove the proposition by induction. The base case for $n=0$ holds trivially. Suppose the proposition holds for $n=k$ for some $k\in\Z, k>0$. Then $\gcd(f_k, f_{k+1}) = 1$. But $f_{k+2} = f_{k+1} + f_k$. That is, any common divisor of $f_{k+1}$ and $f_k$ is also a common divisor of $f_{k+2}$ and $f_{k+1}$. Therefore, $\gcd(f_{k+1}, f_{k+2}) = \gcd(f_k, f_{k+1}) = 1$. The proposition follows. \done
+\textsc{Proof}. The recurrence relation yields $f_2=1$, $f_3=2$, $f_4=3$, $f_5 = 5$, $f_6 = 8$, $f_7 = 13$, $f_8 = 21$, $f_9 = 34$, $f_{10} = 55$, $f_{11} = 89$, and $f_{12} = 144$. We now prove the proposition by induction. The base case for $n=0$ holds trivially. Suppose the proposition holds for $n=k$ for some $k\in\Z, k>0$. Then $\gcd(f_k, f_{k+1}) = 1$. But $f_{k+2} = f_{k+1} + f_k$. That is, any common divisor of $f_{k+1}$ and $f_k$ is also a common divisor of $f_{k+2}$ and $f_{k+1}$. Therefore, $\gcd(f_{k+1}, f_{k+2}) = \gcd(f_k, f_{k+1}) = 1$. The proposition follows. \done
 
 In Exercises $16-23$, $f_n$ denotes the $n$th Fibonacci number.
 
@@ -369,7 +377,7 @@ f_1 + f_2 + \cdots + f_n = f_{n+2} - 1
 \end{displaymath}
 for all positive integers $n$.}
 
-\textsc{Solution}. We prove the proposition by induction. The base case for $n=1$ holds trivially. Suppose the proposition holds for $n=k$ for some $k\in\Z, k>1$. Then $f_1 + f_2 + \cdots + f_k = f_{k+2} - 1$. Adding $f_{k+1}$ to both sides and using the Fibonacci recurrence relation yields $f_1 + f_2 + \cdots + f_{k+1} = f_{k+1+2} - 1$. The proposition follows. \done
+\textsc{Proof}. We prove the proposition by induction. The base case for $n=1$ holds trivially. Suppose the proposition holds for $n=k$ for some $k\in\Z, k>1$. Then $f_1 + f_2 + \cdots + f_k = f_{k+2} - 1$. Adding $f_{k+1}$ to both sides and using the Fibonacci recurrence relation yields $f_1 + f_2 + \cdots + f_{k+1} = f_{k+1+2} - 1$. The proposition follows. \done
 
 \textsc{Exercise 18}. \emph{Prove that 
 \begin{displaymath}
@@ -377,7 +385,7 @@ f_{n+1}f_{n-1} - f_n^2 = (-1)^n
 \end{displaymath}
 for all positive integers $n$.}
 
-\textsc{Solution}. Using the Fibonacci recurrence relation, we obtain 
+\textsc{Proof}. Using the Fibonacci recurrence relation, we obtain 
 \begin{align*}
   f_{n+1}f_{n-1} - f_n^2 &= (f_n+f_{n-1})f_{n-1} - f_n^2 \\
                          &= f_nf_{n-1} + f_{n-1}^2 - f_n^2 \\
@@ -397,11 +405,11 @@ f_n = f_{k+1}f_{n-k} + f_kf_{n-k-1}
 \end{displaymath}
 for all $k=0,1,\ldots, n$. Equivalently, $f_n = f_{n-1} + f_{n-2} = 2f_{n-2} + f_{n-3} = 3f_{n-3} + 2f_{n-4} = 5f_{n-4} + 3f_{n-5} \cdots$.}
 
-\textsc{Solution}. The second part of the exercise follows readily from the Fibonacci recurrence relation. The coefficients follow the pattern $1, 1, 2, 3, 5, \ldots$. At every step we observe that the new coefficient is the sum of the previous two coefficients. These coefficients are the Fibonacci numbers $f_n$. Consequently, $f_n = f_{k+1}f_{n-k} + f_kf_{n-k-1}$. \done
+\textsc{Proof}. The second part of the exercise follows readily from the Fibonacci recurrence relation. The coefficients follow the pattern $1, 1, 2, 3, 5, \ldots$. At every step we observe that the new coefficient is the sum of the previous two coefficients. These coefficients are the Fibonacci numbers $f_n$. Consequently, $f_n = f_{k+1}f_{n-k} + f_kf_{n-k-1}$. \done
 
 \textsc{Exercise 20}. \emph{Prove that $f_n$ divides $f_{ln}$ for all positive integers $l$.}
 
-\textsc{Solution}. We prove this proposition by induction on $l$. The base case of $l = 1$ follows trivially. Suppose the proposition holds for $l = k$ for some $k\in \Z, k>1$. By the result of Exercise 19, we can write 
+\textsc{Proof}. We prove this proposition by induction on $l$. The base case of $l = 1$ follows trivially. Suppose the proposition holds for $l = k$ for some $k\in \Z, k>1$. By the result of Exercise 19, we can write 
 \begin{displaymath}
   f_{(k+1)n} = f_{kn+n} = f_{n+1}f_{kn} + f_nf_{kn-1}. 
 \end{displaymath}
@@ -412,7 +420,7 @@ Since $f_n$ divides $f_{kn}$ (by induction hypothesis) and $f_n$, it follows tha
 \begin{pmatrix} f_{n+1} & f_n \\ f_n & f_{n-1} \end{pmatrix} = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}^n.
 \end{displaymath}}
 
-\textsc{Solution}. We prove the proposition by induction. The base case of $n=1$ holds trivially. Suppose the proposition holds for $n=k$ for some $k\in\Z, k>1$. Then 
+\textsc{Proof}. We prove the proposition by induction. The base case of $n=1$ holds trivially. Suppose the proposition holds for $n=k$ for some $k\in\Z, k>1$. Then 
 \begin{displaymath}
 \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}^{k+1} = \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix}^k \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} f_{k+1} & f_k \\ f_k & f_{k-1} \end{pmatrix} \begin{pmatrix} 1 & 1 \\ 1 & 0 \end{pmatrix} = \begin{pmatrix} f_{k+2} & f_{k+1} \\ f_{k+1} & f_k \end{pmatrix}.
 \end{displaymath}
@@ -424,7 +432,7 @@ Exercises 1-4 are simple computation problems.
 
 \textsc{Exercise 5}. \emph{Compute the standard factorization of $15!$.}
 
-\textsc{Solution}. The primes not exceeding $15$ are $2, 3, 5, 7, 11 $ and $13$. Then 
+\textsc{Proof}. The primes not exceeding $15$ are $2, 3, 5, 7, 11 $ and $13$. Then 
 \begin{align*}
   v_2(15!) &= \left[\frac{15}{2}\right] + \left[\frac{15}{4}\right] + \left[\frac{15}{8}\right] = 7 + 3 + 1 = 11, \\
   v_3(15!) &= \left[\frac{15}{3}\right] + \left[\frac{15}{9}\right] = 5 + 1 = 6,\\
@@ -437,36 +445,36 @@ Therefore, $15! = 2^{11}\cdot 3^6\cdot 5^3\cdot 7 \cdot 11 \cdot 13$. \done
 
 \textsc{Exercise 6}. \emph{Prove that $n$, $n+2$, $n+4$ are all primes if and only if $n=3$.}
 
-\textsc{Solution}. One direction is trivial: if $n=3$, then $3$, $5$, and $7$ are all primes. For the other direction, suppose $n$, $n+2$, and $n+4$ are all primes. Clearly $n$ is odd. Also $n$ is divisible by $3$ (otherwise, either $n+1$ (and consequently $n+4$) or $n+2$ will be divisible by $3$ which cannot be true unless of course $n+2$ is $3$ itself in which case $n=1$ which is impossible). Therefore $n=3$ (because any other multiple of 3 is not prime). \done
+\textsc{Proof}. One direction is trivial: if $n=3$, then $3$, $5$, and $7$ are all primes. For the other direction, suppose $n$, $n+2$, and $n+4$ are all primes. Clearly $n$ is odd. Also $n$ is divisible by $3$ (otherwise, either $n+1$ (and consequently $n+4$) or $n+2$ will be divisible by $3$ which cannot be true unless of course $n+2$ is $3$ itself in which case $n=1$ which is impossible). Therefore $n=3$ (because any other multiple of 3 is not prime). \done
 
 \textsc{Exercise 7}. \emph{Prove that $n$, $n+4$, $n+8$ are all primes if and only if $n=3$.}
 
-\textsc{Solution}. As in Exercise 6, one direction is trivial. Suppose $n$, $n+4$, $n+8$ are all primes. Suppose $n$ is not divisible by $3$. Then either $n+1$ or $n+2$ is divisible by $3$. If $n+1$ is divisible by $3$, then $3 \ne n+4$ is also divisible by $3$ which is absurd. If $n+2$ is divisible by $3$, then $3 \ne n+8$ is divisible by $3$ which is again absurd. Therefore $n=3$. \done
+\textsc{Proof}. As in Exercise 6, one direction is trivial. Suppose $n$, $n+4$, $n+8$ are all primes. Suppose $n$ is not divisible by $3$. Then either $n+1$ or $n+2$ is divisible by $3$. If $n+1$ is divisible by $3$, then $3 \ne n+4$ is also divisible by $3$ which is absurd. If $n+2$ is divisible by $3$, then $3 \ne n+8$ is divisible by $3$ which is again absurd. Therefore $n=3$. \done
 
 \textsc{Exercise 8}. \emph{Let $n \geq 2$. Prove that $(n+1)! + k$ is composite for $k= 2, \ldots, n+1$. This shows that there exists arbitrarily long intervals of composite numbers.}
 
-\textsc{Solution}. The proposition follows since $(n+1)!+k$ can also be written as $k[(k-1)!(k+1)(k+2)\cdots (n+1) + 1]$ which is divisible by $k$. \done
+\textsc{Proof}. The proposition follows since $(n+1)!+k$ can also be written as $k[(k-1)!(k+1)(k+2)\cdots (n+1) + 1]$ which is divisible by $k$. \done
 
 \textsc{Exercise 9}. \emph{Prove that $n^5-n$ is divisible by $30$ for every integer $n$.}
 
-\textsc{Solution}. Since $30 = 2\cdot 3\cdot 5$ we are done if we prove that $n^5-n$, i.e., $n(n+1)(n-1)(n^2+1)$ has $2, 3,$ and $5$ as its prime factors. The cases for $2$ and $3$ are obvious since $n-1$, $n$, $n+1$ are three consecutive numbers. If one of the numbers $n-1$, $n$, or $n+1$ is divisible by $5$, we are done. So we consider only the cases where $n=5k+2$ or $n=5k+3$. Refer to Exercise $11$ of $1.1$ for the remainder of the proof. \done
+\textsc{Proof}. Since $30 = 2\cdot 3\cdot 5$ we are done if we prove that $n^5-n$, i.e., $n(n+1)(n-1)(n^2+1)$ has $2, 3,$ and $5$ as its prime factors. The cases for $2$ and $3$ are obvious since $n-1$, $n$, $n+1$ are three consecutive numbers. If one of the numbers $n-1$, $n$, or $n+1$ is divisible by $5$, we are done. So we consider only the cases where $n=5k+2$ or $n=5k+3$. Refer to Exercise $11$ of $1.1$ for the remainder of the proof. \done
 
 \textsc{Exercise 10}. \emph{Find all primes $p$ such that $29p+1$ is a square.}
 
-\textsc{Solution}. From the proof of Exercise $11$, it follows that $p$ can only be $31$. \done
+\textsc{Proof}. From the proof of Exercise $11$, it follows that $p$ can only be $31$. \done
 
 \textsc{Exercise 11}. \emph{The prime numbers $p$ and $q$ are called twin primes if $|p-q|=2$. Let $p$ and $q$ be primes. Prove that $pq+1$ is a square if and only if $p$ and $q$ are twin primes.}
 
-\textsc{Solution}. Suppose $p$ and $q$ are twin primes. Without loss of generality, we assume $q = p+2$. Then $pq+1 = p(p+2) + 1 = p^2 + 2p + 1 = (p+1)^2$, which is a square. Conversely, suppose $p$ and $q$ are two primes with $pq+1 = a^2$ for some $a\in\Z$. Then $pq = a^2-1 = (a+1)(a-1)$. But $p$ and $q$ are primes, and the only factors they have are $1$ and themselves. It follows that $a+1$ and $a-1$ are $p$ and $q$ themselves so that $|p-q| = |(a+1)-(a-1)| =  2$. Therefore, $p$ and $q$ are twin primes. The proposition follows. \done
+\textsc{Proof}. Suppose $p$ and $q$ are twin primes. Without loss of generality, we assume $q = p+2$. Then $pq+1 = p(p+2) + 1 = p^2 + 2p + 1 = (p+1)^2$, which is a square. Conversely, suppose $p$ and $q$ are two primes with $pq+1 = a^2$ for some $a\in\Z$. Then $pq = a^2-1 = (a+1)(a-1)$. But $p$ and $q$ are primes, and the only factors they have are $1$ and themselves. It follows that $a+1$ and $a-1$ are $p$ and $q$ themselves so that $|p-q| = |(a+1)-(a-1)| =  2$. Therefore, $p$ and $q$ are twin primes. The proposition follows. \done
 
 \textsc{Exercise 12}. \emph{Prove that if $p$ and $q$ are twin primes greater than $3$, then $p+q$ is divisible by $12$.}
 
-\textsc{Solution}. Without loss of generality, we assume $q = p+2$ and $p>3$. Since $p$, $p+1$, $q$ are three consecutive numbers, one of them is divisible by $3$ and $p+1$ is divisible by $2$. But $p$ and $q$ are primes greater than $3$. It follows that $p+1$ is also divisible by $3$. Let $p+1 = 6k$ for some $k\in\Z$. Then $p+q = 6k - 1 + 6k-1 + 2 = 12k$. The proposition follows. \done
+\textsc{Proof}. Without loss of generality, we assume $q = p+2$ and $p>3$. Since $p$, $p+1$, $q$ are three consecutive numbers, one of them is divisible by $3$ and $p+1$ is divisible by $2$. But $p$ and $q$ are primes greater than $3$. It follows that $p+1$ is also divisible by $3$. Let $p+1 = 6k$ for some $k\in\Z$. Then $p+q = 6k - 1 + 6k-1 + 2 = 12k$. The proposition follows. \done
 
 \textsc{Exercise 13}. \emph{Let $m, n,$ and $k$ be positive integers. Prove that 
 \begin{displaymath}
 v_p(mn) = v_p(m) + v_p(n) \hspace{1cm}\text{and}\hspace{1cm} v_p(m^k) = kv_p(m).
-\end{displaymath}}\textsc{Solution}. The second relation readily follows from the first using induction. To prove the first we write the prime factorizations of $m$ and $n$ as follows: 
+\end{displaymath}}\textsc{Proof}. The second relation readily follows from the first using induction. To prove the first we write the prime factorizations of $m$ and $n$ as follows: 
 \begin{displaymath}
 m = p^{v_p(m)}\prod_{p_{*}}^{} p_{*}^{v_{p_{*}}(m)} \hspace{1cm}\text{and}\hspace{1cm} n = p^{v_p(m)}\prod_{p_{*}}^{} p_{*}^{v_{p_{*}}(m)}
 \end{displaymath}
@@ -478,7 +486,7 @@ We observe that $p^{v_p(m)+v_p(n)}$ but no higher power of $p$ divides $mn$. By 
 
 \textsc{Exercise 14}. \emph{Let $d$ and $m$ be nonzero integers. Prove that $d$ divides $m$ if and only if $v_p(d)\leq v_p(m)$ for all primes $p$.}
 
-\textsc{Solution}. Suppose $d$ divides $m$. That is, there exists an integer $c$ such that $m = dc$. Suppose $d$ has $p$ as one of its prime divisors. Clearly $v_p(d) \leq v_p(m)$ (otherwise the relation $m=dc$ will not hold). If $p$ is not a prime divisor of $d$, then the relation trivially holds since $v_p(d) = 0$. Conversely, suppose $v_p(d) \leq v_p(m)$ for all primes $p$. Then 
+\textsc{Proof}. Suppose $d$ divides $m$. That is, there exists an integer $c$ such that $m = dc$. Suppose $d$ has $p$ as one of its prime divisors. Clearly $v_p(d) \leq v_p(m)$ (otherwise the relation $m=dc$ will not hold). If $p$ is not a prime divisor of $d$, then the relation trivially holds since $v_p(d) = 0$. Conversely, suppose $v_p(d) \leq v_p(m)$ for all primes $p$. Then 
 \begin{displaymath}
 \frac{m}{d} = \frac{\prod_{i=1}p_i^{v_{p_i}(m)}}{\prod_{i=1}p_i^{v_{p_i}(d)}} = \prod_{i=1} p_i^{v_{p_i}(m)-v_{p_i}(d)}
 \end{displaymath}
@@ -486,19 +494,19 @@ is an integer. Consequently, $d$ divides $m$. \done
 
 \textsc{Exercise 15}. \emph{Let $m = \prod_{i=1}^k p_i^{r_i}$, where $p_1, \ldots, p_k$ are distinct primes, $k \geq 2$, and $r_i\geq 1$ for $i=1,\ldots, k$. Let $m_i = mp_i^{-r_i}$ for $i=1,\ldots, k$. Prove that $(m_1, \ldots, m_k) = 1$.}
 
-\textsc{Solution}. Let $M=\{m_1, \ldots, m_k\}$ and $P=\{ p_1, \ldots, p_k\}$. To prove that $\gcd(m_1, \ldots, m_k) = 1$, it suffices to prove that there is no prime in $P$ that divides all $m_i \in M$. Suppose there is a prime $p_j \in P$ that divides $m_i \in M$ for all $1\leq i \leq k$. Then $p_j$ also divides $m_j$. But $m_j = p_j^{-r_j}m = p_j^{-r_j} \prod_{i=1}^k p_i^{r_i} $, that is, $m_j$ does not have $p_j$ in its prime factorization, which is absurd. It follows that $\gcd(m_1, \ldots, m_k) = 1$ \done
+\textsc{Proof}. Let $M=\{m_1, \ldots, m_k\}$ and $P=\{ p_1, \ldots, p_k\}$. To prove that $\gcd(m_1, \ldots, m_k) = 1$, it suffices to prove that there is no prime in $P$ that divides all $m_i \in M$. Suppose there is a prime $p_j \in P$ that divides $m_i \in M$ for all $1\leq i \leq k$. Then $p_j$ also divides $m_j$. But $m_j = p_j^{-r_j}m = p_j^{-r_j} \prod_{i=1}^k p_i^{r_i} $, that is, $m_j$ does not have $p_j$ in its prime factorization, which is absurd. It follows that $\gcd(m_1, \ldots, m_k) = 1$ \done
 
 \textsc{Exercise 16}. \emph{Let $a, b$ and $c$ be positive integers. Prove that $(ab, c)=1$ if and only if $(a,c) = (b,c) = 1$.}
 
-\textsc{Solution}. Suppose $(ab, c) = 1$. That is, there is no prime that divides $ab$ and $c$, which is essentially the same as saying there is no prime that divides $a$ and $c$, and there is no prime that divides $b$ and $c$. Consequently, $\gcd(a,c) = \gcd(b,c) = 1$. The other direction can be argued similarly. \done
+\textsc{Proof}. Suppose $(ab, c) = 1$. That is, there is no prime that divides $ab$ and $c$, which is essentially the same as saying there is no prime that divides $a$ and $c$, and there is no prime that divides $b$ and $c$. Consequently, $\gcd(a,c) = \gcd(b,c) = 1$. The other direction can be argued similarly. \done
 
 \textsc{Exercise 17}. \emph{Prove that if $6$ divides $m$, then there exist integers $b$ and $c$ such that $m=bc$ and $6$ divides neither $b$ nor $c$.}
 
-\textsc{Solution}. From the prime factorization of $m$, we can construct two integers $b$ and $c$ such that $m=bc$, $v_2(m) = v_2(b)$ and $v_3(m) = v_3(c)$. That is, $3$ does not appear in the prime factorization of $b$ neither do $2$ appear in the prime factorization $c$. Consequently, $6$ divides neither $b$ nor $c$. \done
+\textsc{Proof}. From the prime factorization of $m$, we can construct two integers $b$ and $c$ such that $m=bc$, $v_2(m) = v_2(b)$ and $v_3(m) = v_3(c)$. That is, $3$ does not appear in the prime factorization of $b$ neither do $2$ appear in the prime factorization $c$. Consequently, $6$ divides neither $b$ nor $c$. \done
 
 \textsc{Exercise 18}. \emph{Prove the following statement or construct a counterexample: If $d$ is composite and $d$ divides $m$, then there exists integers $b$ and $c$ such that $m=bc$ and $d$ divides neither $b$ nor $c$.}
 
-\textsc{Solution}. We shall provide a constructive proof. Let $d = \prod_{i=1}^k p_i^{r_i}$ be its prime factorization. Since $d$ divides $m$, it follows that $m = z \prod_{i=1}^k p_i^{r_i}$ for some integer $z\in \Z$. Since $d$ is composite, there are at least two primes that divide $d$ (the two primes may not be distinct). Let $p_j$ be some prime factor of $d$. We construct $b$ and $c$ as follows: 
+\textsc{Proof}. We shall provide a constructive proof. Let $d = \prod_{i=1}^k p_i^{r_i}$ be its prime factorization. Since $d$ divides $m$, it follows that $m = z \prod_{i=1}^k p_i^{r_i}$ for some integer $z\in \Z$. Since $d$ is composite, there are at least two primes that divide $d$ (the two primes may not be distinct). Let $p_j$ be some prime factor of $d$. We construct $b$ and $c$ as follows: 
 \begin{align*}
 b = z \frac{\prod_{i=1}^k p_i^{r_i}}{ p_j^{r_j}}, \hspace{1cm} c = p_j^{r_j},
 \end{align*}
@@ -506,11 +514,11 @@ so that $m = bc$. If $z$ has no $p_j$ in its prime factorization, and $k>1$, the
 
 \textsc{Exercise 19}. \emph{Let $a$ and $b$ be positive integers. Prove that $(a,bc) = (a,b)(a,c)$ for every positive integer $c$ if and only if $(a,b)=1$.}
 
-\textsc{Solution}. Suppose $\gcd(a,b) = 1$. There is no prime that divides both $a$ and $b$. Whatever common prime factor $a$ and $bc$ has, it must be a common prime factor of $a$ and $c$. It follows that $\gcd(a, bc) = \gcd(a, c) = \gcd(a,b) \gcd(a, c)$.
+\textsc{Proof}. Suppose $\gcd(a,b) = 1$. There is no prime that divides both $a$ and $b$. Whatever common prime factor $a$ and $bc$ has, it must be a common prime factor of $a$ and $c$. It follows that $\gcd(a, bc) = \gcd(a, c) = \gcd(a,b) \gcd(a, c)$.
 
 \textsc{Exercise 20}. \emph{Let $m_1, \ldots, m_k$ be pairwise relatively prime positive integers, and let $d$ divide $m_1\cdots m_k$. Prove that for each $i = 1, \ldots, k$ there exists a unique divisor $d_i$ of $m_i$ such that $d= d_1\cdots d_k$.}
 
-\textsc{Solution}. Since $d$ divides $m_1\cdots m_k$ and $m_1, \ldots, m_k$ are pairwise relatively prime, every prime that divides $d$ divides only one integer among $m_1, \ldots, m_k$. Let $P$ be the set of distinct primes that divide $d$. We define a relation $R$ on $P$ as follows: $pRq$ if and only if $p,q\in P$ and both $p$ and $q$ divide one $m_i$ for $1\leq i \leq k$. Clearly $R$ is an equivalence relation and it partitions $P$ into the pairwise disjoint sets $M_1, \ldots, M_k$ such that $M_i$ is the set of all primes which divide both $d$ and $m_i$ for each $1 \leq i \leq k$. We define 
+\textsc{Proof}. Since $d$ divides $m_1\cdots m_k$ and $m_1, \ldots, m_k$ are pairwise relatively prime, every prime that divides $d$ divides only one integer among $m_1, \ldots, m_k$. Let $P$ be the set of distinct primes that divide $d$. We define a relation $R$ on $P$ as follows: $pRq$ if and only if $p,q\in P$ and both $p$ and $q$ divide one $m_i$ for $1\leq i \leq k$. Clearly $R$ is an equivalence relation and it partitions $P$ into the pairwise disjoint sets $M_1, \ldots, M_k$ such that $M_i$ is the set of all primes which divide both $d$ and $m_i$ for each $1 \leq i \leq k$. We define 
 \begin{displaymath}
 d_i \coloneqq \prod_p^{M_i} p^{v_p(d)}
 \end{displaymath}
@@ -518,11 +526,11 @@ for each $1 \leq i \leq k$ and $p\in M_i$. Clearly $d = d_1\cdots d_k$. By const
 
 \textsc{Exercise 22}. \emph{Let $n\geq 2$, and let $x$ be a rational number. Prove that $\sqrt[n]{x}$ is rational if and only if $x = y^n$ for some rational number $y$.}
 
-\textsc{Solution}. Suppose $x=y^n$ for some rational number $y$. Then $\sqrt[n]{x} = \sqrt[n]{y^n} = y$, which is rational. Conversely, suppose $\sqrt[n]{x}$ is rational. Then $\sqrt[n]{x} = \frac{p}{q}$ for some integers $p, q \ne 0$ so that $x = (\frac{p}{q})^n = y^n$, where $y = p/q$ is a rational number. \done
+\textsc{Proof}. Suppose $x=y^n$ for some rational number $y$. Then $\sqrt[n]{x} = \sqrt[n]{y^n} = y$, which is rational. Conversely, suppose $\sqrt[n]{x}$ is rational. Then $\sqrt[n]{x} = \frac{p}{q}$ for some integers $p, q \ne 0$ so that $x = (\frac{p}{q})^n = y^n$, where $y = p/q$ is a rational number. \done
 
 \textsc{Exercise 23}. \emph{Let $m_1, \ldots, m_k$ be positive integers and $m = [m_1, \ldots, m_k]$. Prove that there exist positive integers $d_1, \ldots, d_k$ such that $d_i$ is a divisor of $m_i$ for $i=1, \ldots, k, (d_i, d_j) = 1$ for $1 \leq i < j \leq n$, and $m = [d_1, \ldots, d_k] = d_1\cdots d_k$.}
 
-\textsc{Solution}. Let $m = [m_1, \ldots, m_k] = \prod_{i=0}^N p_i^{r_i}$ be its prime factorization. We pick $p_1$ (the first prime that divides $m$). Clearly there is at least one number $m_i$ such that its prime factorization has $p_1^{r_1}$ as its factor. If there are multiple such $m_i$'s we choose the one that comes first, that is, the one with the smallest index $i$. Suppose $m_j$ is the number chosen under this convention. Then we put $p_1^{r_1}$ into a new set $M_j$. Likewise, we pick $p_2$, and repeat the same process. In fact, we go through this process for all primes that divide $m$. After that is done, if $M_i$ does not already exist for any $1 \leq i \leq k$, we construct $M_i$ and let $M_i = \{1\}$. Then we construct the following $k$ numbers:
+\textsc{Proof}. Let $m = [m_1, \ldots, m_k] = \prod_{i=0}^N p_i^{r_i}$ be its prime factorization. We pick $p_1$ (the first prime that divides $m$). Clearly there is at least one number $m_i$ such that its prime factorization has $p_1^{r_1}$ as its factor. If there are multiple such $m_i$'s we choose the one that comes first, that is, the one with the smallest index $i$. Suppose $m_j$ is the number chosen under this convention. Then we put $p_1^{r_1}$ into a new set $M_j$. Likewise, we pick $p_2$, and repeat the same process. In fact, we go through this process for all primes that divide $m$. After that is done, if $M_i$ does not already exist for any $1 \leq i \leq k$, we construct $M_i$ and let $M_i = \{1\}$. Then we construct the following $k$ numbers:
 \begin{align*}
   d_i =
   \begin{cases}
@@ -535,7 +543,7 @@ We observe that $d_i$ divides $m_i$ for all $1 \leq i \leq k$. Also, $\gcd(d_i, 
 \textsc{Exercise 24}. \emph{Prove that for any positive integers $a$ and $b$, 
 \begin{displaymath}
 [a,b] = \frac{ab}{(a,b)}.
-\end{displaymath}}\textsc{Solution}. Let $a = \prod p^{v_p(a)}$ and $b = \prod p^{v_p(b)}$ be their prime factorizations so that 
+\end{displaymath}}\textsc{Proof}. Let $a = \prod p^{v_p(a)}$ and $b = \prod p^{v_p(b)}$ be their prime factorizations so that 
 \begin{displaymath}
 (a, b) = \prod p^{\min\{v_p(a), v_p(b)\}}, \hspace{1cm} [a,b] = \prod p^{\max\{v_p(a), v_p(b)\}}.
 \end{displaymath}
@@ -548,7 +556,7 @@ The proposition follows. \done
 \textsc{Exercise 25}. \emph{Let $a$ and $b$ be positive integers with $(a,b) = d$. Prove that 
 \begin{displaymath}
 \left[ \frac{a}{d}, \frac{b}{d} \right] = \frac{[a,b]}{d}.
-\end{displaymath}}\textsc{Solution}. Let $a = \prod p^{v_p(a)}$ and $b = \prod p^{v_p(b)}$ be their prime factorizations so that 
+\end{displaymath}}\textsc{Proof}. Let $a = \prod p^{v_p(a)}$ and $b = \prod p^{v_p(b)}$ be their prime factorizations so that 
 \begin{displaymath}
 d = \gcd(a, b) = \prod p^{\min\{v_p(a), v_p(b)\}},
 \end{displaymath}
@@ -568,7 +576,7 @@ The proposition follows. \done
 \textsc{Exercise 26}. \emph{Prove that for any positive integers $a, b, c,$ 
 \begin{displaymath}
 [a, b, c] = \frac{abc(a,b,c)}{(a,b)(b,c)(c,a)}.
-\end{displaymath}}\textsc{Solution}. Considering how we tackled Exercises $24$-$25$, it suffices to prove that
+\end{displaymath}}\textsc{Proof}. Considering how we tackled Exercises $24$-$25$, it suffices to prove that
 \begin{displaymath}
 \max\{ v_p(a), v_p(b), v_p(c) \} = \frac{v_p(a)v_p(b)v_p(c)  \min\{ v_p(a), v_p(b), v_p(c) \}}{\min\{ v_a(p) v_b(p) v_c(p)  \}},
 \end{displaymath}
@@ -581,7 +589,7 @@ where $x,y,z$ are any three positive integers. Clearly maximum and minimum funct
 
 \textsc{Exercise 27}. \emph{Let $a_1, \ldots, a_k$ be positive integers. Prove that $[a_1, \ldots, a_k] = a_1\cdots a_k$ if and only if the integers $a_1, \ldots, a_k$ are pairwise relatively prime.}
 
-\textsc{Solution}. Suppose $[a_1, \ldots, a_k] = a_1\cdots a_k$. It follows that 
+\textsc{Proof}. Suppose $[a_1, \ldots, a_k] = a_1\cdots a_k$. It follows that 
 \begin{displaymath}
 \max\{ v_p(a_1), \ldots, v_p(v_k) \} = \sum_{i=1}^k v_p(a_i)
 \end{displaymath}
@@ -589,31 +597,31 @@ for each prime $p$ appearing in the factorization of $[a_1, \ldots, a_k]$, which
 
 \textsc{Exercise 28}. \emph{Let $a$ and $b$ be positive integers and $p$ a prime. Prove that if $p$ divides $[a,b]$ and $p$ divides $a+b$, then $p$ divides $(a,b)$.}
 
-\textsc{Solution}.
+\textsc{Proof}.
 
 \textsc{Exercise 31}. \emph{A positive integer is called square-free if it is the product of distinct prime numbers. Prove that every positive integer can be written uniquely as the product of a square and a square-free integer.}
 
-\textsc{Solution}. Let $a$ be any positive integer and let $a = \prod_{i=1}^k p_i^{r_i}$ be its prime factorization. We pick the first prime $p_1$. If $r_1$ is odd, we can write $p\cdot p^{r_i - 1}$ so that $r_i-1$ is even and so, $p^{r_i-1}$ is a square. If $r_1$ is even, we leave it as it is (because it is already a square). We repeat the process for each prime $p_i$ where $1 \leq i \leq k$. Thus, we are left with distinct primes $p_i$ and squares $p_i^{r_i}$ (or $p_i^{r_i-1}$). The product of these distinct primes is a radical and the product of the squares is a square. Therefore, $a$ is written as the product of a square and a square-free integer. The uniqueness follows from the fact that this is the only way to write $a$ as the product of a square and a square-free integer (this is implicit in the construction we have used). \done
+\textsc{Proof}. Let $a$ be any positive integer and let $a = \prod_{i=1}^k p_i^{r_i}$ be its prime factorization. We pick the first prime $p_1$. If $r_1$ is odd, we can write $p\cdot p^{r_i - 1}$ so that $r_i-1$ is even and so, $p^{r_i-1}$ is a square. If $r_1$ is even, we leave it as it is (because it is already a square). We repeat the process for each prime $p_i$ where $1 \leq i \leq k$. Thus, we are left with distinct primes $p_i$ and squares $p_i^{r_i}$ (or $p_i^{r_i-1}$). The product of these distinct primes is a radical and the product of the squares is a square. Therefore, $a$ is written as the product of a square and a square-free integer. The uniqueness follows from the fact that this is the only way to write $a$ as the product of a square and a square-free integer (this is implicit in the construction we have used). \done
 
 \textsc{Exercise 32}. \emph{Prove that the set of all rational numbers of the form $a/b$, where $a, b \in \Z$ and $b$ is square-free, is an additive subgroup of $\Q$.}
 
-\textsc{Solution}. Let $S$ be the set of all rational numbers of the form $a/b$, where $a, b \in \Z$ and $b$ is square-free. Clearly $0 \in S$. It is easy to see that $0$ is the identity element in $S$ (after all, $S$ is a subset of $\Q$). If $x \in S$, then $-x \in S$ (after all, they have the same denominator) such that $x + (-x) = 0 = (-x) + x$. Let $x,y \in S$. It is easy to see that $x+y \in S$. This is because the denominator of $x+y$ is the lowest common multiple (lcm) of the denominators of $x$ and $y$, but the highest power of any prime in the denominators of $x$ and $y$ is the prime itself so that the lcm contains only distinct primes. It follows that $S$ is an additive subgroup of $\Q$. \done
+\textsc{Proof}. Let $S$ be the set of all rational numbers of the form $a/b$, where $a, b \in \Z$ and $b$ is square-free. Clearly $0 \in S$. It is easy to see that $0$ is the identity element in $S$ (after all, $S$ is a subset of $\Q$). If $x \in S$, then $-x \in S$ (after all, they have the same denominator) such that $x + (-x) = 0 = (-x) + x$. Let $x,y \in S$. It is easy to see that $x+y \in S$. This is because the denominator of $x+y$ is the lowest common multiple (lcm) of the denominators of $x$ and $y$, but the highest power of any prime in the denominators of $x$ and $y$ is the prime itself so that the lcm contains only distinct primes. It follows that $S$ is an additive subgroup of $\Q$. \done
 
 \textsc{Exercise 33}. A powerful number is a positive integer $n$ such that if a prime $p$ divides $n$, then $p^2$ divides $n$. Prove that every powerful number can be written as the product of a square and a cube. Construct examples to show that this representation of powerful numbers is not unique.
 
-\textsc{Solution}. Let $n$ be a powerful number. Since $p^2$ divides $n$ whenever $p$ divides $n$, it follows that $n$ has a prime factorization of the form $n = \prod_{i=1}^k p_i^{r_i}$ such that $r_i \geq 2$ for all $1 \leq i \leq k$. We pick the first prime $p_1$. Either $r_1$ is odd or even. If $r_1$ is odd, then we can write $r_1 = 3 + r_1^{\prime}$ (and hence $p^{r_1} = p^3\cdot p^{r_1^{\prime}}$) where $r_1^{\prime}$ is even. This is possible because $r_i \geq 2$. We continue this for all primes $p_i$ appearing in the factorization of $n$. The product (say $b$) of all even powers of primes is a square and the product (say $c$) of all cubes of primes is definitely a cube, so that $n = bc$. It is easy to see that, unlike Exercise $34$, this construction is not unique. For instance, we could write $p^6$ as either $(p^2p^2)^2$ (which is a square) or $(p^2)^3$ (which is a cube). \done
+\textsc{Proof}. Let $n$ be a powerful number. Since $p^2$ divides $n$ whenever $p$ divides $n$, it follows that $n$ has a prime factorization of the form $n = \prod_{i=1}^k p_i^{r_i}$ such that $r_i \geq 2$ for all $1 \leq i \leq k$. We pick the first prime $p_1$. Either $r_1$ is odd or even. If $r_1$ is odd, then we can write $r_1 = 3 + r_1^{\prime}$ (and hence $p^{r_1} = p^3\cdot p^{r_1^{\prime}}$) where $r_1^{\prime}$ is even. This is possible because $r_i \geq 2$. We continue this for all primes $p_i$ appearing in the factorization of $n$. The product (say $b$) of all even powers of primes is a square and the product (say $c$) of all cubes of primes is definitely a cube, so that $n = bc$. It is easy to see that, unlike Exercise $34$, this construction is not unique. For instance, we could write $p^6$ as either $(p^2p^2)^2$ (which is a square) or $(p^2)^3$ (which is a cube). \done
 
 \textsc{Exercise 34}. \emph{Prove that $m$ is square-free if and only if \emph{rad}$(m) = m$.}
 
-\textsc{Solution}. Suppose $m$ is square-free. Then $m$ is a product of distinct primes. If follows that rad$(m) = m$. Conversely, suppose rad$(m) = m$. This is possible only when the highest power of every prime that divides $m$ is the prime itself. Consequently, $m$ is a product of distinct primes, and so $m$ is square-free. \done
+\textsc{Proof}. Suppose $m$ is square-free. Then $m$ is a product of distinct primes. If follows that rad$(m) = m$. Conversely, suppose rad$(m) = m$. This is possible only when the highest power of every prime that divides $m$ is the prime itself. Consequently, $m$ is a product of distinct primes, and so $m$ is square-free. \done
 
 \textsc{Exercise 35}. \emph{Prove that \emph{rad($mn$)} = \emph{rad($m$)} \emph{rad($n$)} if and only if $(m, n) = 1$.}
 
-\textsc{Solution}. Suppose rad($mn$) = rad($m$) rad($n$). Since the left hand side is a product of distinct primes, it follows that rad($m$) and rad($n$) have no prime factor in common. But every prime factor of $m$ is also a factor of rad($m$). Likewise for $n$. Therefore, $m$ and $n$ have no prime factor in common. Consequently, $\gcd(m,n) = 1$. The argument for the other direction is similar. \done
+\textsc{Proof}. Suppose rad($mn$) = rad($m$) rad($n$). Since the left hand side is a product of distinct primes, it follows that rad($m$) and rad($n$) have no prime factor in common. But every prime factor of $m$ is also a factor of rad($m$). Likewise for $n$. Therefore, $m$ and $n$ have no prime factor in common. Consequently, $\gcd(m,n) = 1$. The argument for the other direction is similar. \done
 
 \textsc{Exercise 36}. \emph{Let $H = \{1, 5, 9, \ldots,\}$ be the arithmetic progression of all positive integers of the form $4k + 1$. Elements of $H$ are called Hilbert numbers. Show that $H$ is closed under multiplication, that is, $x, y \in H$ implies $xy \in H$. An element $x$ of $H$ will be called a Hilbert prime if $x\ne 1$ and $x$ cannot be written as the product of two strictly smaller elements of $H$. Compute all the Hilbert primes up to $100$. Prove that every element of $H$ can be factored into a product of Hilbert primes, but that unique factorization does not hold in $H$.}
 
-\textsc{Solution}. Let $a = 4k + 1$ and $b = 4h + 1$ be any two elements of $H$. Then $ab = (4k + 1)(4h + 1) = 4(4kh + k + h) + 1$ is in $H$ and so, $H$ is closed under multiplication. By computation, all the Hilbert primes less than $100$ are $5$, $9$, $13$, $17$, $21$, $29$, $33$, $37$, $41$, $49$, $53$, $57$, $61$, $69$, $73$, $77$, $81$, $89$, $93$, and $97$. In computing these numbers, we use prime factorization to see if the number can be factored into Hilbert numbers. From the definition of Hilbert prime given in the question, proving that every element of $H$ can be factored into a product of Hilbert primes is rather very simple. If a Hilbert number (say $a$) can be factored into a product of Hilbert primes, then we are done. Otherwise, $a$ is a Hilbert prime and hence we have obtained its factorization. This factorization is not unique. For example, $441 = 9 \cdot 49 = 21 \cdot 21$. \done
+\textsc{Proof}. Let $a = 4k + 1$ and $b = 4h + 1$ be any two elements of $H$. Then $ab = (4k + 1)(4h + 1) = 4(4kh + k + h) + 1$ is in $H$ and so, $H$ is closed under multiplication. By computation, all the Hilbert primes less than $100$ are $5$, $9$, $13$, $17$, $21$, $29$, $33$, $37$, $41$, $49$, $53$, $57$, $61$, $69$, $73$, $77$, $81$, $89$, $93$, and $97$. In computing these numbers, we use prime factorization to see if the number can be factored into Hilbert numbers. From the definition of Hilbert prime given in the question, proving that every element of $H$ can be factored into a product of Hilbert primes is rather very simple. If a Hilbert number (say $a$) can be factored into a product of Hilbert primes, then we are done. Otherwise, $a$ is a Hilbert prime and hence we have obtained its factorization. This factorization is not unique. For example, $441 = 9 \cdot 49 = 21 \cdot 21$. \done
 
 \subsection{Euclid's Theorem and the Sieve of Erastosthenes}
 
@@ -621,7 +629,7 @@ Exercises 1-4 can be solved using the sieve of Eratosthenes (although it might b
 
 \textsc{Exercise 5}. \emph{Let $a$ and $n$ be positive integers. Prove that $a^n-1$ is prime only if $a=2$ and $n=p$ is prime. Primes of the form $M_p = 2^p - 1$ are called Mersenne primes. Compute the first five Mersenne primes.}
 
-\textsc{Solution}. Suppose $a^n-1$ is prime. But $a^n-1 = (a-1)(a^{n-1} + a^{n-2} + \cdots + a + 1)$. So, $a-1 = 1$, that is, $a=2$. Suppose $n$ is composite. Let $n = hk$ for some $1 < h, k < n$. Then $a^{hk}-1 = (a^h-1)[(a^h)^{k-1} + (a^h)^{k-2} + \cdots + a^h + 1]$, that is, $a^h-1$ is composite which is absurd. Therefore, $n = p$ is prime. The first five Mersenne primes are $3$, $7$, $31$, $127$, and $8191$. \done
+\textsc{Proof}. Suppose $a^n-1$ is prime. But $a^n-1 = (a-1)(a^{n-1} + a^{n-2} + \cdots + a + 1)$. So, $a-1 = 1$, that is, $a=2$. Suppose $n$ is composite. Let $n = hk$ for some $1 < h, k < n$. Then $a^{hk}-1 = (a^h-1)[(a^h)^{k-1} + (a^h)^{k-2} + \cdots + a^h + 1]$, that is, $a^h-1$ is composite which is absurd. Therefore, $n = p$ is prime. The first five Mersenne primes are $3$, $7$, $31$, $127$, and $8191$. \done
 
 \textsc{Exercise 6}. \emph{Let $k$ be a positive integer. Prove that if $2^k+1$ is prime, then $k= 2^n$. The integer 
 \begin{displaymath}
@@ -629,19 +637,19 @@ F_n = 2^{2^n} + 1
 \end{displaymath}
 is called the nth Fermat number. Primes of the form $2^{2^n}+1$ are called Fermat primes. Show that $F_n$ is prime for $n=1,2,3,4$.}
 
-\textsc{Solution}. We shall prove the proposition by proving its contrapositive. Suppose $k \ne 2^n$. Then $k$ has an odd prime $h>1$ as its factor. So, $k = lh$ for some $1\leq l < k$. A consequence of binomial theorem states that $a-b$ divides $a^m-b^m$ for any $a, b, m\in\Z, m>0$. Putting $a = 2^l, b = -1$, and $m = h$, we see that $2^l+1$ divides $2^{lh}+1$, that is, $2^k+1$ is composite. Therefore, $k$ must be a power of $2$. By computation, we obtain $F_1 = 5$, $F_2 = 17$, $F_3 = 257$, and $F_4 = 65537$. The first three Fermat numbers are obviously prime. To check that $65537$ is prime, we check that no prime less than $256$ (because $\sqrt{65537} \sim 256$) divides $65537$. \done
+\textsc{Proof}. We shall prove the proposition by proving its contrapositive. Suppose $k \ne 2^n$. Then $k$ has an odd prime $h>1$ as its factor. So, $k = lh$ for some $1\leq l < k$. A consequence of binomial theorem states that $a-b$ divides $a^m-b^m$ for any $a, b, m\in\Z, m>0$. Putting $a = 2^l, b = -1$, and $m = h$, we see that $2^l+1$ divides $2^{lh}+1$, that is, $2^k+1$ is composite. Therefore, $k$ must be a power of $2$. By computation, we obtain $F_1 = 5$, $F_2 = 17$, $F_3 = 257$, and $F_4 = 65537$. The first three Fermat numbers are obviously prime. To check that $65537$ is prime, we check that no prime less than $256$ (because $\sqrt{65537} \sim 256$) divides $65537$. \done
 
 \textsc{Exercise 7}. \emph{Prove that $F_5$ is divisible by $641$, and so $F_5$ is composite.}
 
-\textsc{Solution.} We see that $F_5 = 2^{2^5} - 1 = (2^{32} + 5^4\cdot 2^{28}) - (5^4\cdot 2^{28} - 1)$ and $641 = 2^4 + 5^4 = 5\cdot 2^7 + 1$. But we can write $2^{32} + 5^4\cdot 2^{28} = 2^{28}(2^4 + 5^4)$ and $5^4\cdot 2^{28} - 1 = (5^2\cdot 2^{14} + 1)(5\cdot 2^7 + 1)(5\cdot 2^7 - 1)$. Therefore, $641$ divides both $5^4\cdot 2^{28} + 2^{32}$ and $5^4\cdot 2^{28} - 1$. The proposition follows. \done
+\textsc{Proof.} We see that $F_5 = 2^{2^5} - 1 = (2^{32} + 5^4\cdot 2^{28}) - (5^4\cdot 2^{28} - 1)$ and $641 = 2^4 + 5^4 = 5\cdot 2^7 + 1$. But we can write $2^{32} + 5^4\cdot 2^{28} = 2^{28}(2^4 + 5^4)$ and $5^4\cdot 2^{28} - 1 = (5^2\cdot 2^{14} + 1)(5\cdot 2^7 + 1)(5\cdot 2^7 - 1)$. Therefore, $641$ divides both $5^4\cdot 2^{28} + 2^{32}$ and $5^4\cdot 2^{28} - 1$. The proposition follows. \done
 
 \textsc{Exercise 9}. \emph{Show that every prime number except $2$ and $3$ has the remainder of $1$ or $5$ when divided by $6$. Prove that there are infinitely many prime numbers whose remainder is $5$ when divided by $6$.}
 
-\textsc{Solution}. Every integer is one and only one of the forms $6k$, $6k+1$, $6k+2$, $6k+3$, $6k+4$, or $6k+5$ for some $k\in\Z$. Out of these, $6k$, $6k+2$, and $6k+4$ are divisible by $2$ and cannot be prime. Similarly, $6k+3$ is divisible by $3$ and is not prime. Consequently, every prime $>3$ is one of the forms: $6k+1$ or $6k+5$.
+\textsc{Proof}. Every integer is one and only one of the forms $6k$, $6k+1$, $6k+2$, $6k+3$, $6k+4$, or $6k+5$ for some $k\in\Z$. Out of these, $6k$, $6k+2$, and $6k+4$ are divisible by $2$ and cannot be prime. Similarly, $6k+3$ is divisible by $3$ and is not prime. Consequently, every prime $>3$ is one of the forms: $6k+1$ or $6k+5$.
 
 \textsc{Exercise 10}. \emph{Prove that $\pi(n) \leq n/2$ for $n\geq 8$.}
 
-\textsc{Solution}.
+\textsc{Proof}.
 
 \subsection{A Linear Diophantine Equation}
 
@@ -649,14 +657,14 @@ is called the nth Fermat number. Primes of the form $2^{2^n}+1$ are called Ferma
 \begin{displaymath}
 3x_1 + 5x_2 = b
 \end{displaymath}
-has a solution in integers for every integer $b$, and a solution in nonnegative integers for $b=0,3,5,6$ and all $b\geq 8$.}
+has a Proof in integers for every integer $b$, and a Proof in nonnegative integers for $b=0,3,5,6$ and all $b\geq 8$.}
 
-\textsc{Solution}. Since $\gcd(3,5) = 1$, the equation has a solution in integers for every $b\in\Z$. We see that $3\cdot 0 + 5\cdot 0 = 0$, $3\cdot 1 + 5\cdot 0 = 3$, $3\cdot 0 + 5\cdot 1 = 5$ and $3\cdot 2 + 5\cdot 0 = 6$. Also for a Frobenius linear diophantine equation, $G(3,5) = (3-1)(5-1) = 8$. The proposition follows. \done
+\textsc{Proof}. Since $\gcd(3,5) = 1$, the equation has a Proof in integers for every $b\in\Z$. We see that $3\cdot 0 + 5\cdot 0 = 0$, $3\cdot 1 + 5\cdot 0 = 3$, $3\cdot 0 + 5\cdot 1 = 5$ and $3\cdot 2 + 5\cdot 0 = 6$. Also for a Frobenius linear diophantine equation, $G(3,5) = (3-1)(5-1) = 8$. The proposition follows. \done
 
-\textsc{Exercise 2}. \emph{Find all solutions in nonnegative integers $x_1$ and $x_2$ of the linear diophantine solution 
+\textsc{Exercise 2}. \emph{Find all Proofs in nonnegative integers $x_1$ and $x_2$ of the linear diophantine Proof 
 \begin{displaymath}
 2x_1 + 7x_2 = 53.
-\end{displaymath}}\textsc{Solution}. The following are all the combinations of $(x_1, x_2)$ that satisfy the equation: 
+\end{displaymath}}\textsc{Proof}. The following are all the combinations of $(x_1, x_2)$ that satisfy the equation: 
 \begin{align*}
   2 \cdot 23 + 7 \cdot 1 = 53, \hspace{1cm} & 2 \cdot 9 + 7 \cdot 5 = 53,\\
   2 \cdot 16 + 7 \cdot 3 = 53, \hspace{1cm} & 2 \cdot 2 + 7 \cdot 7 = 53.
@@ -671,7 +679,7 @@ a_1x_1 + a_2x_2
 \end{displaymath}
 with $x_1, x_2$ nonnegative integers. Compute $N(3,10)$ and $N(3,10)/G(3,10)$.}
 
-\textsc{Solution}. For a Frobenius linear diophantine equation, $G(3,10) = (3-1)(10-1) = 18$. Let $V(x_1, x_2) = 3x_1 + 10x_2$. All the possible combinations $(x_1, x_2)$ of nonnegative integers $x_1$, $x_2$ such that $V<18$ are given by the following equations.
+\textsc{Proof}. For a Frobenius linear diophantine equation, $G(3,10) = (3-1)(10-1) = 18$. Let $V(x_1, x_2) = 3x_1 + 10x_2$. All the possible combinations $(x_1, x_2)$ of nonnegative integers $x_1$, $x_2$ such that $V<18$ are given by the following equations.
 \begin{longtable}{p{6em} p{6em} p{6em}}
   $V(0, 0) = 0$, & $V(1,0) = 3$, & $V(2,0) = 6$, \\
   $V(3, 0) = 9$, & $V(4, 0) = 12$, & $V(5, 0) = 15$, \\
@@ -689,40 +697,40 @@ Exercise $5$ may be solved similarly.
 \end{displaymath}
 with $x_1$, $x_2$, $x_3$ nonnegative integers. Compute $G(3,10,14)$.}
 
-\textsc{Solution}. Let $V(x_1, x_2, x_3) = 3x_1 + 10x_2 + 14x_3$. We see that $(3-1)\cdot 14 \cdot 10 = 280$. Therefore, every $b\geq 280$ can be represented by the form $V(x_1, x_2, x_3)$, and we need only check for those $(x_1, x_2, x_3)$ such that $V(x_1, x_2, x_3) < 280$. As in Exercise $4$, we make a table of all possible values of $V(x_1, x_2, x_3)$ avoiding, of course, multiples of $3$, $10$, $14$, $30$, $70$, and $210$ and find that the only nonnegative integers that cannot be represented in the form $3x_1 + 10x_2 + 10x_3$ are $\{ 1, 2, 4, 5, 7, 8, 11 \}$. It follows that $G(3,10,14) = 12$. \done
+\textsc{Proof}. Let $V(x_1, x_2, x_3) = 3x_1 + 10x_2 + 14x_3$. We see that $(3-1)\cdot 14 \cdot 10 = 280$. Therefore, every $b\geq 280$ can be represented by the form $V(x_1, x_2, x_3)$, and we need only check for those $(x_1, x_2, x_3)$ such that $V(x_1, x_2, x_3) < 280$. As in Exercise $4$, we make a table of all possible values of $V(x_1, x_2, x_3)$ avoiding, of course, multiples of $3$, $10$, $14$, $30$, $70$, and $210$ and find that the only nonnegative integers that cannot be represented in the form $3x_1 + 10x_2 + 10x_3$ are $\{ 1, 2, 4, 5, 7, 8, 11 \}$. It follows that $G(3,10,14) = 12$. \done
 
 Exercise $8$ is similar to Exercise $2$.
 
-\textsc{Exercise 9}. \emph{Find all solutions in integers $x_1$, $x_2$ and $x_3$ of the system of linear diophantine equations 
+\textsc{Exercise 9}. \emph{Find all Proofs in integers $x_1$, $x_2$ and $x_3$ of the system of linear diophantine equations 
 \begin{displaymath}
   3x_1 + 5x_2 + 7x_3 = 560, \hspace{1cm}
   9x_1 + 25x_2 + 49x_3 = 2920.
-\end{displaymath}}\textsc{Solution}. Putting $x_3 = k$, we reduce the given system to a linear system in two unknowns: 
+\end{displaymath}}\textsc{Proof}. Putting $x_3 = k$, we reduce the given system to a linear system in two unknowns: 
 \begin{align*}
   3x_1 + 5x_2 &= 560 - 7k, \\
   9x_1 + 25x_2 &= 2920 - 49k,
 \end{align*}
-whose solutions, by Cramer's rule, are given by 
+whose Proofs, by Cramer's rule, are given by 
 \begin{displaymath}
 x_1 = \frac{7}{3}k - 20; \hspace{1cm} x_2 = 124 - \frac{14}{5}k.
 \end{displaymath}
-Since we are interested only in nonnegative integer solutions, we look into the cases where $k$ is divisible by both $3$ and $5$ such that $x_1$ and $x_2$ are both nonnegative. It is easy to see that the only solution is $(15, 82, 15)$. \done
+Since we are interested only in nonnegative integer Proofs, we look into the cases where $k$ is divisible by both $3$ and $5$ such that $x_1$ and $x_2$ are both nonnegative. It is easy to see that the only Proof is $(15, 82, 15)$. \done
 
-\textsc{Exercise 10}. \emph{Find all solutions of the Ramanujan-Nagell diophantine equation 
+\textsc{Exercise 10}. \emph{Find all Proofs of the Ramanujan-Nagell diophantine equation 
 \begin{displaymath}
 x^2 + 7 = 2^n
 \end{displaymath}
 with $x \leq 1000$.}
 
-\textsc{Solution}. We observe that $1000^2 = 1000000$, and $2^{20}  = 1048576$. Thus, we need only check for $n < 20$. Since powers of $2$ are even, $x^2 + 7$ must be even, that is, $x^2$ must be odd. It follows that $x$ must be odd. Clearly it has no solutions when $n < 3$. We look at the values $\sqrt{2^n - 7}$ for each $3 \leq n \leq 19$ and see if it evaluates to an odd integer. We shall write a solution in the form $(x,n)$. An obvious solution is $(1,3)$. Other solutions are $(3,4)$, $(5,5)$, $(11,7)$, and $(181, 15)$. It is checked that these are all the possible solutions. \done
+\textsc{Proof}. We observe that $1000^2 = 1000000$, and $2^{20}  = 1048576$. Thus, we need only check for $n < 20$. Since powers of $2$ are even, $x^2 + 7$ must be even, that is, $x^2$ must be odd. It follows that $x$ must be odd. Clearly it has no Proofs when $n < 3$. We look at the values $\sqrt{2^n - 7}$ for each $3 \leq n \leq 19$ and see if it evaluates to an odd integer. We shall write a Proof in the form $(x,n)$. An obvious Proof is $(1,3)$. Other Proofs are $(3,4)$, $(5,5)$, $(11,7)$, and $(181, 15)$. It is checked that these are all the possible Proofs. \done
 
-\textsc{Exercise 11}. \emph{Find all solutions of the Ljunggren diophantine equation 
+\textsc{Exercise 11}. \emph{Find all Proofs of the Ljunggren diophantine equation 
 \begin{displaymath}
 x^2 - 2y^4 = -1
 \end{displaymath}
 with $x \leq 1000$.}
 
-\textsc{Solution}. We can re-write the equation as $x^2 + 1 = 2y^4$. We observe that $1000^2 = 1000000$ and $27^4 = 531441$. Thus, we need only check for $n < 27$. As in Exercise $10$, we shall write a solution in the form $(x,y)$. An obvious solution is $(1,1)$. It is checked that the only other solution is $(239, 13)$. \done
+\textsc{Proof}. We can re-write the equation as $x^2 + 1 = 2y^4$. We observe that $1000^2 = 1000000$ and $27^4 = 531441$. Thus, we need only check for $n < 27$. As in Exercise $10$, we shall write a Proof in the form $(x,y)$. An obvious Proof is $(1,1)$. It is checked that the only other Proof is $(239, 13)$. \done
 \clearpage
 
 \section{Congruences}
@@ -731,7 +739,7 @@ with $x \leq 1000$.}
 
 \textsc{Exercise 1}. \emph{Compute the least nonnegative residue of $10^k + 1$ modulo $13$ for $k = 1, 2, 3, 4$.}
 
-\textsc{Solution}. We compute 
+\textsc{Proof}. We compute 
 \begin{align*}
   10^1+1 \equiv 10 \mod 13, \hspace{1cm} &10^3+1 \equiv 12 \mod 13,\\
   10^2+1 \equiv 9 \mod 13, \hspace{1cm} &10^4+1 \equiv 3 \mod 13.
@@ -740,11 +748,11 @@ We simply computed the remainders on division by $13$. \done
 
 \textsc{Exercise 2}. \emph{Compute the least nonnegative residue of $5^{22}$ modulo $23$.}
 
-\textsc{Solution}. We observe that $23$ is a prime. Therefore, Fermat's theorem, $5^{22} \equiv 1 \mod 23$. \done
+\textsc{Proof}. We observe that $23$ is a prime. Therefore, Fermat's theorem, $5^{22} \equiv 1 \mod 23$. \done
 
 \textsc{Exercise 3}. \emph{Construct the multiplication table for the ring $\Z/5\Z$.}
 
-\textsc{Solution}. We see that $\Z/5\Z = \{ 0, 1, 2, 3, 4\}$. To construct the multiplication table, we compute all the products $a\cdot b$ for $a, b \in \Z/5\Z$.
+\textsc{Proof}. We see that $\Z/5\Z = \{ 0, 1, 2, 3, 4\}$. To construct the multiplication table, we compute all the products $a\cdot b$ for $a, b \in \Z/5\Z$.
 \begin{longtable}{p{2em} p{2em} p{2em} p{2em} p{2em} p{2em}}
   $\times$ & $0$ & $1$ & $2$ & $3$ & $4$ \\
   $0$      & $0$ & $0$ & $0$ & $0$ & $0$ \\
@@ -758,13 +766,13 @@ We simply computed the remainders on division by $13$. \done
 
 \textsc{Exercise 4}. \emph{Construct the multiplication table for the ring $\Z/6\Z$.}
 
-\textsc{Solution}. We see that $\Z/6\Z = \{ 0, 1, 2, 3, 4, 5 \}$. As in Exercise $3$, we compute all products $a \cdot b$ for $a, b \in \Z/6\Z$. \done
+\textsc{Proof}. We see that $\Z/6\Z = \{ 0, 1, 2, 3, 4, 5 \}$. As in Exercise $3$, we compute all products $a \cdot b$ for $a, b \in \Z/6\Z$. \done
 
 Exercise 5 is a special case of Exercise 6, which we will now solve.
 
 \textsc{Exercise 6}. \emph{Let $m$ be an odd positive integer. Prove that every integer is congruent modulo $m$ to one of the even integers $0$, $2$, $4$, $6$, $\ldots$, $2m-2$.}
 
-\textsc{Solution}. Let $X=\{0,1,2,\ldots,m-1\}$ be the complete set of residues modulo $m$. Let $Y=\{0,2,4,\ldots,2m-2\}$. Let $f: X \to Y$ be a map defined by 
+\textsc{Proof}. Let $X=\{0,1,2,\ldots,m-1\}$ be the complete set of residues modulo $m$. Let $Y=\{0,2,4,\ldots,2m-2\}$. Let $f: X \to Y$ be a map defined by 
 \begin{displaymath}
   f(x) = \begin{cases}
     x & \text{if } x \text{ is even} \\
@@ -777,7 +785,7 @@ Exercise 7 is a special case of Exercise 8, which we will now solve.
 
 \textsc{Exercise 8}. \emph{Let $m = 2q + 1$ be an odd positive integer. Prove that every integer is congruent modulo $m$ to a unique integer $r$ such that $-q \leq r \leq q$.}
 
-\textsc{Solution}. As in Exercise 6, we only need to find the correct map. Let $X=\{0,1,2,\ldots, 2q\}$ be the complete set of residues modulo $2q+1$. Let $Y = \{-q,-q+1,\ldots,q-1,q\}$. Then the function $f:X\to Y$ defined by 
+\textsc{Proof}. As in Exercise 6, we only need to find the correct map. Let $X=\{0,1,2,\ldots, 2q\}$ be the complete set of residues modulo $2q+1$. Let $Y = \{-q,-q+1,\ldots,q-1,q\}$. Then the function $f:X\to Y$ defined by 
 \begin{displaymath}
 f(x) =
 \begin{cases}
@@ -789,7 +797,7 @@ maps every integer to its congruent modulo $2q+1$ in the set $Y$. The uniqueness
 
 \textsc{Exercise 9}. \emph{Let $m=2q$ be an even positive integer. Prove that every integer is congruent modulo $m$ to a unique integer $r$ such that $-(q-1) \leq r \leq q$.}
 
-\textsc{Solution}. Let $X=\{0,1,2,\ldots,2q-1\}$ be the complete set of residues modulo $2q$. Let $Y=\{-(q-1),-q+2,\ldots,q-1,q\}$. Then the function $f:X\to Y$ defined by 
+\textsc{Proof}. Let $X=\{0,1,2,\ldots,2q-1\}$ be the complete set of residues modulo $2q$. Let $Y=\{-(q-1),-q+2,\ldots,q-1,q\}$. Then the function $f:X\to Y$ defined by 
 \begin{displaymath}
 f(x) =
 \begin{cases}
@@ -801,11 +809,11 @@ maps every integer to its congruent modulo $2q$ in the set $Y$. The uniqueness f
 
 \textsc{Exercise 10}. \emph{Prove that $a^3 \equiv a (\mod 6)$ for every integer $a$.}
 
-\textsc{Solution}. It suffices to prove that $a^3-a$ is divisible by $6$, which we already did in Exercise 10 of 1.1. \done
+\textsc{Proof}. It suffices to prove that $a^3-a$ is divisible by $6$, which we already did in Exercise 10 of 1.1. \done
 
 \textsc{Exercise 11}. \emph{Prove that $a^4\equiv 1 (\mod 5)$ for every integer $a$ that is not divisible by 5.}
 
-\textsc{Solution}. It suffices to prove that $a^4-1$, that is, $(a^2+1)(a+1)(a-1)$ is divisible by $5$. If either $a+1$ or $a-1$ is divisible by $5$ then we are done. Excluding these cases, $a$ can only be one of the forms: $5k+2$ or $5k+3$ for some $k\in\Z$. Suppose $a=5k+2$. Then (by expansion or using binomial theorem) $a^4-1 = 5^4a^4 + 4\cdot 5^3a^3 \cdot 2 + 6\cdot 5^2a^2\cdot 2^2 + 4\cdot 5a\cdot 2^3 + 15$, which is divisible by $5$. The other case of $a$ of the form $5k+3$ is proved similarly. \done
+\textsc{Proof}. It suffices to prove that $a^4-1$, that is, $(a^2+1)(a+1)(a-1)$ is divisible by $5$. If either $a+1$ or $a-1$ is divisible by $5$ then we are done. Excluding these cases, $a$ can only be one of the forms: $5k+2$ or $5k+3$ for some $k\in\Z$. Suppose $a=5k+2$. Then (by expansion or using binomial theorem) $a^4-1 = 5^4a^4 + 4\cdot 5^3a^3 \cdot 2 + 6\cdot 5^2a^2\cdot 2^2 + 4\cdot 5a\cdot 2^3 + 15$, which is divisible by $5$. The other case of $a$ of the form $5k+3$ is proved similarly. \done
 
 Exercise 12 is exactly the same as Exercise 9 of 1.1.
 
@@ -817,7 +825,7 @@ a \equiv b \mod m
 \frac{a}{d} \equiv \frac{b}{d} \mod \frac{m}{d}.
 \end{displaymath}}
 
-\textsc{Solution}. Suppose $a \equiv b \mod m$. That is, $m$ divides $a-b$. Or rather, $(a-b)/m$ is an integer. Then $\frac{(a-b)/d}{m/d}$ is also an integer. That is, $m/d$ divides $(a-b)/d$. Or rather, 
+\textsc{Proof}. Suppose $a \equiv b \mod m$. That is, $m$ divides $a-b$. Or rather, $(a-b)/m$ is an integer. Then $\frac{(a-b)/d}{m/d}$ is also an integer. That is, $m/d$ divides $(a-b)/d$. Or rather, 
 \begin{displaymath}
 \frac{a}{d} \equiv \frac{b}{d} \mod \frac{m}{d}.
 \end{displaymath}
@@ -825,11 +833,11 @@ The converse can be checked similarly. \done
 
 \textsc{Exercise 15}. \emph{Prove that $a_1 \equiv a_2 \mod m$ implies $a_1^k \equiv a_2^k \mod m$ for all $k \geq 1$. Prove that if $f(x)$ is a polynomial with integer coefficients and $a_1 \equiv a_2 \mod m$, then $f(a_1) \equiv f(a_2) \mod m$.}
 
-\textsc{Solution}. Suppose $a_1 \equiv a_2 \mod m$. That is, $m$ divides $a_1 - a_2$. But then $a_1^k - a_2^k = (a_1 - a_2)(a_1^{k-1} + a_1^{k-2}a_2 + \cdots + a_1a_2^{k-2} + a_2^{k-1})$, and so $a_1 - a_2$ divides $a_1^k - a_2^k$. It follows that $m$ divides $a_1^k - a_2^k$. Therefore, $a_1^k \equiv a_2^k \mod m$ for all $k\geq 1$. We observe that $a_1 \equiv a_2 \mod m$ also implies $ca_1 \equiv ca_2 \mod m$ for any integer $c$. Also, $a_1 \equiv a_2 \mod m$ and $a_3 \equiv a_4 \mod m$ implies $a_1 + a_3 \equiv a_2 + a_4 \mod m$. Indeed, when we think of it in terms of divisibility by $m$, it becomes trivial. Let $f(x) = c_nx^n + c_{n-1}x^{n-1} + \cdots + c_1x + c_0$ where $c_i \in \Z$ for $0 \leq i \leq n$. Since $a_2 \equiv a_2 \mod m$, by the implications we have derived above, $f(a_1) \equiv f(a_2) \mod m$. \done
+\textsc{Proof}. Suppose $a_1 \equiv a_2 \mod m$. That is, $m$ divides $a_1 - a_2$. But then $a_1^k - a_2^k = (a_1 - a_2)(a_1^{k-1} + a_1^{k-2}a_2 + \cdots + a_1a_2^{k-2} + a_2^{k-1})$, and so $a_1 - a_2$ divides $a_1^k - a_2^k$. It follows that $m$ divides $a_1^k - a_2^k$. Therefore, $a_1^k \equiv a_2^k \mod m$ for all $k\geq 1$. We observe that $a_1 \equiv a_2 \mod m$ also implies $ca_1 \equiv ca_2 \mod m$ for any integer $c$. Also, $a_1 \equiv a_2 \mod m$ and $a_3 \equiv a_4 \mod m$ implies $a_1 + a_3 \equiv a_2 + a_4 \mod m$. Indeed, when we think of it in terms of divisibility by $m$, it becomes trivial. Let $f(x) = c_nx^n + c_{n-1}x^{n-1} + \cdots + c_1x + c_0$ where $c_i \in \Z$ for $0 \leq i \leq n$. Since $a_2 \equiv a_2 \mod m$, by the implications we have derived above, $f(a_1) \equiv f(a_2) \mod m$. \done
 
 \textsc{Exercise 16}. \emph{(A criterion for divisibility by $9$). Prove that a positive integer $n$ is divisible by $9$ if and only if the sum of its decimal digits is divisible by $9$. (For example, the sum of the decimal digits of $567$ is $5+6+7 = 18$.)}
 
-\textsc{Solution}. Since $a^m - b^m = (a-b)(a^{m-1} + a^{m-2}b + \cdots + ab^{m-2} + b^{m-1})$ for a positive integer $m$ so that $a - b$ divides $a^m - b^m$. Substituting $a = 10$, and $b = 1$, it follows that $9$ divides $10^m-1$. In other words, $10^m \equiv 1 \mod 9$. Let $x$ be any decimal number (base 10). Suppose $x = a_ka_{k-1}\cdots a_1a_0$ where $a_0, a_1, \ldots, a_k$ are its decimal digits. Then it has a unique $10$-acidic representation of the following form 
+\textsc{Proof}. Since $a^m - b^m = (a-b)(a^{m-1} + a^{m-2}b + \cdots + ab^{m-2} + b^{m-1})$ for a positive integer $m$ so that $a - b$ divides $a^m - b^m$. Substituting $a = 10$, and $b = 1$, it follows that $9$ divides $10^m-1$. In other words, $10^m \equiv 1 \mod 9$. Let $x$ be any decimal number (base 10). Suppose $x = a_ka_{k-1}\cdots a_1a_0$ where $a_0, a_1, \ldots, a_k$ are its decimal digits. Then it has a unique $10$-acidic representation of the following form 
 \begin{displaymath}
 x = a_0 + a_1\cdot 10 + a_2 \cdot 10^2 + \cdots + a_k \cdot 10^k.
 \end{displaymath}
@@ -841,12 +849,12 @@ Therefore, $x \equiv 0 \mod 9$ if and only if $\sum_{i=0}^k a_i \equiv 0 \mod 9$
 
 \textsc{Exercise 17}. \emph{(A criterion for divisibility by $11$.) Prove that a positive integer $n$ is divisible by $11$ if and only if the alternating sum of its decimal digits is divisible by $11$. (For example, the alternating sum of the decimal digits of $80,729$ is $-9 + 2 -7 + 0 -8 = -22$.)}
 
-\textsc{Solution}.
+\textsc{Proof}.
 
 \textsc{Exercise 18}. \emph{Prove that if $x_1, \ldots, x_m$ is a sequence of $m$ not necessarily distinct integers, then there is a subsequence of consecutive terms whose sum is divisible by $m$, that is, there exists integers $1 \leq k \leq l \leq m$ such that 
 \begin{displaymath}
 \sum_{i=k}^l x_i \equiv 0 \mod m.
-\end{displaymath}}\textsc{Solution}. We consider the $m+1$ integers $0, x_1, x_1+x_2, x_1+x_2+x_3, \ldots, x_1+x_2+\cdots + x_m$. We shall represent them as $s_i$ where $0 \leq i \leq m$ (because $s$ reminds us of sum!). There are $m+1$ such sums $(s_i)$ while there are only $m$ numbers in the complete set of residues modulo $m$. By pigeonhole principle, there are two sums $s_i$ and $s_j$ (say) such that $s_i \equiv s_j \mod m$. Without loss of generality, we assume that $i < j$. Then $s_j - s_i \equiv 0 \mod m$. That is, 
+\end{displaymath}}\textsc{Proof}. We consider the $m+1$ integers $0, x_1, x_1+x_2, x_1+x_2+x_3, \ldots, x_1+x_2+\cdots + x_m$. We shall represent them as $s_i$ where $0 \leq i \leq m$ (because $s$ reminds us of sum!). There are $m+1$ such sums $(s_i)$ while there are only $m$ numbers in the complete set of residues modulo $m$. By pigeonhole principle, there are two sums $s_i$ and $s_j$ (say) such that $s_i \equiv s_j \mod m$. Without loss of generality, we assume that $i < j$. Then $s_j - s_i \equiv 0 \mod m$. That is, 
 \begin{displaymath}
 x_{i+1} + x_{i+2} + \cdots + s_j \equiv 0 \mod m.
 \end{displaymath}
@@ -854,7 +862,7 @@ The proposition follows. \done
 
 \textsc{Exercise 19}. \emph{Let $m \geq 2$ and let $d$ be a positive divisor of $m-1$. Let $n = a_0 + a_1m + \cdots + a_km^k$ be the $m$-acidic representation of $n$. Prove that $n \equiv 0 \mod d$ if and only if $a_0 + a_1 + \cdots + a_k \equiv 0 \mod d$.}
 
-\textsc{Solution}. Since $d$ divides $m-1$, we conclude that $d$ also divides $m^k-1$ for any nonnegative integer $k$ (because $m-1$ divides $m^k-1$, see Exercise $16$), and so $m^k \equiv 1 \mod d$. By a result of Exercise $15$, 
+\textsc{Proof}. Since $d$ divides $m-1$, we conclude that $d$ also divides $m^k-1$ for any nonnegative integer $k$ (because $m-1$ divides $m^k-1$, see Exercise $16$), and so $m^k \equiv 1 \mod d$. By a result of Exercise $15$, 
 \begin{displaymath}
 n \equiv \sum_{i=0}^k a_im^i \equiv \sum_{i=0}^k a_i \mod d,
 \end{displaymath}
@@ -868,7 +876,7 @@ so that $n \equiv 0 \mod d$ if and only if $a_0 + a_1 + \cdots + a_k \equiv 0 \m
   3 &\mod 8 \\
   7 &\mod 12 \\
   23 &\mod 24.
-\end{align*}}\textsc{Solution}. Let $n$ be any integer. Then $n$ is of the form $24k + a$ where $0 \leq a \leq 23$. Indeed, $a$ is simply the remainder on division of $n$ by $24$. We shall prove that any $24k + a$ with $0 \leq a \leq 23$ can be reduced to one of the forms (or congruence classes) given in the question. All even numbers, that is, numbers of the form $24k + a$ where $a$ is even is equivalent to $2k$ or they belong to the congruence class ($0 \mod 2$). Similarly, numbers of the form $24k + a$ where $a$ is a multiple of $3$ is equivalent to $3k$ or they belong to the congruence class ($0 \mod 3$). We are left with only the forms $24k + a$ where $a$ is neither even nor multiple of $3$. The form $24k + 1$ is equivalent to $4(6k)+1$, and so it belongs to the congruence class ($1 \mod 4$). The form $24k+ 3$ is equivalent to $8(3k) + 3$, and so it belongs to the congruence class ($3 \mod 8$). The form $24k + 5$ is equivalent to $4(6k+1) + 1$, and so it belongs to the congruence class ($1 \mod 4$). The form $24k + 7$ is equivalent to $12(2k) + 7$, and so it belongs to the congruence class ($7 \mod 12$). The form $24k + 11$ is equivalent to $8(3k + 1) + 3$, and so it belongs to the congruence class ($3 \mod 8$). The form $24k + 13$ is equivalent to $4(6k + 3) + 1$, and so it belongs to the congruence class ($1 \mod 4$). The form $24k + 17$ is equivalent to $4(6k + 4) + 1$, and so it belongs to the congruence class ($1 \mod 4$). The form $24k + 19$ is equivalent to $8(3k + 2) + 3$, and so it belongs to the congruence class ($3 \mod 8$). And then we have the form $24k + 23$ in the congruence class ($23 \mod 24$). \done
+\end{align*}}\textsc{Proof}. Let $n$ be any integer. Then $n$ is of the form $24k + a$ where $0 \leq a \leq 23$. Indeed, $a$ is simply the remainder on division of $n$ by $24$. We shall prove that any $24k + a$ with $0 \leq a \leq 23$ can be reduced to one of the forms (or congruence classes) given in the question. All even numbers, that is, numbers of the form $24k + a$ where $a$ is even is equivalent to $2k$ or they belong to the congruence class ($0 \mod 2$). Similarly, numbers of the form $24k + a$ where $a$ is a multiple of $3$ is equivalent to $3k$ or they belong to the congruence class ($0 \mod 3$). We are left with only the forms $24k + a$ where $a$ is neither even nor multiple of $3$. The form $24k + 1$ is equivalent to $4(6k)+1$, and so it belongs to the congruence class ($1 \mod 4$). The form $24k+ 3$ is equivalent to $8(3k) + 3$, and so it belongs to the congruence class ($3 \mod 8$). The form $24k + 5$ is equivalent to $4(6k+1) + 1$, and so it belongs to the congruence class ($1 \mod 4$). The form $24k + 7$ is equivalent to $12(2k) + 7$, and so it belongs to the congruence class ($7 \mod 12$). The form $24k + 11$ is equivalent to $8(3k + 1) + 3$, and so it belongs to the congruence class ($3 \mod 8$). The form $24k + 13$ is equivalent to $4(6k + 3) + 1$, and so it belongs to the congruence class ($1 \mod 4$). The form $24k + 17$ is equivalent to $4(6k + 4) + 1$, and so it belongs to the congruence class ($1 \mod 4$). The form $24k + 19$ is equivalent to $8(3k + 2) + 3$, and so it belongs to the congruence class ($3 \mod 8$). And then we have the form $24k + 23$ in the congruence class ($23 \mod 24$). \done
 
 \textsc{Exercise 23}. \emph{Let $G$ be the subset of $M_2(\C)$ consisting of the four matrices 
 \begin{displaymath}
@@ -879,7 +887,7 @@ so that $n \equiv 0 \mod d$ if and only if $a_0 + a_1 + \cdots + a_k \equiv 0 \m
 \end{displaymath}
 Prove that $G$ is a multiplicative group isomorphic to the additive group of congruence classes $\Z/4\Z$.}
 
-\textsc{Solution}. The first matrix is the identity matrix. We observe that 
+\textsc{Proof}. The first matrix is the identity matrix. We observe that 
 \begin{align*}
   \begin{pmatrix} 0 & -1 \\ 1 & 0 \end{pmatrix}
   \begin{pmatrix} -1 & 0 \\ 0 & -1 \end{pmatrix}
@@ -909,13 +917,13 @@ It is checked that $f$ is a homomorphism. Clearly $f$ is a bijection. It follows
 
 Exercises 1-2 are similar and as such, we solve only Exercise 2.
 
-\textsc{Exercise 2}. \emph{Find all solutions of the congruence $12x \equiv 3 \mod 45$.}
+\textsc{Exercise 2}. \emph{Find all Proofs of the congruence $12x \equiv 3 \mod 45$.}
 
-\textsc{Solution}. On division by $3$, we may reduce the problem to finding the solutions of the congruence $4x \equiv 1 \mod 15$. Since $\gcd(15,4) =1$, this equation has exactly one solution which is $x\equiv 4 \mod 15$. The complete set of solutions that are pairwise incongruent modulo $45$ is $\{ 4, 19, 34 \}$. \done
+\textsc{Proof}. On division by $3$, we may reduce the problem to finding the Proofs of the congruence $4x \equiv 1 \mod 15$. Since $\gcd(15,4) =1$, this equation has exactly one Proof which is $x\equiv 4 \mod 15$. The complete set of Proofs that are pairwise incongruent modulo $45$ is $\{ 4, 19, 34 \}$. \done
 
-\textsc{Exercise 3}. \emph{Find all solutions of the congruence $28x \equiv 35 \mod 42$.}
+\textsc{Exercise 3}. \emph{Find all Proofs of the congruence $28x \equiv 35 \mod 42$.}
 
-\textsc{Solution}. On division by $7$, we may reduce the problem to finding the solutions of $4x \equiv 5 \mod 6$. Since $\gcd(4,6) = 2$ and $2$ does not divide $5$, the given equation has no solutions. \done
+\textsc{Proof}. On division by $7$, we may reduce the problem to finding the Proofs of $4x \equiv 5 \mod 6$. Since $\gcd(4,6) = 2$ and $2$ does not divide $5$, the given equation has no Proofs. \done
 
 \subsection{The Euler Phi Function}
 
@@ -923,7 +931,7 @@ Exercise 1 is a simple computation problem using the Euler totient function (may
 
 \textsc{Exercise 2}. \emph{Represent the congruence classes modulo $12$ in the form $3a+4b$ with $0\leq a \leq 3$ and $0\leq b \leq 2$.}
 
-\textsc{Solution}. The congruence classes modulo $12$ may be represented as linear combinations of $3$ and $4$ as follows: 
+\textsc{Proof}. The congruence classes modulo $12$ may be represented as linear combinations of $3$ and $4$ as follows: 
 \begin{align*}
   0 & \equiv 0\cdot 3 + 0\cdot 4 \mod 12, & 6 & \equiv 2\cdot 3 + 0\cdot 4 \mod 12,\\
   1 & \equiv 3\cdot 3 + 1\cdot 4 \mod 12, & 7 & \equiv 1\cdot 3 + 1\cdot 4 \mod 12,\\
@@ -936,11 +944,11 @@ Exercise 3 is a simple verification.
 
 \textsc{Exercise 4}. \emph{Prove that $\varphi(m)$ is even for all $m\geq 3$.}
 
-\textsc{Solution}. The value $\varphi(m)$ equals the number of positive integers less than $m$ which are relatively prime to $m$. Let $m\geq 3$. Let $1\leq k \leq m$ be such that $\gcd(k, m) = 1$. Then $\gcd(m-k, m) = 1$ such that all positive integers less than $m$ which are relatively prime to $m$ can be written in pairs $\{k, m-k\}$. Therefore, $\varphi(m)$ is even. \done
+\textsc{Proof}. The value $\varphi(m)$ equals the number of positive integers less than $m$ which are relatively prime to $m$. Let $m\geq 3$. Let $1\leq k \leq m$ be such that $\gcd(k, m) = 1$. Then $\gcd(m-k, m) = 1$ such that all positive integers less than $m$ which are relatively prime to $m$ can be written in pairs $\{k, m-k\}$. Therefore, $\varphi(m)$ is even. \done
 
 \textsc{Exercise 5}. \emph{Prove that $\varphi(m^k) = m^{k-1}\varphi(m)$ for all positive integers $m$ and $k$.}
 
-\textsc{Solution}. Using the formula for $\varphi$, we have
+\textsc{Proof}. Using the formula for $\varphi$, we have
 \begin{displaymath}
 \varphi(m^k) = m^k \prod_{p|m^k} \left(1-\frac{1}{p}\right) = m^{k-1}\cdot m \prod_{p|m}\left(1-\frac{1}{p}\right) = m^{k-1}\varphi(m),
 \end{displaymath}
@@ -948,15 +956,15 @@ where we have used the fact that $m^k$ and $m$ would have same prime divisors. \
 
 \textsc{Exercise 6}. \emph{Prove that $m$ is prime if and only if $\varphi(m) = m-1$.}
 
-\textsc{Solution}. Suppose $m$ is prime. Then $\gcd(k,m) = 1$ for all $1\leq k \leq m-1$ (otherwise $k$ and $m$ would have a common factor greater than $1$ and $m$ would not be prime) so that $\varphi(m) = m-1$. Conversely suppose $\varphi(m) = m-1$. This implies that no positive integer less than $m$ divides $m$. Evidently $m$ is prime. \done
+\textsc{Proof}. Suppose $m$ is prime. Then $\gcd(k,m) = 1$ for all $1\leq k \leq m-1$ (otherwise $k$ and $m$ would have a common factor greater than $1$ and $m$ would not be prime) so that $\varphi(m) = m-1$. Conversely suppose $\varphi(m) = m-1$. This implies that no positive integer less than $m$ divides $m$. Evidently $m$ is prime. \done
 
 \textsc{Exercise 7}. \emph{Prove that $\varphi(m) = \varphi(2m)$ if and only if $m$ is odd.}
 
-\textsc{Solution}. Suppose $m$ is odd. Then $\gcd(m, 2)=1$. Since $\varphi$ is multiplicative, it follows that $\varphi(2m) = \varphi(2)\cdot \varphi(m) = \varphi(m)$. Conversely, suppose $\varphi(2m) = \varphi(m)$.
+\textsc{Proof}. Suppose $m$ is odd. Then $\gcd(m, 2)=1$. Since $\varphi$ is multiplicative, it follows that $\varphi(2m) = \varphi(2)\cdot \varphi(m) = \varphi(m)$. Conversely, suppose $\varphi(2m) = \varphi(m)$.
 
 \textsc{Exercise 8}. \emph{Prove that if $m$ divides $n$, then $\varphi(m)$ divides $\varphi(n)$.}
 
-\textsc{Solution}. This becomes obvious once we write down the expressions
+\textsc{Proof}. This becomes obvious once we write down the expressions
 \begin{displaymath}
 \varphi(m) = m \prod_{p|m} \left(1-\frac{1}{p}\right); \hspace{1cm} \varphi(n) = n \prod_{p|n} \left(1-\frac{1}{p}\right).
 \end{displaymath}
@@ -964,50 +972,50 @@ Since $m|n$, every prime that divides $m$ also divides $n$. That is, every term 
 
 \textsc{Exercise 9}. \emph{Find all positive integers $n$ such that $\varphi(n)$ is not divisible by $4$.}
 
-\textsc{Solution}.
+\textsc{Proof}.
 
 \textsc{Exercise 10}. \emph{Find all positive integers $n$ such that $\varphi(5n) = 5\varphi(n)$.}
 
-\textsc{Solution}. The relation is true for all $n$ which are not divisible by $5$. \done
+\textsc{Proof}. The relation is true for all $n$ which are not divisible by $5$. \done
 
 \textsc{Exercise 11}. \emph{Let $f(n) = \varphi(n)/n$. Prove that $f(p^k) = f(p)$ for all primes $p$ and all positive integers $k$.}
 
-\textsc{Solution}. By Euler totient function, $\displaystyle f(p^k) = \frac{\varphi(p^k)}{p^k} = \left(1 - \frac{1}{p}\right) = \frac{\varphi(p)}{p} = f(p)$. \done
+\textsc{Proof}. By Euler totient function, $\displaystyle f(p^k) = \frac{\varphi(p^k)}{p^k} = \left(1 - \frac{1}{p}\right) = \frac{\varphi(p)}{p} = f(p)$. \done
 
 \subsection{Chinese Remainder Theorem}
 
-\textsc{Exercise 1}. \emph{Find all solutions of the system of congruences 
+\textsc{Exercise 1}. \emph{Find all Proofs of the system of congruences 
 \begin{displaymath}
 x \equiv 4 \mod 5; \hspace{1cm} x\equiv 5 \mod 6.
-\end{displaymath}}\textsc{Solution}. Since $\gcd(5,6)=1$ and $5 \equiv 4 \mod 1$, the system has a solution. From the first congruence, we have $x=4+5u$. Using this in the second congruence, we have $5u\equiv 1 \mod 6$ which has the solution $u \equiv 5 \mod 6$. All solutions of the system is then given by $4+5(5+6v) = 29 + 30v$, that is, $29+30\Z$. \done
+\end{displaymath}}\textsc{Proof}. Since $\gcd(5,6)=1$ and $5 \equiv 4 \mod 1$, the system has a Proof. From the first congruence, we have $x=4+5u$. Using this in the second congruence, we have $5u\equiv 1 \mod 6$ which has the Proof $u \equiv 5 \mod 6$. All Proofs of the system is then given by $4+5(5+6v) = 29 + 30v$, that is, $29+30\Z$. \done
 
 Exercises 2-3 are solved similarly.
 
-\textsc{Exercise 4}. \emph{Find all solutions of the system of congruences 
+\textsc{Exercise 4}. \emph{Find all Proofs of the system of congruences 
 \begin{displaymath}
 2x \equiv 1 \mod 5; \hspace{1cm} 3x\equiv 4 \mod 7. 
-\end{displaymath}}\textsc{Solution}.
+\end{displaymath}}\textsc{Proof}.
 
 \textsc{Exercise 5}. \emph{Find all integers that have a remainder of $1$ when divided by $3$, $5$ and $7$.}
 
-\textsc{Solution}. We simply need to find all solutions to the following system of congruences: 
+\textsc{Proof}. We simply need to find all Proofs to the following system of congruences: 
 \begin{displaymath}
 x\equiv 1 \mod 3; \hspace{1cm} x\equiv 1 \mod 5; \hspace{1cm} x \equiv 1 \mod 7.
 \end{displaymath}
-From the first two congruences, we have $3u \equiv 0\mod 5$ whose solution is $u\equiv 0 \mod 5$. Therefore the solution to the first two congruences is $1+15v$. Continuing with the third congruence, we find that the solutions are indeed $1+105\Z$. \done
+From the first two congruences, we have $3u \equiv 0\mod 5$ whose Proof is $u\equiv 0 \mod 5$. Therefore the Proof to the first two congruences is $1+15v$. Continuing with the third congruence, we find that the Proofs are indeed $1+105\Z$. \done
 
 \textsc{Exercise 6}. \emph{Find all integers that have a remainder of $2$ when divided by $4$ and that have a remainder of $3$ when divided by $5$.}
 
-\textsc{Solution}. We simply need to find all solutions to the following system of congruences: 
+\textsc{Proof}. We simply need to find all Proofs to the following system of congruences: 
 \begin{displaymath}
 x\equiv 2 \mod 4; \hspace{1cm} x\equiv 3 \mod 5.
 \end{displaymath}
-As before, we find the general solution to be $18+20\Z$. \done
+As before, we find the general Proof to be $18+20\Z$. \done
 
-\textsc{Exercise 7}. \emph{Find all solutions of the congruence 
+\textsc{Exercise 7}. \emph{Find all Proofs of the congruence 
 \begin{displaymath}
 f(x) = 5x^3-93 \equiv 0 \mod 231.
-\end{displaymath}}\textsc{Solution}. Since $231 = 3\cdot 7\cdot 11$, it suffices to solve the congruences 
+\end{displaymath}}\textsc{Proof}. Since $231 = 3\cdot 7\cdot 11$, it suffices to solve the congruences 
 \begin{align*}
   5x^3-93 &\equiv 0 \mod 3,\\
   5x^3-93 &\equiv 0 \mod 7,\\
@@ -1018,7 +1026,7 @@ f(x) = 5x^3-93 \equiv 0 \mod 231.
   5x^3-2 &\equiv 0 \mod 7,\\
   5x^3+5 &\equiv 0 \mod 11.
 \end{align*}
-It can be checked that these congruences have the solutions 
+It can be checked that these congruences have the Proofs 
 \begin{align*}
   f(0) &\equiv 0 \mod 3, \\
   f(3) &\equiv 0 \mod 7, \\
@@ -1030,11 +1038,11 @@ By the Chinese remainder theorem, there exists an integer $a$ such that
   a &\equiv 3 \mod 7, \\
   a &\equiv 10 \mod 11.
 \end{align*}
-From the first congruence, we have $a = 3u$ for some integer $u$. Using this in the second congruence, we have $ a = 3u \equiv 3 \mod 7$, which has the solution $u \equiv 1 \mod 7$, and so $a = 3u = 3(1 + 7v) = 3 + 21v$. Using this in the third congruence, we have $ a = 3 + 21v \equiv 10 \mod 11$ or equivalently $21v \equiv 7 \mod 11$, which has the solution $4 \mod 11$, and so $a = 3+21(4 + 11w)$ or equivalently $a = 87 + 231\Z$. It is checked that $f(87) \equiv 0 \mod 231$. \done
+From the first congruence, we have $a = 3u$ for some integer $u$. Using this in the second congruence, we have $ a = 3u \equiv 3 \mod 7$, which has the Proof $u \equiv 1 \mod 7$, and so $a = 3u = 3(1 + 7v) = 3 + 21v$. Using this in the third congruence, we have $ a = 3 + 21v \equiv 10 \mod 11$ or equivalently $21v \equiv 7 \mod 11$, which has the Proof $4 \mod 11$, and so $a = 3+21(4 + 11w)$ or equivalently $a = 87 + 231\Z$. It is checked that $f(87) \equiv 0 \mod 231$. \done
 
 \textsc{Exercise 8}. \emph{(Bhaskara, sixth century) A basket contains $n$ eggs. If the eggs are removed $2, 3, 4, 5, $ or $6$ at a time, then the number of eggs that remain in the basket is $1, 2, 3, 4$, or $5$ respectively. If the eggs are removed $7$ at a time, then no eggs remain. What is the smallest number $n$ of eggs that could have been in the basket at the start of this procedure?}
 
-\textsc{Solution}. The given conditions imply that 
+\textsc{Proof}. The given conditions imply that 
 \begin{align*}
   n &\equiv 1 \mod 2, \\
   n &\equiv 2 \mod 3, \\
@@ -1048,17 +1056,17 @@ Then we solve for the smallest $n$ satisfying all the above congruences.
 
 \textsc{Exercise 1}. \emph{Prove that $3^{512}\equiv 1 \mod 1024$.}
 
-\textsc{Solution}. Since $1024 = 2^{10}$, the Euler totient function yields $\displaystyle \varphi(1024) = 2^{10}\left( 1 - \frac{1}{2} \right) = 512$. By Theorem $2.12$, it follows that $3^{512} \equiv 1 \mod 1024$. \done
+\textsc{Proof}. Since $1024 = 2^{10}$, the Euler totient function yields $\displaystyle \varphi(1024) = 2^{10}\left( 1 - \frac{1}{2} \right) = 512$. By Theorem $2.12$, it follows that $3^{512} \equiv 1 \mod 1024$. \done
 
 \textsc{Exercise 2}. \emph{Find the remainder when $7^{51}$ is divided by $144$.}
 
-\textsc{Solution}. Let $x=7^{51} \mod 144$. We observe that $7^3\mod 144 = 55 \mod 144$ so that $x = 55^{17} \mod 144$. We again observe that $55^2 \mod 144 = 1\mod 144$ rendering $x = 55 \mod 144$. \done
+\textsc{Proof}. Let $x=7^{51} \mod 144$. We observe that $7^3\mod 144 = 55 \mod 144$ so that $x = 55^{17} \mod 144$. We again observe that $55^2 \mod 144 = 1\mod 144$ rendering $x = 55 \mod 144$. \done
 
 Exercise 3 is solved similarly.
 
 \textsc{Exercise 4}. \emph{Compute the order of $2$ with respect to the prime moduli $3$, $5$, $7$, $11$, $13$, $17$ and $19$.}
 
-\textsc{Solution}. We observe that 
+\textsc{Proof}. We observe that 
 \begin{align*}
   2^1 &\equiv 2 \mod 3, \\
   2^2 &\equiv 1 \mod 3,
@@ -1073,7 +1081,7 @@ so that the order of $2$ modulo $17$ is $8$.
 
 \textsc{Exercise 5}. \emph{Compute the order of $10$ with respect to the modulus $7$.}
 
-\textsc{Solution}. The divisors of $6$ are $1, 2, 3,$ and $6$. We compute 
+\textsc{Proof}. The divisors of $6$ are $1, 2, 3,$ and $6$. We compute 
 \begin{align*}
   10^1 &\equiv 10 \mod 7, \\
   10^2 &\equiv 9 \mod 7, \\
@@ -1084,11 +1092,11 @@ so that the order of $10$ modulo $7$ is $6$. Clearly $10$ is a primitive root mo
 
 \textsc{Exercise 6}. \emph{Let $r_i$ denote the least nonnegative residue of $10^i \mod 7$. Compute $r_i$ for $i=1,\ldots,6$. Compute the decimal expansion of the fraction $1/7$ without using a calculator. Can you find where the numbers $r_1, \ldots, r_6$ appear in the process of dividing $7$ into $1$?}
 
-\textsc{Solution}. We compute $r_1 \equiv 3 \mod 7$, $r_2 \equiv 2 \mod 7$, $r_3 \equiv 6 \mod 7$, $r_4 \equiv 4 \mod 7$, $r_5 \equiv 5 \mod 7$, $r_6 \equiv 1 \mod 7$. The decimal expansion of $1/7$ is $.142857...$. The numbers $r_1, \ldots, r_6$ appear as remainders in the long division of $1$ by $7$. \done
+\textsc{Proof}. We compute $r_1 \equiv 3 \mod 7$, $r_2 \equiv 2 \mod 7$, $r_3 \equiv 6 \mod 7$, $r_4 \equiv 4 \mod 7$, $r_5 \equiv 5 \mod 7$, $r_6 \equiv 1 \mod 7$. The decimal expansion of $1/7$ is $.142857...$. The numbers $r_1, \ldots, r_6$ appear as remainders in the long division of $1$ by $7$. \done
 
 \textsc{Exercise 7}. \emph{Compute the order of $10$ modulo $13$. Compute the period of the fraction $1/13$.}
 
-\textsc{Solution}. The order of $10$ modulo $13$ must divide $\varphi(13) = 12$. Thus, it could be $2, 4, 6, $ or $12$. We compute 
+\textsc{Proof}. The order of $10$ modulo $13$ must divide $\varphi(13) = 12$. Thus, it could be $2, 4, 6, $ or $12$. We compute 
 \begin{align*}
   10^2 &\equiv 100 \equiv 9 \mod 13, \\
   10^4 &\equiv 9^2 \equiv 3 \mod 13, \\
@@ -1098,13 +1106,13 @@ so that ord$_{13}(10) = 6$. The period of the fraction $1/13$ is 6. \done
 
 \textsc{Exercise 8}. \emph{Let $p$ be a prime and $a$ an integer not divisible by $p$. Prove that if $a^{2^n}\equiv -1 \mod p$, then $a$ has order $2^{n+1} \mod p$.}
 
-\textsc{Solution}. On multiplying the congruence by itself, we have $a^{2^{n+1}} \equiv 1 \mod p$. We observe that $2^{n+1}$ has only $2$ as its prime factor. It is easy to see that there is no $k$ with $1\leq k < 2^{n+1}$ such that $a^k \equiv 1 \mod p$. Therefore, $a$ has order $2^{n+1}\mod p$. \done
+\textsc{Proof}. On multiplying the congruence by itself, we have $a^{2^{n+1}} \equiv 1 \mod p$. We observe that $2^{n+1}$ has only $2$ as its prime factor. It is easy to see that there is no $k$ with $1\leq k < 2^{n+1}$ such that $a^k \equiv 1 \mod p$. Therefore, $a$ has order $2^{n+1}\mod p$. \done
 
 \subsection{Pseudoprimes and Carmichael Numbers}
 
 \textsc{Exercise 1}. \emph{Prove that $589$ is composite by computing the least nonnegative residue of $2^{588} \mod 589$.}
 
-\textsc{Solution}. We observe that $588 = 7\cdot 7 \cdot 12$ so that 
+\textsc{Proof}. We observe that $588 = 7\cdot 7 \cdot 12$ so that 
 \begin{align*}
   2^{588} &\equiv 2^7\cdot 2^7 \cdot 2^{12} \mod 589 \\
           &\equiv 128 \cdot 128 \cdot 562 \mod 589 \\
@@ -1114,11 +1122,11 @@ Therefore, $589$ is composite. \done
 
 \textsc{Exercise 2}. \emph{Let $n$ be an odd integer, $n\geq 3$. Prove that there exists a nonnegative integer $u$ such that $n+u^2 = (u+1)^2$. Prove that $n$ is composite if and only if there exist nonnegative integers $u$ and $v$ such that $v > u + 1$ and $n+u^2 = v^2$. Use this method to factor $589$.}
 
-\textsc{Solution}.
+\textsc{Proof}.
 
 \textsc{Exercise 3}. \emph{Prove that $645$ is a pseudoprime to base $2$.}
 
-\textsc{Solution}. We see that $2^{12}\equiv 226 \mod 645$ so that $2^{25} \equiv 2\cdot (2^{12})^2 \equiv 242 \mod 645$. Now,
+\textsc{Proof}. We see that $2^{12}\equiv 226 \mod 645$ so that $2^{25} \equiv 2\cdot (2^{12})^2 \equiv 242 \mod 645$. Now,
 \begin{align*}
   2^{50} \equiv (2^{25})^2 \equiv 514 \mod 645, \\
   2^{100} \equiv (2^{50})^2 \equiv  391 \mod 645, \\
@@ -1129,11 +1137,11 @@ Therefore, $2^{644} \equiv 2^{600} \cdot 2^{25} \cdot 2^{12} \cdot 2^7 \equiv 1 
 
 \textsc{Exercise 4}. \emph{Prove that $1729$ is a pseudoprime to bases $2$, $3$, and $5$.}
 
-\textsc{Solution}. As in Exercise $3$, it is checked that $2^{1728} \equiv 1 \mod 1729$, $3^{1728} \equiv 1 \mod 1729$, and $5^{1728} \equiv 1 \mod 1729$. \done
+\textsc{Proof}. As in Exercise $3$, it is checked that $2^{1728} \equiv 1 \mod 1729$, $3^{1728} \equiv 1 \mod 1729$, and $5^{1728} \equiv 1 \mod 1729$. \done
 
 \textsc{Exercise 5}. \emph{Prove that $1105$ is a Carmichael number.}
 
-\textsc{Solution}. Let $b$ be an integer relatively prime to $1105$. We need to show that $b^{1104} \equiv 1 \mod 1105$. We observe that $1105 = 5 \cdot 13 \cdot 17$. By Fermat's little theorem, we obtain 
+\textsc{Proof}. Let $b$ be an integer relatively prime to $1105$. We need to show that $b^{1104} \equiv 1 \mod 1105$. We observe that $1105 = 5 \cdot 13 \cdot 17$. By Fermat's little theorem, we obtain 
 \begin{align*}
   b^4 \equiv 1 \mod 5 \hspace{1cm} &\text{so that} \hspace{1cm} b^{1104} \equiv (b^4)^{276} \mod 5,\\
   b^{12} \equiv 1 \mod 13 \hspace{1cm} &\text{so that} \hspace{1cm} b^{1104} \equiv (b^{12})^{92} \mod 13,\\
@@ -1143,7 +1151,7 @@ It follows that $b^{1104} \equiv 1 \mod 1105$. So, $1105$ is a Carmichael number
 
 \textsc{Exercise 6}. \emph{Let $n$ be a product of distinct primes. Prove that if $p-1$ divides $n-1$ for every prime $p$ that divides $n$, then $n$ is a Carmichael number.}
 
-\textsc{Solution}. This solution is simply a generalization of Exercise $5$. Let $n = \prod_{i=0}^k p_i$ where $p_i \ne p_j$ when $i \ne j$. Let $b$ be an integer relatively prime to $n$. By Fermat's little theorem, 
+\textsc{Proof}. This Proof is simply a generalization of Exercise $5$. Let $n = \prod_{i=0}^k p_i$ where $p_i \ne p_j$ when $i \ne j$. Let $b$ be an integer relatively prime to $n$. By Fermat's little theorem, 
 \begin{displaymath}
 b^{p_i-1} \equiv 1 \mod p_i \hspace{1cm} \text{so that} \hspace{1cm} b^{n-1} \equiv (b^{p_i-1})^{(n-1)/(p_i-1)} \equiv 1 \mod p_i,
 \end{displaymath}
@@ -1151,13 +1159,13 @@ for each $0\leq i \leq k$, and $(n-1)/(p_i-1)$ is an integer (since $p_i-1$ divi
 
 \textsc{Exercise 7}. \emph{Prove that $6601$ is a Carmichael number.}
 
-\textsc{Solution}. Prime factorization of $6601$ yields $6601 = 7 \cdot 23 \cdot 41$. It is checked that $6, 22,$ and $40$ divide $6600$. By Exercise $7$, it follows that $6601$ is a Carmichael number. \done
+\textsc{Proof}. Prime factorization of $6601$ yields $6601 = 7 \cdot 23 \cdot 41$. It is checked that $6, 22,$ and $40$ divide $6600$. By Exercise $7$, it follows that $6601$ is a Carmichael number. \done
 
 \subsection{Public Key Cryptography}
 
 \textsc{Exercise 1}. \emph{Consider the secret key cryptosystem constructed from the prime $p = 947$ and the encoding key $e = 167$. Encipher the plaintext $P=2$. Find a decrypting key and decipher the ciphertext $C=3$.}
 
-\textsc{Solution}. Since $0< P < 947$ and $\gcd(167, 946) = 1$, we compute
+\textsc{Proof}. Since $0< P < 947$ and $\gcd(167, 946) = 1$, we compute
 \begin{displaymath}
 C \equiv 2^{167} \equiv 172 \mod 947,
 \end{displaymath}
@@ -1169,12 +1177,12 @@ so that $P = 376$ is the plaintext. \done
 
 \textsc{Exercise 2}. \emph{Consider the primes $p=53$ and $q=61$. Let $m = pq$. Prove that $e=7$ is relatively prime to $\varphi(m)$. Find a positive integer $d$ such that $ed \equiv 1 \mod \varphi(m)$.}
 
-\textsc{Solution}. Euler totient function yields $\varphi(m) = 3120$. We see that $3120 = 2^4 \cdot 3 \cdot 5 \cdot 13$. Since $7$ is not a prime factor of $3120$, it follows that $e = 7$ is relatively prime to $\varphi(m)$. We need to find a positive integer $d$ such that $7\cdot d \equiv 1 \mod 3120$.
+\textsc{Proof}. Euler totient function yields $\varphi(m) = 3120$. We see that $3120 = 2^4 \cdot 3 \cdot 5 \cdot 13$. Since $7$ is not a prime factor of $3120$, it follows that $e = 7$ is relatively prime to $\varphi(m)$. We need to find a positive integer $d$ such that $7\cdot d \equiv 1 \mod 3120$.
 We observe that $d = 1783$ satisfies the condition. \done
 
 \textsc{Exercise 3}. \emph{The integer $6059$ is the product of two distinct primes, and $\varphi(6059) = 5904$. Use Theorem $2.19$ to compute the prime divisors of $6059$.}
 
-\textsc{Solution}. By Theorem $2.19$, the prime divisors of $6059$ are roots of the quadratic equation 
+\textsc{Proof}. By Theorem $2.19$, the prime divisors of $6059$ are roots of the quadratic equation 
 \begin{displaymath}
 x^2 - 156x + 6059 = 0.
 \end{displaymath}
@@ -1182,7 +1190,7 @@ On solving, we see that $73$ and $83$ are its roots. It can be checked that $73\
 
 \textsc{Exercise 4}. \emph{The probability that an integer chosen at random between $1$ and $n$ is relatively prime to $n$ is $\varphi(n)/n$. Let $n=pq$, where $p$ and $q$ are two distinct primes greater than $x$. Prove that the probability that a randomly chosen positive integer up to $x$ is relatively prime to $n$ is greater than $(1-1/x)^{2}$. If $x=200$, this probability is greater than $0.99$.}
 
-\textsc{Solution}. 
+\textsc{Proof}. 
 
 \clearpage
 \section{Primitive Roots and Quadratic Reciprocity}
@@ -1191,44 +1199,44 @@ On solving, we see that $73$ and $83$ are its roots. It can be checked that $73\
 
 \textsc{Exercise 1}. \emph{Find a primitive root modulo $23$.}
 
-\textsc{Solution}. 23 is a prime and $\varphi(22) = 10$. Therefore, there are $10$ primitive roots modulo $23$. $2$ is such one primitive root modulo $23$. \done
+\textsc{Proof}. 23 is a prime and $\varphi(22) = 10$. Therefore, there are $10$ primitive roots modulo $23$. $2$ is such one primitive root modulo $23$. \done
 
 Exercise 2 may be solved similarly.
 
 \textsc{Exercise 3}. \emph{Prove that $2$ is a primitive root modulo $101$.}
 
-\textsc{Solution}. The Euler totient function yields $\varphi(101) = 100$. Repeatedly computing $2^i \mod 101$ for $1\leq i \leq 100$, we find that $2$ has order $100 \mod 101$. Hence the result. \done
+\textsc{Proof}. The Euler totient function yields $\varphi(101) = 100$. Repeatedly computing $2^i \mod 101$ for $1\leq i \leq 100$, we find that $2$ has order $100 \mod 101$. Hence the result. \done
 
 \textsc{Exercise 4}. \emph{Compute \emph{ind}$_2(27)$ modulo $101$.}
 
-\textsc{Solution}. In Exercise 3 we proved that $2$ is a primitive root of $101$. Thus, $27 \equiv 2^k \mod 101$ has a unique solution satisfying $0\leq k \leq 99$. By computation, we find ind$_2(27) = 7$. \done
+\textsc{Proof}. In Exercise 3 we proved that $2$ is a primitive root of $101$. Thus, $27 \equiv 2^k \mod 101$ has a unique Proof satisfying $0\leq k \leq 99$. By computation, we find ind$_2(27) = 7$. \done
 
 Exercise 5 may be solved similarly.
 
 \textsc{Exercise 6}. \emph{What is the order of $3$ modulo $101$? Is $3$ a primitive root modulo $101$?}
 
-\textsc{Solution}. By successive computation of $3^i \mod 101$ for $i\geq 1$ we find that $3^{100}\equiv 1 \mod 101$ and there is no $k\leq 100$ satisfying $3^k \equiv 1 \mod 101$. That is, the order of $3 \mod 101$ is $100$. But $\varphi(101) = 100$. Therefore, $3$ is a primitive root modulo $101$. \done
+\textsc{Proof}. By successive computation of $3^i \mod 101$ for $i\geq 1$ we find that $3^{100}\equiv 1 \mod 101$ and there is no $k\leq 100$ satisfying $3^k \equiv 1 \mod 101$. That is, the order of $3 \mod 101$ is $100$. But $\varphi(101) = 100$. Therefore, $3$ is a primitive root modulo $101$. \done
 
 Exercise 7 is similar to Exercise 3.
 
-\textsc{Exercise 8}. \emph{Find all solutions of the congruence $2^x \equiv 22 \mod 53$}.
+\textsc{Exercise 8}. \emph{Find all Proofs of the congruence $2^x \equiv 22 \mod 53$}.
 
-\textsc{Solution}. In Exercise 7, we prove that $2$ is a primitive root modulo $53$. We observe that $2^7 \equiv 22 \mod 53$. 
+\textsc{Proof}. In Exercise 7, we prove that $2$ is a primitive root modulo $53$. We observe that $2^7 \equiv 22 \mod 53$. 
 
 \subsection{Primitive Roots to Composite Moduli}
 
 \textsc{Exercise 1}. \emph{Find an integer $g$ that is a primitive root moduli $5^k$ for all $k \geq 1$. Find a primitive root modulo $10$. Find a primitive root modulo $50$.}
 
-\textsc{Solution}. Since ord$_5(2) = 4 = \varphi(5)$, $2$ is a primitive root of $5$. We observe that the highest power of $3$ which divides $2^4-1$ is $3$. Further, $\varphi(5^k) = 4\cdot 5^{k-1}$. By Theorem $3.6$, it follows that $2$ is a primitive root modulo $5^k$ for all $k\geq 1$. Since $10 = 2\cdot 5$ and $2+5 = 7 $ is odd, by Theorem $3.7$, it follows that $7$ is a primitive root modulo $10$. Finally, $50 = 2 \cdot 5^2$ and $2$ is a primitive root modulo $25$. Since $2+5^2 = 27$ is odd, $27$ is a primitive root modulo $50$. \done
+\textsc{Proof}. Since ord$_5(2) = 4 = \varphi(5)$, $2$ is a primitive root of $5$. We observe that the highest power of $3$ which divides $2^4-1$ is $3$. Further, $\varphi(5^k) = 4\cdot 5^{k-1}$. By Theorem $3.6$, it follows that $2$ is a primitive root modulo $5^k$ for all $k\geq 1$. Since $10 = 2\cdot 5$ and $2+5 = 7 $ is odd, by Theorem $3.7$, it follows that $7$ is a primitive root modulo $10$. Finally, $50 = 2 \cdot 5^2$ and $2$ is a primitive root modulo $25$. Since $2+5^2 = 27$ is odd, $27$ is a primitive root modulo $50$. \done
 
 \textsc{Exercise 2}. \emph{For $k \geq 1$, let $e_k$ be the order of $5$ modulo $3^k$. Prove that 
 \begin{displaymath}
 e_k = 2\cdot 3^{k-1}.
-\end{displaymath}}\textsc{Solution}. We begin by observing that $5$ is a primitive root of $3$ (because $5 \equiv 2 \mod 3, 5^2 \equiv 1 \mod 3$ and $\varphi(3) = 2$). Since the highest power of $3$ which divides $5^2-1$ is $3$ and $\varphi(3^k) = 2\cdot 3^{k-1}$, by Theorem $3.6$, it follows that $5$ is a primitive root of $3^k$ for all $k\geq 1$. Therefore, $e_k = \varphi(3^k) = 2\cdot 3^{k-1}$. \done
+\end{displaymath}}\textsc{Proof}. We begin by observing that $5$ is a primitive root of $3$ (because $5 \equiv 2 \mod 3, 5^2 \equiv 1 \mod 3$ and $\varphi(3) = 2$). Since the highest power of $3$ which divides $5^2-1$ is $3$ and $\varphi(3^k) = 2\cdot 3^{k-1}$, by Theorem $3.6$, it follows that $5$ is a primitive root of $3^k$ for all $k\geq 1$. Therefore, $e_k = \varphi(3^k) = 2\cdot 3^{k-1}$. \done
 
 \textsc{Exercise 3}. \emph{Prove that $p$ divides the binomial coefficient $\binom{p}{i} $ for $i=1,2,\ldots, p-1$.}
 
-\textsc{Solution}. By definition 
+\textsc{Proof}. By definition 
 \begin{displaymath}
 \binom{p}{i} = \frac{p!}{i!(p-i)!}.
 \end{displaymath}
@@ -1244,30 +1252,30 @@ where we have used the facts that $v_p(p) = 1$, and $p$ does not occur in the pr
 
 \textsc{Exercise 4}. \emph{Prove that if $g$ is a primitive root modulo $p^2$, then $g$ is a primitive root modulo $p^k$ for all $k\geq 2$.}
 
-\textsc{Solution}. If we can prove that $g$ is a primitive root modulo $p$, then (by Theorem $3.7$) we are done.
+\textsc{Proof}. If we can prove that $g$ is a primitive root modulo $p$, then (by Theorem $3.7$) we are done.
 
 \textsc{Exercise 7}. \emph{Use Exercise $6$ to prove that the exponential congruence 
 \begin{displaymath}
 9^k \equiv 1 \mod 7^k
 \end{displaymath}
-has no solutions}.
+has no Proofs}.
 
-\textsc{Solution.} We see that ord$_7(9) = 3$ and the highest power of $7$ which divides $9^3-1$ is $7$. Suppose the given congruence has solutions. Then by Exercise $6$, we have 
+\textsc{Proof.} We see that ord$_7(9) = 3$ and the highest power of $7$ which divides $9^3-1$ is $7$. Suppose the given congruence has Proofs. Then by Exercise $6$, we have 
 \begin{displaymath}
 \frac{7^k}{k} < \frac{9^3}{3} = 243 \implies 7^k < 243k,
 \end{displaymath}
-which cannot hold for $k\geq 4$. It is easy to check that it has no solutions for $k=1,2,3$ as well. The proposition follows. \done
+which cannot hold for $k\geq 4$. It is easy to check that it has no Proofs for $k=1,2,3$ as well. The proposition follows. \done
 
 \subsection{Power Residues}
 
 %
 %\textsc{Exercise 1}. \emph{Find all cubic residues modulo $19$.}
 
-%\textsc{Solution}. We observe that $\gcd(3, 18) = 3$. Since ord$_{19}(2) = \varphi(19)$, it follows that $2$ is a primitive root modulo $19$. Suppose $a$ is a cubic residue modulo $19$. Then, by Theorem $3.11$, it follows that 
+%\textsc{Proof}. We observe that $\gcd(3, 18) = 3$. Since ord$_{19}(2) = \varphi(19)$, it follows that $2$ is a primitive root modulo $19$. Suppose $a$ is a cubic residue modulo $19$. Then, by Theorem $3.11$, it follows that 
 %\begin{displaymath}
 %a^{(19-1)/3} = a^6 \equiv 1 \mod 19.
 %\end{displaymath}
-%But $1$ is a $6$th power residue modulo $19$. It follows that the congruence has exactly $3$ solutions that are pairwise incongruent modulo $19$. We see that
+%But $1$ is a $6$th power residue modulo $19$. It follows that the congruence has exactly $3$ Proofs that are pairwise incongruent modulo $19$. We see that
 %\begin{longtable}{p{8em} p{8em} p{8em}}
 %  $7^6 \equiv 1 \mod 19$, & $8^6 \equiv 1 \mod 19$, & $11^6 \equiv \mod 19$ \\
 %  $12^6 \equiv 1 \mod 19$, & $18^6 \equiv 1 \mod 19$. & \\
@@ -1275,21 +1283,21 @@ which cannot hold for $k\geq 4$. It is easy to check that it has no solutions fo
 
 Exercise $1$ has been solved in the text.
 
-\textsc{Exercise 2}. \emph{Find all solutions of the congruence $x^3\equiv 8 \mod 19$.}
+\textsc{Exercise 2}. \emph{Find all Proofs of the congruence $x^3\equiv 8 \mod 19$.}
 
-\textsc{Solution}. In Exercise $1$, we saw that $8$ is a cubic residue modulo $19$. Also, $\gcd(3,18) = 6$. By Theorem $3.11$, it follows that the congruence has exactly $6$ solutions that are pairwise incongruent modulo $19$.
+\textsc{Proof}. In Exercise $1$, we saw that $8$ is a cubic residue modulo $19$. Also, $\gcd(3,18) = 6$. By Theorem $3.11$, it follows that the congruence has exactly $6$ Proofs that are pairwise incongruent modulo $19$.
 
 \textsc{Exercise 3}. \emph{Define the map $f:(\Z/19\Z)^{\times} \to (\Z/19\Z)^{\times}$ by $f(x+19\Z) = x^3+19\Z$. Prove that $f$ is a homomorphism of the multiplicative group $(\Z/19\Z)^{\times}$, and compute its kernel.}
 
-\textsc{Solution}. Homomorphism follows from the fact that $f(xy) = (xy)^3 + 19\Z = (x^3+19\Z)(y^3+19\Z) = f(x)f(y)$ for all $x,y \in \Z/19\Z$. Any $k\in \ker(f)$ satisfies the congruence
+\textsc{Proof}. Homomorphism follows from the fact that $f(xy) = (xy)^3 + 19\Z = (x^3+19\Z)(y^3+19\Z) = f(x)f(y)$ for all $x,y \in \Z/19\Z$. Any $k\in \ker(f)$ satisfies the congruence
 \begin{displaymath}
 k^3 \equiv 1 \mod 19.
 \end{displaymath}
-It is checked that the solutions are $1+19\Z$, $7+19\Z$, and $11+19\Z$. These are the elements of $\ker(f)$. \done
+It is checked that the Proofs are $1+19\Z$, $7+19\Z$, and $11+19\Z$. These are the elements of $\ker(f)$. \done
 
 \textsc{Exercise 6}. \emph{Define the map $f: (\Z/23\Z)^{\times} \to (\Z/23\Z)^{\times}$ by $f(x+ 23\Z) = x^3 + 23\Z$. Prove that $f$ is an isomorphism of the multiplicative group $(\Z/23\Z)^{\times}$, that is, prove that $f$ is a homomorphism that is one-one and onto.}
 
-\textsc{Solution}. Homomorphism is proved in the same way as in Exercise $5$. Now, $(\Z/23\Z)^{\times} = \{1, \ldots, 22\}$. The following table completely describes the function (for brevity we drop ``modulo'' with an understanding that all quantities are modulo $23$).
+\textsc{Proof}. Homomorphism is proved in the same way as in Exercise $5$. Now, $(\Z/23\Z)^{\times} = \{1, \ldots, 22\}$. The following table completely describes the function (for brevity we drop ``modulo'' with an understanding that all quantities are modulo $23$).
 \begin{longtable}{p{6em} p{6em} p{6em} p{6em}}
   $f(1) = 1$, & $f(7) = 21$, & $f(13) = 12$, & $f(19) = 5$,\\
   $f(2) = 8$, & $f(8) = 6$, & $f(14) = 7$, & $f(20) = 19$,\\
@@ -1303,13 +1311,13 @@ It is easily checked that $f$ is both one-one and onto. Therefore, $f$ is an iso
 
 \subsection{Quadratic Residues}
 
-\textsc{Exercise 1}. \emph{Find all solutions of the congruences $x^2 \equiv 2 \mod 47$ and $x^2 \equiv 2 \mod 53$.}
+\textsc{Exercise 1}. \emph{Find all Proofs of the congruences $x^2 \equiv 2 \mod 47$ and $x^2 \equiv 2 \mod 53$.}
 
-\textsc{Solution}. Since $\left( \frac{2}{47} \right) = 2^{(47-1)/2} = 1$, the congruence has a solution. Since it is a quadratic equation modulo a prime, there are two solutions (or square roots of $2$ modulo $47$). By computation, we find that $7^2 \equiv 2 \mod 47$ and $40^2 \equiv 2 \mod 47$. Therefore, the solutions are $7+47\Z$ and $40+47\Z$. The other congruence is solved similarly. \done
+\textsc{Proof}. Since $\left( \frac{2}{47} \right) = 2^{(47-1)/2} = 1$, the congruence has a Proof. Since it is a quadratic equation modulo a prime, there are two Proofs (or square roots of $2$ modulo $47$). By computation, we find that $7^2 \equiv 2 \mod 47$ and $40^2 \equiv 2 \mod 47$. Therefore, the Proofs are $7+47\Z$ and $40+47\Z$. The other congruence is solved similarly. \done
 
 \textsc{Exercise 2}. \emph{Prove that $S=\{3, 4, 5, 9, 10\}$ is a Gaussian set modulo $11$. Apply Gauss's lemma to this set to compute the Legendre symbols $\left(\frac{3}{11}\right)$ and $\left(\frac{7}{11}\right)$.}
 
-\textsc{Solution}. We observe that $-10 \equiv 1 \mod 11$, $-9 \equiv 2 \mod 11$, $-5 \equiv 6 \mod 11$, $-4 \equiv 7 \mod 11$, and $-3 \equiv 8 \mod 11$. Since $S\cup -S = \{-10, -9, 3, 4, 5, -5, -4, -3, 9, 10\}$ and $\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\}$ is a complete set of residues modulo $11$, it follows that $S$ is a Gaussian set. We now compute the following:
+\textsc{Proof}. We observe that $-10 \equiv 1 \mod 11$, $-9 \equiv 2 \mod 11$, $-5 \equiv 6 \mod 11$, $-4 \equiv 7 \mod 11$, and $-3 \equiv 8 \mod 11$. Since $S\cup -S = \{-10, -9, 3, 4, 5, -5, -4, -3, 9, 10\}$ and $\{1, 2, 3, 4, 5, 6, 7, 8, 9, 10\}$ is a complete set of residues modulo $11$, it follows that $S$ is a Gaussian set. We now compute the following:
 \begin{longtable}{p{12em} p{12em}}
   $3 \cdot 3 \equiv 9 \mod 11$, & $7 \cdot 3 \equiv 10 \mod 11$,\\
   $3 \cdot 4 \equiv (-1)10 \mod 11$, & $7 \cdot 4 \equiv (-1)5 \mod 11$,\\
@@ -1323,11 +1331,11 @@ From the above table, it follows that $\left(\frac{3}{11}\right) = 1$ and $\left
 
 \textsc{Exercise 3}. \emph{Let $p$ be an odd prime. Prove that $\{2, 4, 6, \ldots, p-1\}$ is a Gaussian set modulo $p$.}
 
-\textsc{Solution}. Let $S=\{2, 4, 6, \ldots, p-1\} $. Then $-S = \{-(p-1), -(p-3), \ldots, -2\}$. We observe that $-(p-1) \equiv 1 \mod p$, $-(p-3) \equiv 3 \mod p$, $\ldots$, $-2 \equiv p-2 \mod p$. Clearly $S\cup -S = \{1, 2, \ldots, p-1\}$ is a complete set of residues modulo $p$. The proposition follows. \done
+\textsc{Proof}. Let $S=\{2, 4, 6, \ldots, p-1\} $. Then $-S = \{-(p-1), -(p-3), \ldots, -2\}$. We observe that $-(p-1) \equiv 1 \mod p$, $-(p-3) \equiv 3 \mod p$, $\ldots$, $-2 \equiv p-2 \mod p$. Clearly $S\cup -S = \{1, 2, \ldots, p-1\}$ is a complete set of residues modulo $p$. The proposition follows. \done
 
 \textsc{Exercise 4}. \emph{Use Theorem $3.14$ and Theorem $3.16$ to find all primes $p$ for which $-2$ is a quadratic residue.}
 
-\textsc{Solution}. By Theorem $3.14$, 
+\textsc{Proof}. By Theorem $3.14$, 
 \begin{displaymath}
 \left( \frac{-1}{p} \right) = (-1)^{(p-1)/2}.
 \end{displaymath}
@@ -1341,14 +1349,14 @@ It follows that
 \end{displaymath}
 This gives all primes $p$ for which $-2$ is a quadratic residue. \done
 
-%\textsc{Solution}. Let $p$ be an odd prime. By Exercise $3$, $S=\{2, 4, 6, \ldots, p-1\}$ is a Gaussian set modulo $p$.
+%\textsc{Proof}. Let $p$ be an odd prime. By Exercise $3$, $S=\{2, 4, 6, \ldots, p-1\}$ is a Gaussian set modulo $p$.
 %\begin{longtable}{p{12em}}
 %  $-2 \cdot 2 \equiv $
    %  \end{longtable}
 
 \textsc{Exercise 7}. \emph{Find all primes $p$ for which $4$ is a quadratic residue.}
 
-\textsc{Solution}. By Theorem $3.16$, 
+\textsc{Proof}. By Theorem $3.16$, 
 \begin{displaymath}
 \left( \frac{2}{p} \right) = (-1)^{(p^2-1)/8},
 \end{displaymath}
@@ -1360,7 +1368,7 @@ Any prime $p$ satisfies either $1 \mod 4$ or $3 \mod 4$. Substituting these valu
 
 \textsc{Exercise 8}. \emph{Let $p$ be an odd prime. Prove that the Legendre symbol is a homomorphism from the multiplicative group $(\Z/p\Z)^{\times}$ into $\{\pm 1\}$. What is the kernel of this homomorphism?}
 
-\textsc{Solution}. For any $a\in (\Z/p\Z)^{\times}$, $p$ does not divide $a$. That is, the Legendre symbol $\left( \frac{a}{p} \right) = \pm 1$ for all $a\in (\Z/p\Z)^{\times}$. Then the homomorphism follows from the fact that the Legendre symbol is completely multiplicative arithmetic function. That is, 
+\textsc{Proof}. For any $a\in (\Z/p\Z)^{\times}$, $p$ does not divide $a$. That is, the Legendre symbol $\left( \frac{a}{p} \right) = \pm 1$ for all $a\in (\Z/p\Z)^{\times}$. Then the homomorphism follows from the fact that the Legendre symbol is completely multiplicative arithmetic function. That is, 
 \begin{displaymath}
 \left( \frac{ab}{p} \right) = \left( \frac{a}{p} \right) \left( \frac{b}{p} \right)
 \end{displaymath}
@@ -1373,7 +1381,7 @@ f(x,y) = ax^2 + bxy + cy^2, \hspace{1cm} \text{where $a, b, c$ are integers.}
 The discriminant of this form is the integer $d = b^2 - 4ac$. Show that 
 \begin{displaymath}
 4af(x,y) = (2ax + by)^2 - dy^2.
-\end{displaymath}}\textsc{Solution}. By expanding, 
+\end{displaymath}}\textsc{Proof}. By expanding, 
 \begin{align*}
   (2ax + by)^2 - dy^2 &= 4a^2x^2 + 4abxy + b^2y^2 - b^2y^2 - 4acy^2 \\
                       &= 4a(ax + bxy + cy^2) \\
@@ -1387,7 +1395,7 @@ which is what we wanted to show. \done
 
 \textsc{Exercise 2}. \emph{Use quadratic reciprocity to compute $\left( \frac{7}{43} \right)$. Find an integer $x$ such that $x^2 \equiv 7 \mod 43$.}
 
-\textsc{Solution}. We observe that $7 \equiv 3 \mod 4$, and $43 \equiv 3 \mod 4$. By quadratic reciprocity law, 
+\textsc{Proof}. We observe that $7 \equiv 3 \mod 4$, and $43 \equiv 3 \mod 4$. By quadratic reciprocity law, 
 \begin{displaymath}
 \left( \frac{7}{43} \right) = -\left( \frac{43}{7} \right) = -\left( \frac{1}{7} \right) = -1.
 \end{displaymath}
@@ -1399,9 +1407,9 @@ Exercise $3$ is similar to Exercise $2$.
 \begin{displaymath}
 (x^2-2)(x^2-17)(x^2-34) \equiv 0 \mod p
 \end{displaymath}
-has a solution for every prime number $p$.}
+has a Proof for every prime number $p$.}
 
-\textsc{Solution}. It is easy to see that the given congruence has a solution if at least one of the following congruences has a solution: 
+\textsc{Proof}. It is easy to see that the given congruence has a Proof if at least one of the following congruences has a Proof: 
 \begin{align*}
   x^2 - 2 \equiv  0 \mod p, \\
   x^2 - 17 \equiv 0 \mod p, \\
@@ -1411,11 +1419,11 @@ which is the same as saying at least one of the Legendre symbols $\left( \frac{2
 \begin{displaymath}
 \left( \frac{34}{p} \right) = \left( \frac{2}{p} \right) \left( \frac{17}{p} \right)
 \end{displaymath}
-If at least one of the Legendre symbols on the right hand side evaluate to $1$, we are done. Otherwise both of the Legendre symbols evaluate to $-1$ so that $\left( \frac{34}{p} \right)$ evaluate to $1$. In each case, at least one of the Legendre symbols always evaluates to $1$. Therefore, the given congruence relation has a solution for each prime $p$. \done
+If at least one of the Legendre symbols on the right hand side evaluate to $1$, we are done. Otherwise both of the Legendre symbols evaluate to $-1$ so that $\left( \frac{34}{p} \right)$ evaluate to $1$. In each case, at least one of the Legendre symbols always evaluates to $1$. Therefore, the given congruence relation has a Proof for each prime $p$. \done
 
 \textsc{Exercise 6}. \emph{Use quadratic reciprocity to find all primes $p$ for which $3$ is a quadratic residue.}
 
-\textsc{Solution}. If $p \equiv 1 \mod 4$, by quadratic reciprocity, we have 
+\textsc{Proof}. If $p \equiv 1 \mod 4$, by quadratic reciprocity, we have 
 \begin{displaymath}
 \left( \frac{3}{p} \right) = \left( \frac{p}{3} \right) =
 \begin{cases}
@@ -1435,7 +1443,7 @@ If $p \equiv 3 \mod 4$, by quadratic reciprocity, we have
 
 \textsc{Exercise 7}. \emph{Find all primes for which $-3$ is a quadratic residue.}
 
-\textsc{Solution}. Since the Legendre symbol is completely multiplicative, 
+\textsc{Proof}. Since the Legendre symbol is completely multiplicative, 
 \begin{displaymath}
 \left( \frac{-3}{p} \right) = \left( \frac{-1}{p} \right) \left( \frac{3}{p} \right).
 \end{displaymath}
@@ -1487,7 +1495,7 @@ be the factorization of $m$ into the product of powers of distinct prime numbers
 \item Prove that $\left( \frac{a}{m} \right) = 0$ if and only if $(a,m)>1$.
 \end{enumerate}}
 
-\textsc{Solution}. The idea is to reduce the Jacobi symbol to Legendre symbols whose properties we are already familiar with.
+\textsc{Proof}. The idea is to reduce the Jacobi symbol to Legendre symbols whose properties we are already familiar with.
 \begin{enumerate}[(a)]
 \item Since $a\equiv b \mod m$, it follows that $a \equiv b \mod p_i$ for each prime factor $p_i$ of $m$. Therefore, the following should be obvious: 
 \begin{displaymath}
@@ -1505,7 +1513,7 @@ be the factorization of $m$ into the product of powers of distinct prime numbers
 
 \textsc{Exercise 12}. \emph{Compute the Jacobi symbol $\left( \frac{38}{165} \right)$.}
 
-\textsc{Solution}. Prime factorization yields $38 = 2 \cdot 19$ and $165 = 3 \cdot 5 \cdot 11$. Therefore, 
+\textsc{Proof}. Prime factorization yields $38 = 2 \cdot 19$ and $165 = 3 \cdot 5 \cdot 11$. Therefore, 
 \begin{displaymath}
 \left( \frac{38}{165} \right) = \left( \frac{2}{3} \right) \left( \frac{19}{3} \right) \left( \frac{2}{5} \right) \left( \frac{19}{5} \right) \left( \frac{2}{11} \right) \left( \frac{19}{11} \right) = \left( \frac{2}{3} \right) \left( \frac{1}{3} \right) \left( \frac{2}{5} \right) \left( \frac{4}{5} \right) \left( \frac{2}{11} \right) \left( \frac{8}{11} \right)
 \end{displaymath}
@@ -1519,9 +1527,9 @@ Using the formula $\left( \frac{a}{p} \right) = a^{(p-1)/2} \mod p$ to compute $
 \begin{displaymath}
 x^2 \equiv a \mod m
 \end{displaymath}
-and a quadratic nonresidue modulo $m$ if this congruence has no solution. Prove that if $\left( \frac{a}{m} \right) = -1$, then $a$ is a quadratic nonresidue modulo $m$. Prove that $a$ is not necessarily a quadratic residue modulo $m$ if $\left( \frac{a}{m} \right) = 1$.}
+and a quadratic nonresidue modulo $m$ if this congruence has no Proof. Prove that if $\left( \frac{a}{m} \right) = -1$, then $a$ is a quadratic nonresidue modulo $m$. Prove that $a$ is not necessarily a quadratic residue modulo $m$ if $\left( \frac{a}{m} \right) = 1$.}
 
-\textsc{Solution}. Let $m = \prod_{i=1}^r p_i^{k_i}$ be its prime factorization. Suppose $a$ is a quadratic residue modulo $m$. That is, there is some integer $x$ satisfying $x^2 \equiv a \mod m$. Then, $x^2 \equiv a \mod p_i$ for each $1 \leq i \leq r$ (because if $m$ divides $x^2-a$, then $p_i$ also divides $x^2-a$). Therefore, $\left( \frac{a}{p_i} \right) = 1$ for each $p_i$. But the given condition says
+\textsc{Proof}. Let $m = \prod_{i=1}^r p_i^{k_i}$ be its prime factorization. Suppose $a$ is a quadratic residue modulo $m$. That is, there is some integer $x$ satisfying $x^2 \equiv a \mod m$. Then, $x^2 \equiv a \mod p_i$ for each $1 \leq i \leq r$ (because if $m$ divides $x^2-a$, then $p_i$ also divides $x^2-a$). Therefore, $\left( \frac{a}{p_i} \right) = 1$ for each $p_i$. But the given condition says
 \begin{displaymath}
 \left( \frac{a}{m} \right) = \prod_{i=1}^r \left( \frac{a}{p_i} \right)^{k_i} = -1,
 \end{displaymath}
@@ -1534,7 +1542,7 @@ That is, $-1$ is a quadratic nonresidue modulo $3$ and $7$. Then $-1$ cannot be 
 \textsc{Exercise 14}. \emph{Let $m = p^k$, where $p$ is an odd prime and $k\geq 1$. Prove that 
 \begin{displaymath}
 \frac{m-1}{2} \equiv \frac{k(p-1)}{2} \mod 2.
-\end{displaymath}}\textsc{Solution}. The proposition is trivially true when $k=1$. So, we assume that $k\geq 2$. Then
+\end{displaymath}}\textsc{Proof}. The proposition is trivially true when $k=1$. So, we assume that $k\geq 2$. Then
 \begin{align*}
   m &= ((p-1)+1)^k \\
     &= (p-1)^k + k(p-1)^{k-1} + \cdots + k(p-1) + 1 \\
@@ -1550,17 +1558,17 @@ That is, $-1$ is a quadratic nonresidue modulo $3$ and $7$. Then $-1$ cannot be 
 \end{displaymath}Prove that 
 \begin{displaymath}
 \left( \frac{-1}{m} \right) = (-1)^{(m-1)/2}.
-\end{displaymath}}\textsc{Solution}. We shall prove the proposition by induction on $r$. The base case of $r=1$ reduces to what we proved in Exercise $14$. Suppose the proposition holds for some $r-1\in \Z, r-1>1$.
+\end{displaymath}}\textsc{Proof}. We shall prove the proposition by induction on $r$. The base case of $r=1$ reduces to what we proved in Exercise $14$. Suppose the proposition holds for some $r-1\in \Z, r-1>1$.
 
 \subsection{Quadratic Residues to Composite Moduli}
 
 \textsc{Exercise 1}. \emph{Let $x_1 = 3$. Construct integers $x_k$ such that $x_k^2 \equiv 2 \mod 7^k$ and $x_k \equiv x_{k-1} \mod 7^{k-1}$ for $k=2,3,4$.}
 
-\textsc{Solution}. Let $f(x) = x^2-2$. Then $f^{\prime}(x) = 2x$. We see that $f(x_1) \equiv 0 \mod 7$ and $f^{\prime}(x_1) \not\equiv 0 \mod 7$. By Hensel's lemma, there exists $x_k$ for all $k\geq 2$ such that $x_k^2 \equiv 2 \mod 7^k$ and $x_k \equiv x_{k-1} \mod 7^{k-1}$. When $k=2$, we must have $x_2^2 \equiv 2 \mod 49$ and $x_2 \equiv 3 \mod 7$. It can be checked that $x_2=10$ satisfies the equations. When $k=3$, we must have $x_3^2 \equiv 2 \mod 343$ and $x_3 \equiv 10 \mod 49$. It can be checked that $x_3 = 108$ satisfies the equations. When $k=4$, we must have $x_4^2 \equiv 2\mod 2401$ and $x_4 \equiv 108 \mod 343$. It can be checked that $x_4 = 2166$ satisfies the given equations. \done
+\textsc{Proof}. Let $f(x) = x^2-2$. Then $f^{\prime}(x) = 2x$. We see that $f(x_1) \equiv 0 \mod 7$ and $f^{\prime}(x_1) \not\equiv 0 \mod 7$. By Hensel's lemma, there exists $x_k$ for all $k\geq 2$ such that $x_k^2 \equiv 2 \mod 7^k$ and $x_k \equiv x_{k-1} \mod 7^{k-1}$. When $k=2$, we must have $x_2^2 \equiv 2 \mod 49$ and $x_2 \equiv 3 \mod 7$. It can be checked that $x_2=10$ satisfies the equations. When $k=3$, we must have $x_3^2 \equiv 2 \mod 343$ and $x_3 \equiv 10 \mod 49$. It can be checked that $x_3 = 108$ satisfies the equations. When $k=4$, we must have $x_4^2 \equiv 2\mod 2401$ and $x_4 \equiv 108 \mod 343$. It can be checked that $x_4 = 2166$ satisfies the given equations. \done
 
 \textsc{Exercise 2}. \emph{Let $p$ be a prime, $p\ne 3$, and let $a$ be an integer not divisible by $p$. Prove that if $a$ is a cubic residue modulo $p$, then $a$ is a cubic residue modulo $p^k$ for every $k \geq 1$.}
 
-\textsc{Solution}. Let $f(x) = x^3 - a$. Then $f^{\prime}(x) = 3x^2$. If $a$ is a cubic residue of $p$, there exists an integer $x_1$ such that $x_1 \not \equiv 0 \mod p$ and $x_1^3 \equiv a \mod p$. Then $x_1^2 \not\equiv 0 \mod p$ (since $p$ is a prime), so that $f^{\prime}(x_1) \not\equiv 0 \mod p$. By Hensel's lemma, there exists $x_k \in \Z$ such that $f(x_k) \equiv 0 \mod p^k$. Therefore, $a$ is a cubic residue modulo $p^k$ for every $k\geq 1$. \done
+\textsc{Proof}. Let $f(x) = x^3 - a$. Then $f^{\prime}(x) = 3x^2$. If $a$ is a cubic residue of $p$, there exists an integer $x_1$ such that $x_1 \not \equiv 0 \mod p$ and $x_1^3 \equiv a \mod p$. Then $x_1^2 \not\equiv 0 \mod p$ (since $p$ is a prime), so that $f^{\prime}(x_1) \not\equiv 0 \mod p$. By Hensel's lemma, there exists $x_k \in \Z$ such that $f(x_k) \equiv 0 \mod p^k$. Therefore, $a$ is a cubic residue modulo $p^k$ for every $k\geq 1$. \done
 
 \textsc{Exercise 3}. \emph{Denote the derivative of the polynomial $f(x)$ by $D(f)(x) = f^{\prime}(x)$. We define 
 \begin{align*}
@@ -1568,12 +1576,12 @@ That is, $-1$ is a quadratic nonresidue modulo $3$ and $7$. Then $-1$ cannot be 
   D^{(k)}(f)(x) &= D\left( D^{(k-1)}(f) \right) (x) \hspace{1cm} \text{for } k\geq 1.
 \end{align*}}The polynomial $D^{(k)}(f)$ is called the $k$th derivative of $f$. Prove that if $f(x)$ is a polynomial with integer coefficients, then $D^{(k)}(f)(x) = 0$ if and only if the degree of $f(x)$ is at most $k-1$.
 
-\textsc{Solution}. Let $f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$ be a polynomial of degree $n$ with $a_n \ne 0$, and $a_i \in \Z$ for all $0\leq i \leq n$. Then $D^{(1)}(f)(x) = a_nnx^{n-1} + a_{n-1}(n-1)x^{n-2} + \cdots + a_1$. Following this manner, we can write $D^{(k)}(f)(x) = a_nn(n-1)\cdots (n-k+1)x^{n-k} + a_{n-1}(n-1)(n-2)\cdots (n-k)x^{n-k-1} + \cdots + a_k$. Suppose $D^{(k)}(f)(x) = 0$. Since $a_n\ne 0$, and $x^i\ne 0$ for any $i\in \Z$, we must have $n(n-1)\cdots (n-k+1) = 0$, and so $n$ can be at most $n = k-1$. Conversely, suppose $n$ is at most $k-1$, that is $n \leq k-1$. It is easy to see that $D^{(k)}(f)(x) = 0$ (equivalently, $D^{(k)}(f)(x)$ has no nonzero terms). \done
+\textsc{Proof}. Let $f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0$ be a polynomial of degree $n$ with $a_n \ne 0$, and $a_i \in \Z$ for all $0\leq i \leq n$. Then $D^{(1)}(f)(x) = a_nnx^{n-1} + a_{n-1}(n-1)x^{n-2} + \cdots + a_1$. Following this manner, we can write $D^{(k)}(f)(x) = a_nn(n-1)\cdots (n-k+1)x^{n-k} + a_{n-1}(n-1)(n-2)\cdots (n-k)x^{n-k-1} + \cdots + a_k$. Suppose $D^{(k)}(f)(x) = 0$. Since $a_n\ne 0$, and $x^i\ne 0$ for any $i\in \Z$, we must have $n(n-1)\cdots (n-k+1) = 0$, and so $n$ can be at most $n = k-1$. Conversely, suppose $n$ is at most $k-1$, that is $n \leq k-1$. It is easy to see that $D^{(k)}(f)(x) = 0$ (equivalently, $D^{(k)}(f)(x)$ has no nonzero terms). \done
 
 \textsc{Exercise 4}. \emph{Let $f(x)$ and $g(x)$ be polynomials. Prove the Leibniz formula 
 \begin{displaymath}
 D(f\cdot g)(x) = f(x)\cdot D(g)(x) + D(f)(x)\cdot g(x).
-\end{displaymath}}\textsc{Solution}. Let $f(x) = \sum_{i=0}^m a_ix^i$ and $g(x) = \sum_{j=0}^{n}b_jx^j$ be any two polynomials with $a_m \ne 0$ and $b_n \ne 0$. To make the result as general as it can be, the coefficients $a_i, b_j$ are allowed to be from any ring $R$. Then the formal derivatives of $f$ and $g$ are given by 
+\end{displaymath}}\textsc{Proof}. Let $f(x) = \sum_{i=0}^m a_ix^i$ and $g(x) = \sum_{j=0}^{n}b_jx^j$ be any two polynomials with $a_m \ne 0$ and $b_n \ne 0$. To make the result as general as it can be, the coefficients $a_i, b_j$ are allowed to be from any ring $R$. Then the formal derivatives of $f$ and $g$ are given by 
 \begin{align*}
   D(f)(x) &= a_mmx^{m-1} + a_{m-1}(m-1)x^{m-2} + \cdots + a_1, \\
   D(g)(x) &= b_nnx^{n-1} + b_{n-1}(n-1)x^{n-2} + \cdots + b_1.
@@ -1587,7 +1595,7 @@ It becomes a simple computational endeavor to check that $f(x)\cdot D(g)(x) + D(
 \textsc{Exercise 5}. \emph{Let $f(x)$ be a polynomial of degree $n$. Prove Taylor's formula 
 \begin{displaymath}
 f(x+h) = \sum_{k=0}^n \frac{D^{(k)}(f)(x)}{k!} h^k.
-\end{displaymath}}\textsc{Solution}. Let $f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 = \sum_{k=0}^n a_kx^k$ so that $f(x+h) = a_n(x+h)^n + a_{n-1}(x+h)^{n-1} + \cdots + a_0 = \sum_{k=0}^n a_k(x+h)^k$. We want to prove that 
+\end{displaymath}}\textsc{Proof}. Let $f(x) = a_nx^n + a_{n-1}x^{n-1} + \cdots + a_1x + a_0 = \sum_{k=0}^n a_kx^k$ so that $f(x+h) = a_n(x+h)^n + a_{n-1}(x+h)^{n-1} + \cdots + a_0 = \sum_{k=0}^n a_k(x+h)^k$. We want to prove that 
 \begin{displaymath}
 f(x+h) = f(x) + f^{\prime}(x)h + \frac{f^{\prime\prime}(x)}{2!}h^2 + \cdots + \frac{f^{(n)}(x)}{n!}h^n,
 \end{displaymath}
@@ -1618,7 +1626,7 @@ where, in the final step, we get rid of the borrowed symbols. \done
 \textsc{Exercise 1}. \emph{Let $G = \Z/12\Z$ be the additive group of congruence class modulo $12$. Compute $G(2)$ and $G(3)$ and show explicitly that $G(2) \cong \Z/4\Z$, $G(3) \cong \Z/3\Z$, and 
 \begin{displaymath}
 \Z/12\Z \cong \Z/4\Z \oplus \Z/3\Z.
-\end{displaymath} }\textsc{Solution}. By computation, the orders of all the elements of $\Z/12\Z$ are given below
+\end{displaymath} }\textsc{Proof}. By computation, the orders of all the elements of $\Z/12\Z$ are given below
 \begin{longtable}{p{4em} p{4em} p{4em} p{4em}}
   Element & Order & Element & Order \\
   0 & 1 & 6 & 2 \\
@@ -1632,19 +1640,19 @@ so that $G(2) = \{0, 3, 6, 9\}$ and $G(3) = \{0, 4, 8\}$. Let $f : \Z/4\Z \to G(
 
 \textsc{Exercise 2}. \emph{Let $G$ be an abelian group, written additively, and let $G_1, \ldots, G_k$ be subgroups of $G$. Prove that $G_1 + \cdots + G_k$ is a subgroup of $G$.}
 
-\textsc{Solution}. Since $0 \in G_1, \cdots, G_k$, it follows that $0 \in G_1 + \cdots + G_k$. Suppose $g \in G_1 \cdots + G_k$. Then there exist $g_i \in G_i$ for each $1 \leq i \leq k$ such that $\sum_{i=1}^k g_i = g$. Clearly $-g_i \in G_i$ for each $1 \leq i \leq k$ so that $-g = -\sum_{i=1}^k g_i \in G_1 + \cdots + G_k$. Suppose $x, y \in G_1 + \cdots + G_k$. Then there exist $x_i, y_i \in G_i$ for each $1 \leq i \leq k$ such that $\sum_{i=1}^k x_i = x$ and $\sum_{i=1}^k y_i = y$. Clearly $x + y = \sum_{i=1}^k x_i + \sum_{i=1}^k y_i = \sum_{i=1}^k (x_i + y_i) \in G_1 + \cdots + G_k$. It follows that $G_1 + \cdots + G_k$ is a subgroup of $G$. \done
+\textsc{Proof}. Since $0 \in G_1, \cdots, G_k$, it follows that $0 \in G_1 + \cdots + G_k$. Suppose $g \in G_1 \cdots + G_k$. Then there exist $g_i \in G_i$ for each $1 \leq i \leq k$ such that $\sum_{i=1}^k g_i = g$. Clearly $-g_i \in G_i$ for each $1 \leq i \leq k$ so that $-g = -\sum_{i=1}^k g_i \in G_1 + \cdots + G_k$. Suppose $x, y \in G_1 + \cdots + G_k$. Then there exist $x_i, y_i \in G_i$ for each $1 \leq i \leq k$ such that $\sum_{i=1}^k x_i = x$ and $\sum_{i=1}^k y_i = y$. Clearly $x + y = \sum_{i=1}^k x_i + \sum_{i=1}^k y_i = \sum_{i=1}^k (x_i + y_i) \in G_1 + \cdots + G_k$. It follows that $G_1 + \cdots + G_k$ is a subgroup of $G$. \done
 
 \textsc{Exercise 3}. \emph{Let $G$ be an abelian group, written additively, and let $G_1, \ldots, G_k$ be subgroups of $G$ such that $G = G_1 + \cdots + G_k$. Prove that $|G| \leq |G_1|\cdots |G_k|$. Prove that $G = G_1 \oplus \cdots \oplus G_k$ if and only if $|G| = |G_1|\cdots |G_k|$.}
 
 \textsc{Exercise 4}. \emph{Let $G$ be an abelian group, written additively, and let $G_1, \ldots, G_k$ be subgroups of $G$ such that $G = G_1 + \cdots + G_k$. Prove that $G = G_1 \oplus \cdots \oplus G_k$ if and only if the only representation of $0$ in the form $0 = g_1 + \cdots + g_k$ with $g_i \in G_i$ is $g_1 = \cdots = g_k = 0$.}
 
-\textsc{Solution}. One direction is trivial. If $G = G_1 \oplus \cdots \oplus G_k$, then $0 = 0 + \cdots + 0$ is the only representation of $0$ (because each representation is unique in direct sum). Conversely, suppose this is the only representation of $0$. We shall prove that every $g \in G$ has a unique representation in the form $g = g_1 + \cdots + g_k$ with $g_i \in G_i$. Suppose there is another representation $g = g_1^{\prime} + \cdots + g_k^{\prime}$ with $g_i^{\prime} \in G_i$. Then, on subtraction, $g - g = 0 = g_1 - g_1^{\prime} + \cdots + g_k - g_k^{\prime}$ with $g_i - g_i^{\prime} \in G_k$. But the only representation of $0$ is $0 = 0 + \cdots + 0$. It follows that $g_i = g_i^{\prime}$ for each $1 \leq i \leq k$. It follows that $G = G_1 + \oplus \cdots \oplus G_k$. \done
+\textsc{Proof}. One direction is trivial. If $G = G_1 \oplus \cdots \oplus G_k$, then $0 = 0 + \cdots + 0$ is the only representation of $0$ (because each representation is unique in direct sum). Conversely, suppose this is the only representation of $0$. We shall prove that every $g \in G$ has a unique representation in the form $g = g_1 + \cdots + g_k$ with $g_i \in G_i$. Suppose there is another representation $g = g_1^{\prime} + \cdots + g_k^{\prime}$ with $g_i^{\prime} \in G_i$. Then, on subtraction, $g - g = 0 = g_1 - g_1^{\prime} + \cdots + g_k - g_k^{\prime}$ with $g_i - g_i^{\prime} \in G_k$. But the only representation of $0$ is $0 = 0 + \cdots + 0$. It follows that $g_i = g_i^{\prime}$ for each $1 \leq i \leq k$. It follows that $G = G_1 + \oplus \cdots \oplus G_k$. \done
 
 \textsc{Exercise 5}. \emph{Let $G_1, \cdots, G_k$ be subgroups of an abelian group $G$ such that $G = G_1 \oplus \cdots \oplus G_k$. Prove that $G \cong G_1 \times \cdots \times G_k$.}
 
 \textsc{Exercise 6}. \emph{Let $G$ be an additive abelian group. For every prime number $p$, let $G(p)$ denote the set of all elements of $G$ whose order is a power of $p$. Prove that $G(p)$ is a subgroup of $G$.}
 
-\textsc{Solution}. The identity $0 \in G(p)$. Because the order of $0$ is $1 = p^0$. Suppose $g \in G(p)$. Let ord$(g) = p^r$. In other words, $p^rg = 0$ and $sg \ne 0$ for any $s < p^r$. Clearly $-p^rg = 0$ and $-sg \ne 0$ for any $s < p^r$. Thus, ord$(-g) = p^r$ and $-g \in G(p)$. Let $x, y \in G(p)$. Let ord$(x) = p^u$ and ord$(y) = p^v$. Then $p^ux = 0, p^vy = 0$ but $s_1x \ne 0, s_2y \ne 0$ for all $s_1 < p^u, s_2 < p^v$.
+\textsc{Proof}. The identity $0 \in G(p)$. Because the order of $0$ is $1 = p^0$. Suppose $g \in G(p)$. Let ord$(g) = p^r$. In other words, $p^rg = 0$ and $sg \ne 0$ for any $s < p^r$. Clearly $-p^rg = 0$ and $-sg \ne 0$ for any $s < p^r$. Thus, ord$(-g) = p^r$ and $-g \in G(p)$. Let $x, y \in G(p)$. Let ord$(x) = p^u$ and ord$(y) = p^v$. Then $p^ux = 0, p^vy = 0$ but $s_1x \ne 0, s_2y \ne 0$ for all $s_1 < p^u, s_2 < p^v$.
 
 \textsc{Exercise 7}. \emph{Let $f: G \to H$ be a group homomorphism, and let $g\in G$. Prove that the order of $f(g)$ in $H$ divides the order of $g$ in $G$. Prove that if $G$ is a $p$-group and $f$ is surjective , then $H$ is a $p$-group.}
 
@@ -1656,7 +1664,7 @@ so that $G(2) = \{0, 3, 6, 9\}$ and $G(3) = \{0, 4, 8\}$. Let $f : \Z/4\Z \to G(
 \item Compute the character table for the group $C_2 \times C_2$.
 \end{enumerate}}
 
-\textsc{Solution}. 
+\textsc{Proof}. 
 \begin{enumerate}[(a)]
 \item We have, $C_2 = \{0, 1\}$, and $\widehat{C_2} = \{ \psi_a : a = 0, 1 \}$ where 
 \begin{displaymath}
@@ -1676,7 +1684,7 @@ We have the character table
 
 \textsc{Exercise 2}. \emph{Compute the character table for the cyclic group of order $6$.}
 
-\textsc{Solution}. We have, $C_6 = \{0, 1, \ldots, 5\}$, and $\widehat{C_6} = \{ \psi_a : a = 0, 1, \ldots, 5 \}$ where 
+\textsc{Proof}. We have, $C_6 = \{0, 1, \ldots, 5\}$, and $\widehat{C_6} = \{ \psi_a : a = 0, 1, \ldots, 5 \}$ where 
 \begin{displaymath}
 \psi_a(j) = e^{\frac{2\pi i a j}{6}} = e^{\frac{\pi i a j}{3}} \hspace{1cm} \text{for } j \in C_6.
 \end{displaymath}
@@ -1707,7 +1715,7 @@ We have the character table
 \item $\psi_a = \psi_b$ if and only if $a \equiv b \mod n$.
 \end{enumerate}}
 
-\textsc{Solution}. By $(4.1)$, 
+\textsc{Proof}. By $(4.1)$, 
 \begin{displaymath}
 \psi_a(jg_0) = e^{2 \pi i aj/n} \hspace{1cm} \text{for } a\in \Z.
 \end{displaymath} 
@@ -1729,7 +1737,7 @@ We have the character table
 
 \textsc{Exercise 4}. \emph{Prove that if $G$ is cyclic and $g\in G$, $g\ne 0$, then $\psi_1(g) \ne 1$.}
 
-\textsc{Solution}. Let $G = \{ jg_0 : j = 0, 1, \ldots, n-1 \}$. By $(4.1)$, 
+\textsc{Proof}. Let $G = \{ jg_0 : j = 0, 1, \ldots, n-1 \}$. By $(4.1)$, 
 \begin{displaymath}
 \psi_1(jg_0) = e^{2\pi i j/n}.
 \end{displaymath}
@@ -1747,7 +1755,7 @@ Prove that
 \end{displaymath}
 for all $g, g^{\prime} \in G$ and $\chi, \chi^{\prime} \in \widehat{G}$.}
 
-\textsc{Solution}. Let $g, g^{\prime} \in G$. Let $\chi, \chi^{\prime} \in \widehat{G}$. Then 
+\textsc{Proof}. Let $g, g^{\prime} \in G$. Let $\chi, \chi^{\prime} \in \widehat{G}$. Then 
 \begin{displaymath}
 \langle g+g^{\prime}, \chi \rangle = \chi(g + g^{\prime}) = \chi(g) \chi(g^{\prime}) = \langle g, \chi \rangle \langle g^{\prime}, \chi \rangle,
 \end{displaymath}
@@ -1768,7 +1776,7 @@ and
 \item Prove that $\widehat{G} = \{\psi_{a,b}: a, b = 0, 1, \ldots, m-1\}$. 
 \end{enumerate}}
 
-\textsc{Solution}.
+\textsc{Proof}.
 \begin{enumerate}[(a)]
 \item Let $u \in \Z$. That $\psi_{a,b}$ is well-defined is obvious from the following 
 \begin{align*}
@@ -1810,7 +1818,7 @@ In (c), we proved that $\psi_{a,b}$ is a character of $G$. From (b), each $\psi_
 \item Prove that $\widehat{G} = \{ \chi_a : a = 0, 1, \ldots, p-2 \}$.  
 \end{enumerate}}
 
-\textsc{Solution}. 
+\textsc{Proof}. 
 \begin{enumerate}[(a)]
 \item We shall prove that $\chi_a: G \to \C^{\times}$ is a homomorphism.  Let $\gcd(x, p) = 1$ and $x \equiv g^y \mod p$. Let $\gcd(x^{\prime}, p) = 1$ and $x^{\prime} \equiv g^{y^{\prime}} \mod p$.
 \end{enumerate}
@@ -1822,7 +1830,7 @@ In (c), we proved that $\psi_{a,b}$ is a character of $G$. From (b), each $\psi_
   [G: G^r] & \text{if } a \in G^r \\
   0 & \text{if } a \not\in G^r.
 \end{cases}
-\end{displaymath}}\textsc{Solution}. We consider the quotient group $G/G^r$. By Lagrange's theorem, $| G / G^r | = [G: G^r]$. By Theorem $4.5$, $G_r = G/G^r \cong \widehat{G/G^r}$. Thus, $|\widehat{G_r}| = |\widehat{G/G^r}| = [G:G^r]$. Applying the orthogonality relations, we obtain the formula. \done
+\end{displaymath}}\textsc{Proof}. We consider the quotient group $G/G^r$. By Lagrange's theorem, $| G / G^r | = [G: G^r]$. By Theorem $4.5$, $G_r = G/G^r \cong \widehat{G/G^r}$. Thus, $|\widehat{G_r}| = |\widehat{G/G^r}| = [G:G^r]$. Applying the orthogonality relations, we obtain the formula. \done
 
 \subsection{Elementary Fourier Analysis}
 
@@ -1831,14 +1839,14 @@ In these exercises, $G$ is a finite abelian group.
 \textsc{Exercise 1}. \emph{Let $f,g \in L^2(G)$. Prove that 
 \begin{displaymath}
 (g,f) = \overline{(f,g)}.
-\end{displaymath}}\textsc{Solution}. By definition of inner product on $L^2(G)$, we obtain 
+\end{displaymath}}\textsc{Proof}. By definition of inner product on $L^2(G)$, we obtain 
 \begin{displaymath}
   (g, f) = \int_G g\overline{f} = \sum_{x\in G} g(x) \overline{f(x)} = \overline{\sum_{x\in G} f(x) \overline{g(x)}} = \overline{\int_G f\overline{g}} = \overline{(f,g)}.
 \end{displaymath}\done
 
 \textsc{Exercise 2}. \emph{Let $f \in L^2(G)$. Prove that if $c\in L^2(\widehat{G})$ and $f=(1/n)\sum_{\chi \in \widehat{G}} c(\chi) \chi$, then $c(\chi) = \widehat{f}(\chi)$.}
 
-\textsc{Solution}. By a consequence of the orthogonality relations (Thoerem $4.7$), 
+\textsc{Proof}. By a consequence of the orthogonality relations (Thoerem $4.7$), 
 \begin{displaymath}
 (\chi_1, \chi_2) =
 \begin{cases}
@@ -1854,7 +1862,7 @@ Since $\widehat{G}$ is a basis, this representation must be unique so that $c(\c
 
 \textsc{Exercise 3}. \emph{Prove that the Haar measure on $G$ is unique, that is, there exists a unique function $\mu$ on the subsets of $G$ such that $\mu$ is additive, translation invariant, and $\mu (G) = n$.}
 
-\textsc{Solution}. Let $\mu$ be a function on subsets of $G$ such that $\mu$ is additive, translation invariant, and $\mu(G) = n$. We shall prove that $\mu$ is the Haar measure, that is, $\mu(U) = |U|$ for any $U \subset G$. Let $U = \{0\}$. Then for any $a \in G$, by translation invariance, we must have $\mu(U) = \mu(a + U)$. That is, $\mu(\{0\}) = \mu(\{a\})$. Indeed, for any $a, b\in G$, we have $\mu(\{a\}) = \mu(\{b\})$. By additivity, 
+\textsc{Proof}. Let $\mu$ be a function on subsets of $G$ such that $\mu$ is additive, translation invariant, and $\mu(G) = n$. We shall prove that $\mu$ is the Haar measure, that is, $\mu(U) = |U|$ for any $U \subset G$. Let $U = \{0\}$. Then for any $a \in G$, by translation invariance, we must have $\mu(U) = \mu(a + U)$. That is, $\mu(\{0\}) = \mu(\{a\})$. Indeed, for any $a, b\in G$, we have $\mu(\{a\}) = \mu(\{b\})$. By additivity, 
 \begin{displaymath}
 \mu(G) = \mu(\bigcup_{a\in G} \{a\}) = \sum_{a\in G} \mu(\{a\}) = n.
 \end{displaymath}
@@ -1908,7 +1916,7 @@ f_1 * \cdots * f_k (a) = \sum_{x_1 + \cdots + x_k = a} f_1(x_1) \cdots f_k(x_k)
 \end{displaymath}
 \end{enumerate}}
 
-\textsc{Solution}. 
+\textsc{Proof}. 
 \begin{enumerate}[(a)]
 \item Let $a-x = y$. Since the summation is over the group, 
 \begin{displaymath}
@@ -1936,7 +1944,7 @@ The associativity follows.
 \textsc{Exercise 11}. \emph{Let $\chi \in \widehat{G}$. Prove that 
 \begin{displaymath}
 \underbrace{\chi * \cdots * \chi}_{k\ \text{times}}(a) = \sum_{x_1 + x_2 + \cdots + x_k = a} \chi(x_1 + x_2 + \cdots + x_k).
-\end{displaymath}}\textsc{Solution}. By Exercise $10$ (d), 
+\end{displaymath}}\textsc{Proof}. By Exercise $10$ (d), 
 \begin{align*}
   \underbrace{\chi * \cdots * \chi}_{k\ \text{times}}(a) &= \sum_{x_1 + x_2 + \cdots + x_k = a} \chi(x_1) \chi(x_2) \cdots \chi(x_k) \\
   &= \sum_{x_1 + x_2 + \cdots + x_k = a} \chi(x_1 + x_2 + \cdots + x_k),
@@ -1950,7 +1958,7 @@ l_p(a + p\Z) = \left( \frac{a}{p} \right),
 where $\left( \frac{\cdot}{p} \right)$ is the Legendre symbol. Prove that 
 \begin{displaymath}
   \underbrace{l_p * \cdots * l_p}_{k\ \text{times}}(a + p\Z) = \sum_{\substack {x_1 + x_2 + \cdots + x_k = a\\ 1 \leq x_i \leq p-1}} \left( \frac{x_1x_2\cdots x_k}{p} \right).
-\end{displaymath}}\textsc{Solution}. By Exercise $10$ (d), 
+\end{displaymath}}\textsc{Proof}. By Exercise $10$ (d), 
 \begin{align*}
   \underbrace{l_p * \cdots * l_p}_{k\ \text{times}}(a + p\Z) &= \sum_{\substack {x_1 + x_2 + \cdots + x_k = a\\ 1 \leq x_i \leq p-1}} l_p( x_1 ) l_p(x_2) \cdots l_p(x_k) \\
                                                              &= \sum_{\substack {x_1 + x_2 + \cdots + x_k = a\\ 1 \leq x_i \leq p-1}} \left( \frac{x_1}{p} \right) \left( \frac{x_2}{p} \right) \cdots \left( \frac{x_k}{p} \right) \\
@@ -1965,11 +1973,21 @@ In these exercises, $G$ is a finite abelian group of order $n$.
 
 \textsc{Exercise 1}. \emph{Let $A = (a_{ij})$ and $B = (b_{ij})$ be $n\times n$ matrices. Prove that tr$(AB)$ = tr$(BA)$.}
 
-\textsc{Solution}. From the definition of the multiplication of matrices, 
+\textsc{Proof}. From the definition of the multiplication of matrices, 
 \begin{displaymath}
 \text{tr}(AB) = \sum_{i=1}^{n}(AB)_{ii} = \sum_{i=1}^{n}\sum_{k=1}^{n} a_{ik}b_{ki} = \sum_{k=1}^n \sum_{i=1}^n b_{ki} a_{ik} = \sum_{k=1}^n (BA)_{kk} = \text{tr}(BA).
 \end{displaymath}\done
 
 \textsc{Exercise 2}. \emph{Define the matrices $R$ and $S$ by $(4.12)$ and $(4.13)$. Prove that $S = R^{-1}$.}
+
+\textsc{Proof}. Treating the basis elements as column vectors, let $B = ( v_1, \ldots, v_n)$ and $B^{\prime} = (v_1^{\prime}, \ldots, v_n^{\prime})$ be $n\times n$ matrices corresponding to the bases $B$ and $B^{\prime}$. By $(4.12)$ and $(4.13)$,
+\begin{displaymath}
+B^{\prime} = RB \hspace{1cm}\text{and}\hspace{1cm} B = SB^{\prime},
+\end{displaymath}
+from which we obtain $B = SRB$. The columns of the matrix $B$, being the basis elements themselves, are linearly independent and thus $B$ is invertible. Multiplying both sides by $B^{-1}$, we obtain $I = SR$, where $I$ is the identity matrix of order $n$. It follows that $S = R^{-1}$. \done
+
+\subsection{Gauss Sums and Quadratic Reciprocity}
+
+
 
 \end{document}
