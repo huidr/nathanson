@@ -13,7 +13,7 @@ This solution manual is an indirect product of my (pre) summer work at ISI (Delh
 
 ### Present and Beyond
 
-As of now, it only contains solutions to the first three chapters. Solutions to chapter 4 is currently in preparation. 
+As of now, it only contains solutions to the first three chapters. Solutions to chapter 4 and 5 are currently in preparation. 
 
 I plan to cover more chapters and add more solutions in near future.
 
