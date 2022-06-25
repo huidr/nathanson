@@ -2178,6 +2178,73 @@ D(v) = D\left(\frac{b}{c}\right)= \frac{D(b)c - bD(c)}{c^2}.
 
 \section{The $abc$ Conjecture}
 
+\section{The Congruence $abc$ Conjecture}
 
+\textsc{Exercise 1}. \emph{Let $a$, $b$, $c$ be positive integers such that $(a,b,c) = 1$ and $a+b = c$. Prove that $(a,b) = (a,c) = (b,c) = 1$. Prove that $a = b$ only if $a = 1$ and $c=2$.}
+
+\textsc{Proof}. Since $a+b = c$, any prime $p$ dividing both $a$ and $b$ will also divide $c$ so that $\gcd(a,b,c) \geq p$. It follows that no prime divides both $a$ and $b$, and so $\gcd(a,b) = 1$. We can re-write the equality in the forms $c-a = b$ and $c-b = a$, and similarly we obtain $\gcd(c,a) = \gcd(b,c) = 1$. Suppose $a = b$. But no prime divides both $a$ and $b$. It is easy to see that $a = b = 1$ so that $c = 2$. The other direction follows trivially. \qed
+
+\textsc{Exercise 2}. \emph{Let $a$, $b$, $c$ be relatively prime positive integers such that $c$ is odd, $a < b < c$, and 
+\begin{displaymath}
+a + b = c.
+\end{displaymath}
+For every positive integer $n$, define 
+\begin{align*}
+  A_n &= (b-a)^n, \\
+  B_n &= c^n-(b-a)^n, \\
+  C_n &= c^n.
+\end{align*}
+Prove that $A_n$, $B_n$, and $C_n$ are distinct, relatively prime positive integers such that 
+\begin{displaymath}
+A_n + B_n = C_n.
+\end{displaymath}}\textsc{Proof}. Suppose $A_n = B_n$. Then $c^n = 0$, that is, $c=0$, which is impossible. Suppose $B_n = C_n$. Then $(b-a)^n = 0$, that is, $a = b$. But $a$ and $b$ are relatively prime. So, $a = b = 1$, which violates the given condition $a < b$. It follows that $A_n, B_n$ and $C_n$ are distinct. The relation $A_n + B_n = C_n$ follows trivially by definition. If any prime $p$ divides at least two out of $A_n$, $B_n$, $C_n$ then $p$ also divides the remaining one and $\gcd(A_n, B_n, C_n) \geq p$. It suffices to prove that there is no prime that divides both $C_n$ and $A_n$. Suppose a prime $p$ divides both $C_n$ and $A_n$. Then $p$ divides both $c = a + b$ and $b-a$. That is, $p$ divides $2b = (a + b) + (b-a)$ and $2a = (a + b) - (b-a)$, which is possible only when $p=2$ (since $a$ and $b$ are relatively prime). But $p$ cannot be $2$ if $p$ divides $c$ and $c$ is odd. It follows that $A_n$, $B_n$ and $C_n$ are relatively prime. \qed
+
+\textsc{Exercise 3}. \emph{Let $a$, $b$, and $c$ be relatively prime positive integers such that $c$ is even, $a < b < c$, and 
+\begin{displaymath}
+a + b = c.
+\end{displaymath}
+For every positive integer $n$, define 
+\begin{align*}
+  A_n &= \left( \frac{b-a}{2} \right)^n,\\
+  B_n &= \left( \frac{c}{2} \right)^n - \left( \frac{b-a}{2} \right)^n, \\
+  C_n &= \left( \frac{c}{2} \right)^n.
+\end{align*}
+Prove that $A_n$, $B_n$, and $C_n$ are distinct, relatively prime positive integers such that 
+\begin{displaymath}
+A_n + B_n = C_n.
+\end{displaymath}}\textsc{Proof}. Distinctness follows similarly as in Exercise $2$. The relation $A_n + B_n = C_n$ follows trivially by definition. As in Exercise $2$, it suffices to show that there is no prime that divides both $C_n$ and $A_n$. Since $\gcd(a,b,c) = 1$ and $c$ is even, both $a$ and $b$ are odd. So, all the fractions involved are whole numbers. Suppose a prime $p$ divides both $C_n$ and $A_n$. Then $p$ divides both $(b-a)/2$ and $c/2$. That is, $p$ divides both $b-a$ and $c = a+b$. As in Exercise $2$, $p$ cannot be other than $2$. Suppose $p$ is indeed $2$. Since $p = 2$ divides $(b-a)/2$ and $(a+b)/2$, it follows that $b-a$ and $a+b$ are divisible by $4$. Let $b-a = 4k$ and $a+b = 4l$. Then $a = 2(l-k)$ and $b = 2(k+l)$, which is a contradiction since $a$ and $b$ are odd. The proposition follows \qed
+
+\textsc{Exercise 4}. \emph{Let $a$, $b$, $c$ be relatively prime integers such that $a + b = c$. Prove if $c$ is even, then exactly one of the integers $c$ and $b-a$ is divisible by $4$.}
+
+\textsc{Proof}. By Exercise $1$, it follows that $a$, $b$ and $c$ are pairwise relatively prime. Since $2$ divides $c$, both $a$ and $b$ are odd. Let $a = 2k+1$ and $b= 2l + 1$. Then 
+\begin{displaymath}
+c = a+b = 2(k+l+1), \hspace{1cm} b-a = 2(l-k).
+\end{displaymath}
+Case I: $l-k$ is even. Let $l-k = 2h$, that is, $l = 2h+k$. Then $b-a = 4h$ is divisible by $4$. But $c = 2(2k + 2h + 1)$ is not divisible by $4$.
+
+Case II: $l-k$ is odd. Let $l-k = 2h+1$, that is, $l = 2h + k + 1$. Then $b-a = 2(2h + 1)$ is not divisible by $4$. But $c = 4(h + k + 1)$ is divisible by $4$. This completes the proof. \qed
+
+\textsc{Exercise 5}. \emph{Prove that if $n$ is even, then 
+\begin{displaymath}
+(b+a)^n - (b-a)^n = 4ab((b+a)^{n-2} + (b+a)^{n-4}(b-a)^2 + \cdots + (b-a)^{n-2}).
+\end{displaymath}}\textsc{Proof}. Let $c = b + a$ and $d = b - a$. Then the given relation reduces to 
+\begin{displaymath}
+c^n - d^n = (c+d)(c-d)(c^{n-2} + c^{n-4}d^2 + \cdots + d^{n-2}).
+\end{displaymath}
+By multiplying term-wise, we obtain 
+\begin{align*}
+  (c+d)(c^{n-2} + c^{n-4}d^2 + \cdots + d^{n-2}) &= c^{n-1} + c^{n-3}d^2 + \cdots + cd^{n-2} + c^{n-2}d + c^{n-4}d^3 + \cdots + d^{n-1} \\
+  &= c^{n-1} + c^{n-2}d + c^{n-3}d^2 + c^{n-4}d^3 + \cdots + cd^{n-2} + d^{n-1}.
+\end{align*}
+Therefore, it suffices to prove the relation 
+\begin{displaymath}
+c^n - d^n = (c-d)(c^{n-1} + c^{n-2}d + \cdots + cd^{n-2} + d^{n-1}),
+\end{displaymath}
+which again follows by term-wise multiplication 
+\begin{align*}
+  (c-d)(c^{n-1} + c^{n-2}d + \cdots + cd^{n-2} + d^{n-1}) &= c^n + (c^{n-1}d - c^{n-1}d) + \cdots + (cd^{n-1} - cd^{n-1}) - d^n \\
+  &= c^n - d^n.
+\end{align*}
+\qed
 
 \end{document}
