@@ -1,6 +1,6 @@
 ** Solutions to Nathanson's Elementary Methods in Number Theory
 
-Version: 0.1 (beta)
+Version: 0.1
 
 *** About the Book
 
