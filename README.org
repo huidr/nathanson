@@ -4,7 +4,7 @@ Version: 0.1
 
 *** About the Book
 
-This is a solution manual (in preparation) for the popular textbook [[https://link.springer.com/book/10.1007/b98870#:~:text=Elementary%20Methods%20in%20Number%20Theory%20begins%20with%20%22a%20first%20course,%2C%20prime%20numbers%2C%20and%20congruences][Elementary Methods in Number Theory]] by Melvyn B. Nathanson and as such, it is best used with the parent text. 
+This is a solution manual (in preparation) for the popular textbook [[https://link.springer.com/book/10.1007/b98870#:~:text=Elementary%20Methods%20in%20Number%20Theory%20begins%20with%20%22a%20first%20course,%2C%20prime%20numbers%2C%20and%20congruences][Elementary Methods in Number Theory]] by Melvyn B. Nathanson.
 
 *** History
 
