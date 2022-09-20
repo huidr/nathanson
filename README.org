@@ -2,7 +2,7 @@
 
 Version: 0.1 (in preparation)
 
-Get the PDF [[NathansonSolutions.pdf][here]]
+Get the PDF [[NathansonSolutions.pdf][here]].
 
 *** About the Book
 
