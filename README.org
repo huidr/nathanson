@@ -2,7 +2,7 @@
 
 Version: 0.1 (in preparation)
 
-Get the PDF [here](https://github.com/huidr/nathanson/blob/main/NathansonSolutions.pdf)
+Get the PDF [[NathansonSolutions.pdf][here]]
 
 *** About the Book
 
